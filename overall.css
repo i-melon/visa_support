@@ -1,0 +1,138 @@
+p{margin: 0;}
+
+
+
+.Title{
+    color: #0E2D4A;
+    font-family: customBold;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 64px; /* 100% */
+    letter-spacing: -1.28px;
+    margin: 0;
+}
+.blue{color: #0866C5;}
+.yellow{color: #EAC33E;}
+.white{color: #FFF}
+a{
+    color: #0E2D4A;
+    font-family: customFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+}
+a:hover{color: #1478DC;}
+.netButton{
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid rgba(9, 102, 194, 0.40);
+    background: #FFF;
+}
+.callButton{
+    display: flex;
+    padding: var(--spacing-m, 12px) var(--spacing-l, 16px);
+    align-items: center;
+    gap: var(--spacing-s-2, 10px);
+    border: none;
+    border-radius: 14px;
+    background: #0866C5;
+    color: #FFF;
+    font-family: customFont;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+}
+.miniText{
+    color: #0E2D4A;
+    font-family: customLight;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 16px; /* 133.333% */
+}
+.mainButton{
+    display: inline-flex;
+    height: 68px;
+    width: 313px;
+    padding: 18px 24px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 16px;
+    background: #F0CD56;
+    color: #0E2D4A;
+    text-align: right;
+    font-family: customFont;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; /* 138.889% */
+    letter-spacing: -0.18px;
+    border: none;
+}
+.arrowButton{
+    display: flex;
+    width: 64px;
+    height: 64px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border-radius: 16px;
+    background: #F0CD56;
+    border: none;
+}
+
+
+
+
+
+
+
+
+#openText1{display: none}
+#closeButton1{display: none}
+#openText2{display: none}
+#closeButton2{display: none}
+#openText3{display: none}
+#closeButton3{display: none}
+#openText4{display: none}
+#closeButton4{display: none}
+#openText5{display: none}
+#closeButton5{display: none}
+#openText6{display: none}
+#closeButton6{display: none}
+#openText7{display: none}
+#closeButton7{display: none}
+
+
+#iconText{display: none}
+#iconClose{display: none}
+#iconText2{display: none}
+#iconClose2{display: none}
+#iconText3{display: none}
+#iconClose3{display: none}
+#iconText4{display: none}
+#iconClose4{display: none}
+#iconText5{display: none}
+#iconClose5{display: none}
+#iconText6{display: none}
+#iconClose6{display: none}
+#iconText7{display: none}
+#iconClose7{display: none}
+#iconText8{display: none}
+#iconClose8{display: none}
+#iconText9{display: none}
+#iconClose9{display: none}
+#iconText10{display: none}
+#iconClose10{display: none}
+#iconText11{display: none}
+#iconClose11{display: none}
+#iconText12{display: none}
+#iconClose12{display: none}
