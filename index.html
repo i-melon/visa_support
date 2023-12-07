@@ -52,10 +52,9 @@
         <p>Наш специалист свяжется с вами и<br> ответит на все вопросы.</p>
         <div class="modalForm">
           <p>Телефон</p>
-          <input id="phoneNumber" name="phoneNumber" type="text" 
-          placeholder="+7 (700) 000-00-00">
+          <input id="phoneNumber1" name="phoneNumber" type="text" placeholder="+7 (700) 000-00-00">
         </div>
-        <button class="mainButton" id="modalButton" onclick="sendEmail(event)">Отправить заявку</button>
+        <button class="mainButton" id="modalButton" onclick="sendEmail(1)">Отправить заявку</button>
       </div>
     </div>
     <header>
@@ -564,10 +563,10 @@
       <p class="mobDel">Оставьте заявку</p>
       <h1 class="Title white">Получите <span class="yellow">бесплатную<br> оценку </span> на получение <br>визы в США онлайн</h1>
       <div class="formRow">
-        <input class="formInput" type="text" name="" placeholder="Имя">
-        <input class="formInput" type="text" name="" placeholder="Телефон">
+        <input id="name2" name="name" class="formInput" type="text" placeholder="Имя">
+        <input id="phoneNumber2" class="formInput phoneNumber" type="text" placeholder="Телефон">
       </div>
-      <button class="mainButton" >
+      <button class="mainButton" onclick="sendEmail(2, true)">
         Оставить заявку
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
           <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="#0D253D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -861,10 +860,10 @@
       <p class="mobDel">Оставьте заявку</p>
       <h1 class="Title white">Пробная подготовка <br>с <span class="yellow"> визовый экспертом</span> <br>бесплатно</h1>
       <div class="formRow">
-        <input class="formInput" type="text" name="" placeholder="Имя">
-        <input class="formInput" type="text" name="" placeholder="Телефон">
+        <input id="name3" name="name" class="formInput" type="text" placeholder="Имя">
+        <input id="phoneNumber3" class="formInput phoneNumber" type="text" placeholder="Телефон">
       </div>
-      <button class="mainButton">
+      <button class="mainButton" onclick="sendEmail(3, true)">
         Оставить заявку
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
           <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="#0D253D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1081,9 +1080,9 @@
           <h3 class="blue">Остались вопросы?</h3>
           <p>Оставьте заявку, наш специалист перезвонит вам и проконсультирует по всем вопросам.</p>
         </div>
-        <input placeholder="Имя">
-        <input placeholder="Телефон">
-        <button class="mainButton">
+        <input id="name4" name="name" class="formInput" type="text" placeholder="Имя">
+        <input id="phoneNumber4" class="formInput phoneNumber" type="text" placeholder="Телефон">
+        <button class="mainButton" onclick="sendEmail(4, true)">
           <span class="white">
           Оставить заявку
           </span>

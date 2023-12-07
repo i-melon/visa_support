@@ -47,6 +47,10 @@ try {
     $mailSubject = "Visa Support | Обратная связь";
     $mailBody = $_POST['phoneNumber'];
 
+    if (isset($_POST['name'])) {
+        $mailBody .= " " . $_POST['name'];
+    }
+
     // Server settings
     $mail->SMTPDebug = SMTP::DEBUG_OFF;               // Enable verbose debug output
     $mail->isSMTP();                                  // Send using SMTP

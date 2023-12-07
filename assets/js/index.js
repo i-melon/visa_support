@@ -342,14 +342,32 @@ addEventListener("DOMContentLoaded", function () {
     })
     document.getElementById("modalOpen8").addEventListener("click", function () {
         document.getElementById("modalWrapper").style.display= "flex"
-    })
+    });
 
 
-    // Set Phone Mask On Modal Form
+    // Set Phone Mask On Inputs
     IMask(
-        document.getElementById('phoneNumber'),
+        document.getElementById('phoneNumber1'),
+        {
+          mask: '+{7} (700) 000-00-00'
+        }
+    )   
+    IMask(
+        document.getElementById('phoneNumber2'),
         {
           mask: '+{7} (700) 000-00-00'
         }
     )    
+    IMask(
+        document.getElementById('phoneNumber3'),
+        {
+          mask: '+{7} (700) 000-00-00'
+        }
+    )    
+    IMask(
+        document.getElementById('phoneNumber4'),
+        {
+          mask: '+{7} (700) 000-00-00'
+        }
+    )      
 })

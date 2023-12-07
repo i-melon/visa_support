@@ -16,8 +16,9 @@ xhr.addEventListener("loadend", function() {
     document.getElementById("loader-content").classList.remove('loading-content');
 });
 
-function sendEmail(event) {
-    let inputId = 'phoneNumber';
+function sendEmail(number, withName = false) {
+    let nameInputId = 'name' + number;
+    let inputId = 'phoneNumber' + number;
     let inputElement = document.getElementById(inputId);
 
     if (!checkPhoneNumberInputSize(inputElement.value)) {
@@ -25,12 +26,26 @@ function sendEmail(event) {
         return;
     }
 
-    let formData = new FormData();
-    formData.append("phoneNumber", inputElement.value);
+    if (withName) {
+        let nameInputElement = document.getElementById(nameInputId);
+    
+        if (!nameInputElement.value) {
+            alert('Введите имя!');
+            return;
+        }
+    }
+
+    let formData = {"phoneNumber": inputElement.value};
+    
+    if (withName) {
+        let nameInputElement = document.getElementById(nameInputId);
+
+        formData.name = nameInputElement.value;
+    }
 
     xhr.open('POST', getMailerUrl());
     xhr.setRequestHeader('Content-Type', 'application/json');
-    xhr.send(JSON.stringify({"phoneNumber": inputElement.value}));
+    xhr.send(JSON.stringify(formData));
 }
 
 function redirectToThanks() {
