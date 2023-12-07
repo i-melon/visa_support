@@ -2,11 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Visa Support</title>
   <style>
-    @import "./style.css";
-    @import "./overall.css";
-    @import "./media.css";
+    @import "./assets/css/style.css";
+    @import "./assets/css/overall.css";
+    @import "./assets/css/media.css";
+    @import "./assets/css/loader.css";
+
     @font-face {
       font-family: customFont;
       src: url('./assets/fonts/AeonikProTRIAL-Regular.otf');
@@ -20,10 +22,24 @@
       src: url('./assets/fonts/AeonikProTRIAL-Light.otf');
     }
   </style>
-  <script src="./index.js"></script>
+
+  <!-- JS -->
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/email.js"></script>
+
+  <!-- Packages -->
+  <script src="https://unpkg.com/imask"></script>
+
 
 </head>
 <body>
+
+  <!-- Loader -->
+  <section id="loader">
+    <div id="loader-content"></div>
+  </section>
+
+  <!-- Main Page -->
   <div class="global">
     <div class="modalWrapper" id="modalWrapper">
       <div class="modal">
@@ -36,9 +52,10 @@
         <p>Наш специалист свяжется с вами и<br> ответит на все вопросы.</p>
         <div class="modalForm">
           <p>Телефон</p>
-          <input placeholder="+7 (   )" id="emailForm">
+          <input id="phoneNumber" name="phoneNumber" type="text" 
+          placeholder="+7 (700) 000-00-00">
         </div>
-        <button class="mainButton" id="modalButton">Отправить заявку</button>
+        <button class="mainButton" id="modalButton" onclick="sendEmail(event)">Отправить заявку</button>
       </div>
     </div>
     <header>
