@@ -1,4 +1,6 @@
-addEventListener("DOMContentLoaded", function (){
+addEventListener("DOMContentLoaded", function () {
+    var xhr = new XMLHttpRequest();
+
     index = 0;
     toLeft = document.getElementById("toLeft").addEventListener("click", function (){
         if(index>0){
@@ -340,34 +342,32 @@ addEventListener("DOMContentLoaded", function (){
     })
     document.getElementById("modalOpen8").addEventListener("click", function () {
         document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("modalButton").addEventListener("click", function () {
-        sendEmail();
-    })
+    });
 
 
-
-    function sendEmail() {
-        var form = document.getElementById('emailForm');
-        var formData = new FormData(form);
-
-        var xhr = new XMLHttpRequest();
-        xhr.open('POST', './index.php', true);
-
-        xhr.onreadystatechange = function () {
-            if (xhr.readyState === 4 && xhr.status === 200) {
-                // Обработка успешного ответа от сервера
-                console.log(xhr.responseText);
-                alert('Email sent successfully!');
-            } else if (xhr.readyState === 4 && xhr.status !== 200) {
-                // Обработка ошибки
-                console.error('Error sending email.');
-                alert('Error sending email. Please try again later.');
-            }
-        };
-
-        xhr.send(formData);
-    }
-
-    
+    // Set Phone Mask On Inputs
+    IMask(
+        document.getElementById('phoneNumber1'),
+        {
+          mask: '+{7} (700) 000-00-00'
+        }
+    )   
+    IMask(
+        document.getElementById('phoneNumber2'),
+        {
+          mask: '+{7} (700) 000-00-00'
+        }
+    )    
+    IMask(
+        document.getElementById('phoneNumber3'),
+        {
+          mask: '+{7} (700) 000-00-00'
+        }
+    )    
+    IMask(
+        document.getElementById('phoneNumber4'),
+        {
+          mask: '+{7} (700) 000-00-00'
+        }
+    )      
 })
