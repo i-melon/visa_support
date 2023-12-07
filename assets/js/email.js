@@ -61,5 +61,5 @@ function checkPhoneNumberInputSize(phoneNumber) {
 function getMailerUrl() {
     return (location.hostname === "localhost" || location.hostname === "127.0.0.1") ? 
                 "http://127.0.0.1:8000/mailer.php" : 
-                "https://estetika.agency/mailer.php";
+                "https://visa.estetika.agency/mailer.php";
 }
