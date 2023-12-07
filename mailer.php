@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Import PHPMailer classes into the global namespace
  * These must be at the top of your script, not inside a function
@@ -13,6 +12,15 @@ use Dotenv\Dotenv;
  * Load Composer's autoloader
  */
 require 'vendor/autoload.php';
+
+// Dotenv initialization
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
+// Set CORS
+header("Access-Control-Allow-Origin: " . $_ENV['CORS_ORIGIN']);
+header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
+header("Access-Control-Allow-Headers: *");
 
 
 /**
@@ -28,15 +36,6 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
  * Sending Email Request
  */ 
 $_POST = json_decode(file_get_contents("php://input"), true);
-
-// Dotenv initialization
-$dotenv = Dotenv::createImmutable(__DIR__);
-$dotenv->load();
-
-// Set CORS
-header("Access-Control-Allow-Origin: " . $_ENV['CORS_ORIGIN']);
-header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
-header("Access-Control-Allow-Headers: *");
 
 // Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
