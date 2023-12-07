@@ -312,5 +312,62 @@ addEventListener("DOMContentLoaded", function (){
     })
 
 
+
+
+    document.getElementById("closeModal").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "none"
+    })
+    document.getElementById("modalOpen").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen2").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen3").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen4").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen5").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen6").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen7").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen8").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalButton").addEventListener("click", function () {
+        sendEmail();
+    })
+
+
+
+    function sendEmail() {
+        var form = document.getElementById('emailForm');
+        var formData = new FormData(form);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', './index.php', true);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Обработка успешного ответа от сервера
+                console.log(xhr.responseText);
+                alert('Email sent successfully!');
+            } else if (xhr.readyState === 4 && xhr.status !== 200) {
+                // Обработка ошибки
+                console.error('Error sending email.');
+                alert('Error sending email. Please try again later.');
+            }
+        };
+
+        xhr.send(formData);
+    }
+
     
 })

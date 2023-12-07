@@ -1,4 +1,8 @@
-body{background: #F5F7FA; font-family: customFont; margin: 0; padding: 0}
+body{background: #F5F7FA; font-family: customFont; margin: 0; padding: 0; display: flex; flex-direction: column}
+.global{max-width: 1440px;width: 100%; align-self: center}
+
+
+
 header{
     display: flex;
     flex-direction: row;
@@ -237,7 +241,7 @@ header{
     line-height: 32px; /* 114.286% */
     letter-spacing: 0.56px;
     position: absolute;
-    top: 22px;
+    top: 0px;
     right: 36px;
     z-index: 3;
 }
@@ -605,6 +609,7 @@ header{
     line-height: 25px; /* 156.25% */
     letter-spacing: -0.16px;
 }
+.typeButton:hover{background: #1478DC;}
 .typeText{
     color: #0E2D4A;
     font-size: 16px;
@@ -851,6 +856,7 @@ header{
 .contactsForm .mainButton{
     background-color:#2678CB;
 }
+.contactsForm .mainButton:hover{background: #1478DC;}
 
 
 .contactInfo{
@@ -902,6 +908,7 @@ header{
     font-weight: 500;
     line-height: 24px; /* 150% */
 }
+.qnetButton:hover{color: white; background: #0866C5}
 .cHelper{
     color: #0E2D4A;
     font-size: 14px;
@@ -925,4 +932,144 @@ header{
     opacity: 0.5;
     text-align: center;
     margin-top: 24px;
+}
+
+
+.modalWrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 10;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+.modal{
+    display: inline-flex;
+    padding: 72px 48px 56px 48px;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    border-radius: 16px;
+    background: #FFF;
+    position: relative;
+}
+.modalForm{
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+.modal h1{
+    color: #0E2D4A;
+    text-align: center;
+    font-family: customBold;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 32px; /* 100% */
+    letter-spacing: -0.64px;
+    margin: 0;
+}
+.modal p{
+    color: #0E2D4A;
+    text-align: center;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px; /* 137.5% */
+}
+.modal input{
+    display: flex;
+    padding: var(--spacing-l, 16px);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid rgba(158, 158, 158, 0.24);
+    background: #FFF;
+    color: #0E2D4A;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; /* 156.25% */
+    letter-spacing: -0.16px;
+}
+.modal .mainButton{
+    align-self: stretch;
+    width: 100%;
+    justify-content: center;
+}
+#closeModal{
+    display: flex;
+    width: 48px;
+    height: 48px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    border-radius: 32px;
+    background: #F5F7FA;
+    border: none;
+}
+
+
+.thanksBlock{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap:32px;
+}
+.thanksBlock p{
+    color: #0E2D4A;
+    text-align: center;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 25px; /* 125% */
+}
+.thanksBlock .typeButton{
+    align-self: center;
+    gap: 12px;
+}
+.thanksBlock a{
+    text-decoration: none;
+}
+
+
+
+.TitleMobile{display: none}
+.TitleMob{margin-top: 24px; }
+.titleMobRight{
+    color: #0E2D4A;
+    font-family:customBold;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 16px; /* 160% */
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 0;
+    right: 8px;
+}
+.mobBc{display: none}
+.mobBc p{
+    color: #F0CD56;
+    font-family: customBold;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 16px; /* 160% */
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
 }

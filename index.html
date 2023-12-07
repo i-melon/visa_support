@@ -21,9 +21,26 @@
     }
   </style>
   <script src="./index.js"></script>
+
 </head>
 <body>
   <div class="global">
+    <div class="modalWrapper" id="modalWrapper">
+      <div class="modal">
+        <button id="closeModal">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.35638 4.35653C4.71175 4.00115 5.28793 4.00115 5.64331 4.35653L9.99984 8.71306L14.3564 4.35653C14.7118 4.00115 15.2879 4.00115 15.6433 4.35653C15.9987 4.71191 15.9987 5.28809 15.6433 5.64346L11.2868 10L15.6433 14.3565C15.9987 14.7119 15.9987 15.2881 15.6433 15.6435C15.2879 15.9988 14.7118 15.9988 14.3564 15.6435L9.99984 11.2869L5.64331 15.6435C5.28793 15.9988 4.71175 15.9988 4.35638 15.6435C4.001 15.2881 4.001 14.7119 4.35638 14.3565L8.71291 10L4.35638 5.64346C4.001 5.28809 4.001 4.71191 4.35638 4.35653Z" fill="#0E2D4A" fill-opacity="0.53"/>
+          </svg>
+        </button>
+        <h1>Оставить заявку</h1>
+        <p>Наш специалист свяжется с вами и<br> ответит на все вопросы.</p>
+        <div class="modalForm">
+          <p>Телефон</p>
+          <input placeholder="+7 (   )" id="emailForm">
+        </div>
+        <button class="mainButton" id="modalButton">Отправить заявку</button>
+      </div>
+    </div>
     <header>
       <div class="headerLeft">
         <div class="logo">
@@ -31,18 +48,18 @@
           <p class="logoText">Visa<br>Support</p>
         </div>
         <div class="linkRow">
-          <a>Как мы работаем</a>
-          <a>Преимущества</a>
-          <a>Отзывы</a>
-          <a>Контакты</a>
+          <a href="#hawWeWork">Как мы работаем</a>
+          <a href="#pluses">Преимущества</a>
+          <a href="#reviwes">Отзывы</a>
+          <a href="#contacts">Контакты</a>
         </div>
       </div>
       <div class="headerRight">
         <div class="contactsCol">
           <p id="numberText">+7 747 365 55 55</p>
-          <p class="miniText">9:00 - 18:00, без выходных</p>
+          <p class="miniText">9:00 - 19:00, без выходных</p>
         </div>
-        <button class="netButton"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+        <a href="https://wa.me/87473655554"><button class="netButton"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
           <g clip-path="url(#clip0_255_1063)">
             <path d="M14.5893 11.9225L14.5818 11.985C12.7493 11.0717 12.5576 10.95 12.3209 11.305C12.1568 11.5508 11.6784 12.1083 11.5343 12.2733C11.3884 12.4358 11.2434 12.4483 10.9959 12.3358C10.7459 12.2108 9.94345 11.9483 8.99345 11.0983C8.25345 10.4358 7.75678 9.62333 7.61011 9.37333C7.36595 8.95167 7.87678 8.89167 8.34178 8.01167C8.42511 7.83667 8.38261 7.69917 8.32095 7.575C8.25845 7.45 7.76095 6.225 7.55261 5.73667C7.35261 5.25 7.14678 5.31167 6.99261 5.31167C6.51261 5.27 6.16178 5.27667 5.85261 5.59833C4.50761 7.07667 4.84678 8.60167 5.99761 10.2233C8.25928 13.1833 9.46428 13.7283 11.6676 14.485C12.2626 14.6742 12.8051 14.6475 13.2343 14.5858C13.7126 14.51 14.7068 13.985 14.9143 13.3975C15.1268 12.81 15.1268 12.3225 15.0643 12.21C15.0026 12.0975 14.8393 12.035 14.5893 11.9225Z" fill="#0866C5"/>
             <path d="M17.1 2.87416C10.6925 -3.32001 0.0883333 1.17249 0.0841667 9.91083C0.0841667 11.6575 0.541667 13.3608 1.41333 14.865L0 20L5.27917 18.6233C11.8667 22.1817 19.9967 17.4567 20 9.91583C20 7.26916 18.9667 4.77833 17.0875 2.90666L17.1 2.87416ZM18.335 9.88833C18.33 16.2492 11.3475 20.2217 5.825 16.975L5.525 16.7967L2.4 17.6092L3.2375 14.5717L3.03833 14.2592C-0.398333 8.78833 3.55 1.63833 10.06 1.63833C11.1471 1.63559 12.224 1.84851 13.2283 2.26477C14.2326 2.68102 15.1444 3.29233 15.9108 4.06333C16.6815 4.82464 17.2927 5.73183 17.7089 6.73195C18.1251 7.73206 18.338 8.80507 18.335 9.88833Z" fill="#0866C5"/>
@@ -52,8 +69,8 @@
               <rect width="20" height="20" fill="white"/>
             </clipPath>
           </defs>
-        </svg></button>
-        <button class="callButton">
+        </svg></button></a>
+        <button class="callButton" id="modalOpen">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M14.5828 2.5L17.4995 5.41667M17.4995 5.41667L14.5828 8.33333M17.4995 5.41667H10.8328M8.52204 11.5526C7.52072 10.5512 6.73007 9.41904 6.15007 8.21102C6.10018 8.10712 6.07523 8.05516 6.05607 7.98942C5.98797 7.75579 6.03689 7.46891 6.17856 7.27105C6.21843 7.21537 6.26606 7.16774 6.36132 7.07248C6.65266 6.78115 6.79833 6.63548 6.89356 6.48899C7.25273 5.93659 7.25273 5.22443 6.89356 4.67203C6.79833 4.52554 6.65266 4.37988 6.36132 4.08854L6.19893 3.92615C5.75606 3.48328 5.53462 3.26184 5.29681 3.14156C4.82384 2.90233 4.26529 2.90233 3.79232 3.14156C3.5545 3.26184 3.33307 3.48328 2.8902 3.92615L2.75883 4.05751C2.31748 4.49886 2.09681 4.71954 1.92827 5.01956C1.74125 5.35249 1.60678 5.86956 1.60792 6.25141C1.60894 6.59554 1.67569 6.83072 1.8092 7.30109C2.52668 9.82892 3.8804 12.2142 5.87039 14.2042C7.86037 16.1942 10.2457 17.5479 12.7735 18.2654C13.2439 18.3989 13.4791 18.4657 13.8232 18.4667C14.205 18.4678 14.7221 18.3333 15.055 18.1463C15.3551 17.9778 15.5757 17.7571 16.0171 17.3158L16.1484 17.1844C16.5913 16.7415 16.8128 16.5201 16.933 16.2823C17.1723 15.8093 17.1723 15.2508 16.933 14.7778C16.8128 14.54 16.5913 14.3185 16.1484 13.8757L15.9861 13.7133C15.6947 13.4219 15.549 13.2763 15.4026 13.181C14.8502 12.8219 14.138 12.8219 13.5856 13.181C13.4391 13.2763 13.2934 13.4219 13.0021 13.7133C12.9069 13.8085 12.8592 13.8562 12.8035 13.896C12.6057 14.0377 12.3188 14.0866 12.0852 14.0185C12.0194 13.9994 11.9675 13.9744 11.8636 13.9245C10.6556 13.3445 9.52335 12.5539 8.52204 11.5526Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
@@ -66,7 +83,7 @@
       <h1 class="superTitle">Получите визу<br>в США на 10 лет <br>от $550</h1>
       <div class="subTitleBlock">
         <p class="TitleBlockText">Бесплатная онлайн-оценка <br>одобрения визы от специалистов.</p>
-        <button class="mainButton">
+        <button class="mainButton" id="modalOpen2">
           Узнать процент одобрения
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M4.1665 9.99999H15.8332M15.8332 9.99999L9.99984 4.16666M15.8332 9.99999L9.99984 15.8333" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -74,6 +91,28 @@
         </button>
       </div>
       <img class="titleImg" src="./assets/imgs/titleImg.png">
+    </div>
+    <div class="TitleMobile">
+      <div class="TitleMob">
+        <img src="./assets/imgs/titleImg2.png">
+        <div class="TitleMobLeft">
+          <div class="logo">
+            <img id="logoImg2" src="./assets/imgs/logo.png">
+            <p class="logoText">Visa<br>Support</p>
+          </div>
+        </div>
+        <p class="titleMobRight">От лидера рынка в СНГ</p>
+      </div>
+      <h1 class="superTitle">Получите визу<br class="mobDel">в США на 10 лет <br class="mobDel">от $550</h1>
+      <div class="subTitleBlock">
+        <p class="TitleBlockText">Бесплатная онлайн-оценка <br>одобрения визы от специалистов.</p>
+        <button class="mainButton" id="modalOpen8">
+          Узнать процент одобрения
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M4.1665 9.99999H15.8332M15.8332 9.99999L9.99984 4.16666M15.8332 9.99999L9.99984 15.8333" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
     </div>
     <div class="listBlock">
       <p>Вы получите визу даже если:</p>
@@ -148,7 +187,7 @@
     </div>
     <div class="chanceBlock">
       <img src="./assets/imgs/chance.png">
-      <h1 class="Title">Увеличьте шансы на<br> получение визы с помощью <br> <span class="blue">экс-консулов</span> США</h1>
+      <h1 class="Title">Увеличьте шансы на<br class="mobDel"> получение визы с помощью <br class="mobDel"> <span class="blue">экс-консулов</span> США</h1>
       <p>Только в нашей компании экспертов<br> курируют экс-консулы США, что сильно<br> повышает шансы на успех в получении визы.</p>
       <div class="chanceRow">
         <div class="chanceItem">
@@ -340,9 +379,10 @@
         </div>
       </div>
     </div>
+    <a name="hawWeWork"></a>
     <div class="upradeBlock">
       <div class="upgradeLeft">
-        <h1 class="Title white">Как мы<br> <span class="yellow">увеличиваем<br> шансы</span> на<br> получение<br> визы</h1>
+        <h1 class="Title white">Как мы<br class="mobDel"> <span class="yellow">увеличиваем<br class="mobDel"> шансы</span> на<br> получение<br class="mobDel"> визы</h1>
         <p>до<br><span class="big">+92%</span> </p>
       </div>
       <div class="upgradeRight">
@@ -462,10 +502,11 @@
       </div>
       <img src="./assets/imgs/Component4.png">
     </div>
+    <a name="pluses"></a>
     <div class="prepareBlock">
       <img class="bcimg" src="./assets/imgs/chance.png">
       <div class="prepareLeft">
-        <h1 class="Title">5 часов<br> подготовки <br>и <span class="yellow">покупайте<br> билеты</span> <br>в США</h1>
+        <h1 class="Title">5 часов<br class="mobDel"> подготовки <br class="mobDel">и <span class="yellow">покупайте<br class="mobDel"> билеты</span> <br class="mobDel">в США</h1>
         <div class="ButtonRow">
           <button class="arrowButton" id="toLeft2">
             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
@@ -498,14 +539,18 @@
       </div>
     </div>
     <div class="formBlock">
-      <img src="./assets/imgs/formImg.png">
-      <p>Оставьте заявку</p>
+      <div class="mobBc">
+        <img src="assets/imgs/mobForm.png">
+        <p>Оставьте заявку</p>
+      </div>
+      <img class="mobDel" src="./assets/imgs/formImg.png">
+      <p class="mobDel">Оставьте заявку</p>
       <h1 class="Title white">Получите <span class="yellow">бесплатную<br> оценку </span> на получение <br>визы в США онлайн</h1>
       <div class="formRow">
         <input class="formInput" type="text" name="" placeholder="Имя">
         <input class="formInput" type="text" name="" placeholder="Телефон">
       </div>
-      <button class="mainButton">
+      <button class="mainButton" >
         Оставить заявку
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
           <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="#0D253D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
@@ -514,8 +559,8 @@
       <p class="formRec">НАЖИМАЯ НАКНОПКУ «ОТПРАВИТЬ ЗАЯВКУ»,<br> ВЫПРИНИМАЕТЕ УСЛОВИЯ ОБРАБОТКИ<br> ПЕРСОНАЛЬНЫХ ДАННЫХ</p>
     </div>
     <div class="typesBlock">
-      <h1 class="Title">Какие <span class="blue">виды виз</span> в США<br>вы можете получить</h1>
-      <div class="typesRow">
+      <h1 class="Title">Какие <span class="blue">виды виз</span> в США<br class="mobDel">вы можете получить</h1>
+      <div class="typesRow mobDel">
         <div class="typeItem">
           <div class="blueBall">
             <div class="mask">
@@ -526,7 +571,7 @@
             <h2>Деловая</h2>
             <p>Предназначена для тех, кто собирается посещать страну с деловыми целями, такими как участие в конференциях, предпринимательская деятельность и тд.</p>
           </div>
-          <button class="typeButton">Получить визу
+          <button class="typeButton" id="modalOpen3">Получить визу
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
               <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -542,7 +587,7 @@
             <h2>Студентческая</h2>
             <p>Студенческая виза в США предоставляет возможность иностранным студентам учиться в американских образовательных учреждениях.</p>
           </div>
-          <button class="typeButton">Получить визу
+          <button class="typeButton" id="modalOpen4">Получить визу
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
               <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -558,7 +603,7 @@
             <h2>Туристическая</h2>
             <p>Для планирующих посетить страну с целью отдыха, туризма или посещения друзей и родственников.</p>
           </div>
-          <button class="typeButton">Получить визу
+          <button class="typeButton" id="modalOpen5">Получить визу
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
               <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -574,7 +619,7 @@
             <h2>Иммиграция в США</h2>
             <p>Для тех кто не хочет разбираться в типе виз и хочет как можно скорее иммигрировать в США по любой визе.</p>
           </div>
-          <button class="typeButton">Получить визу
+          <button class="typeButton" id="modalOpen6">Получить визу
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
               <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
@@ -583,7 +628,7 @@
       </div>
     </div>
     <div class="beliveBlock">
-      <img src="./assets/imgs/chance.png">
+      <img src="./assets/imgs/chance.png" class="mobDel">
       <div class="beliveContent">
         <h1 class="Title">Доверьтесь<br><span class="blue">профессионалам</span> </h1>
         <div class="beliveGrid">
@@ -728,6 +773,7 @@
         </div>
       </div>
     </div>
+    <a name="reviwes"></a>
     <div class="reviewBlock">
       <div class="reviewController">
         <h1 class="Title"><span class="yellow"> Отзывы</span> <br>наших клиентов</h1>
@@ -790,8 +836,12 @@
       </div>
     </div>
     <div class="formBlock">
-      <img src="./assets/imgs/form2.png">
-      <p>Оставьте заявку</p>
+      <div class="mobBc">
+        <img src="assets/imgs/mobBc2.png">
+        <p>Оставьте заявку</p>
+      </div>
+      <img class="mobDel" src="./assets/imgs/form2.png">
+      <p class="mobDel">Оставьте заявку</p>
       <h1 class="Title white">Пробная подготовка <br>с <span class="yellow"> визовый экспертом</span> <br>бесплатно</h1>
       <div class="formRow">
         <input class="formInput" type="text" name="" placeholder="Имя">
@@ -1006,6 +1056,7 @@
         </div>
       </div>
     </div>
+    <a name="contacts"></a>
     <div class="contactBlock">
       <img class="bgImg" src="./assets/imgs/chance.png">
       <div class="contactsForm">
@@ -1029,26 +1080,26 @@
           <p class="cHelper">Телефон:</p>
           <p class="bigText">+7 747 365 55 55</p>
           <div class="oneRow">
-            <button class="callButton">
+            <button class="callButton" id="modalOpen7">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <path d="M14.5828 2.5L17.4995 5.41667M17.4995 5.41667L14.5828 8.33333M17.4995 5.41667H10.8328M8.52204 11.5526C7.52072 10.5512 6.73007 9.41904 6.15007 8.21102C6.10018 8.10712 6.07523 8.05516 6.05607 7.98942C5.98797 7.75579 6.03689 7.46891 6.17856 7.27105C6.21843 7.21537 6.26606 7.16774 6.36132 7.07248C6.65266 6.78115 6.79833 6.63548 6.89356 6.48899C7.25273 5.93659 7.25273 5.22443 6.89356 4.67203C6.79833 4.52554 6.65266 4.37988 6.36132 4.08854L6.19893 3.92615C5.75606 3.48328 5.53462 3.26184 5.29681 3.14156C4.82384 2.90233 4.26529 2.90233 3.79232 3.14156C3.5545 3.26184 3.33307 3.48328 2.8902 3.92615L2.75883 4.05751C2.31748 4.49886 2.09681 4.71954 1.92827 5.01956C1.74125 5.35249 1.60678 5.86956 1.60792 6.25141C1.60894 6.59554 1.67569 6.83072 1.8092 7.30109C2.52668 9.82892 3.8804 12.2142 5.87039 14.2042C7.86037 16.1942 10.2457 17.5479 12.7735 18.2654C13.2439 18.3989 13.4791 18.4657 13.8232 18.4667C14.205 18.4678 14.7221 18.3333 15.055 18.1463C15.3551 17.9778 15.5757 17.7571 16.0171 17.3158L16.1484 17.1844C16.5913 16.7415 16.8128 16.5201 16.933 16.2823C17.1723 15.8093 17.1723 15.2508 16.933 14.7778C16.8128 14.54 16.5913 14.3185 16.1484 13.8757L15.9861 13.7133C15.6947 13.4219 15.549 13.2763 15.4026 13.181C14.8502 12.8219 14.138 12.8219 13.5856 13.181C13.4391 13.2763 13.2934 13.4219 13.0021 13.7133C12.9069 13.8085 12.8592 13.8562 12.8035 13.896C12.6057 14.0377 12.3188 14.0866 12.0852 14.0185C12.0194 13.9994 11.9675 13.9744 11.8636 13.9245C10.6556 13.3445 9.52335 12.5539 8.52204 11.5526Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
               Заказать звонок
             </button>
-            <p class="miniText">График работы:<br>9:00 - 18:00, без выходных</p>
+            <p class="miniText">График работы:<br class="mobDel"> 9:00 - 19:00, без выходных</p>
           </div>
         </div>
         <div class="contactTwo">
           <p class="cHelper">Адрес:</p>
           <p class="spec">Алматы, ул. Оспанова 86, офис 15</p>
-          <button class="qnetButton">Построить маршрут в 2GIS</button>
+          <a href="https://2gis.kz/almaty/firm/70000001038950153"><button class="qnetButton">Построить маршрут в 2GIS</button></a>
         </div>
         <div class="contactTwo">
           <p class="cHelper">Написать нам:</p>
           <p class="spec">hello@visasupport.kz</p>
           <div class="oneRow">
-            <button class="qnetButton">Instagram</button>
-            <button class="qnetButton">WhatsApp</button>
+            <a href="https://instagram.com/visa.support.usa?igshid=MmVlMjlkMTBhMg=="><button class="qnetButton">Instagram</button></a>
+            <a href="https://wa.me/87473655554"><button class="qnetButton">WhatsApp</button></a>
           </div>
         </div>
       </div>

@@ -1,0 +1,91 @@
+@media (max-width: 1150px) {
+    .linkRow{display: none}
+    .titleImg{width: 680px}
+    .TitleBlock .superTitle{font-size: 59px; line-height: 61px}
+    .TitleBlock{height: 480px}
+    .chanceItem{width: 270px; height: 320px}
+    .formBlock img{width: 680px; height: 480px;}
+    .Title{font-size: 48px; line-height: 50px}
+    .formInput{width: 240px}
+    .formRow{margin-top: 12px;margin-bottom: 12px}
+    .formBlock p{margin-bottom: 12px}
+    .mainButton{padding: 8px 12px; height: 50px}
+    .typesRow{display: grid; grid-template-columns: 1fr 1fr; row-gap: 60px }
+    .contactsForm{padding: 32px 20px}
+}
+@media (max-width: 1001px) {
+    .linkRow{display: none}
+    .titleImg{width: 580px}
+    .TitleBlockText{font-size: 18px; line-height: 20px}
+    .TitleBlock .superTitle{font-size: 49px; line-height: 51px}
+    .TitleBlock{height: 420px}
+    .listItem p{font-size: 16px; line-height: 18px}
+    .chanceItem{width: 230px; height: 280px}
+    .formBlock img{width: 580px; height: 480px;}
+    .Title{font-size: 48px; line-height: 50px}
+    .formInput{width: 200px}
+    .formRow{margin-top: 12px;margin-bottom: 12px}
+    .formBlock p{margin-bottom: 12px}
+    .mainButton{padding: 8px 12px; height: 50px; width: 280px; font-size: 16px}
+    .contactsForm{padding: 32px 20px}
+    .contactsForm .mainButton{width: 242px}
+}
+@media screen and (max-width: 780px) {
+    header{margin: 12px 20px}
+    .TitleBlock{display: none}
+    .headerLeft{display: none}
+    header{justify-content: end}
+    .contactsCol{justify-self: start}
+    .headerRight{width: 100%; justify-content: space-between}
+    .TitleMob{position: relative; }
+    .TitleMobile{display: flex; flex-direction: column}
+    .TitleMobile img{width: 100%;}
+    .TitleMobLeft{position: absolute; top: 0; left: 0; width: 148px}
+    .superTitle{font-size: 36px; line-height: 37px; margin:20px 24px 20px 24px}
+    .subTitleBlock{margin: 0px 20px}
+    .listBlock{margin: 8px 20px}
+    .listRow{display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 24px}
+    .Title{font-size: 36px; line-height: 36px}
+    .chanceBlock{padding: 20px; border-radius: 20px 20px 0px 0px}
+    .chanceBlock p{font-size: 18px; line-height: 24px}
+    .chanceRow{flex-direction: column; align-items: stretch; gap: 12px; margin-bottom: 0}
+    .chanceItem{width: 90%}
+    .cantController{margin: 20px}
+    .cantWrapper{margin-left: 20px; margin-top: 20px}
+    .cantSlider{padding-bottom: 24px}
+    .upradeBlock{padding: 24px 20px 124px 20px; flex-direction: column; align-items: stretch; border-radius: 20px 20px 0px 0px}
+    .upgradeLeft{justify-content: start;gap: 12px}
+    .mobDel{display: none}
+    .upgradeRight{margin-top: 12px; align-items: stretch; width: 100%}
+    .prepareBlock{padding: 24px 0px 100px 20px;border-radius: 20px 20px 0px 0px; flex-direction: column}
+    .prepareLeft{margin: 0}
+    .mobBc img{width: 100%; height: unset;  position: relative}
+    .formBlock{padding: 0; border-radius: 30px}
+    .mobBc{position: relative; display: flex}
+    .mobBc p{position: absolute; bottom: 0px; left: 20px; margin: 0}
+    .formBlock h1{margin: 12px 20px 12px 20px}
+    .formRow{margin: 0px 20px 0px 20px; flex-direction: column ; align-items: stretch}
+    .formInput{align-self: stretch; width: 80%}
+    .formBlock .mainButton{margin: 12px 20px 12px 20px; width: 80%}
+    .formRec{margin: 8px 20px 20px 20px}
+    .typesBlock{padding: 24px 20px 74px 20px}
+    .beliveBlock{padding: 24px 20px 74px 20px; background-color: white}
+    .beliveGrid{display: flex; flex-direction: column; gap: 32px}
+    .beliveItem{display: flex;flex-direction: row; align-items: center; gap: 12px}
+    .beliveItem p{margin: 0}
+    .reviewController{margin: 24px 20px 74px 20px}
+    .reviewSlider{margin: 20px}
+    .questionBlock{padding: 24px 20px 74px 20px}
+    .question h2{font-size: 16px; line-height: 20px}
+    .question p{font-size: 14px; line-height: 20px}
+    .contactBlock{padding: 24px 20px 20px 20px}
+    .contactsForm{flex-direction: column; align-items: stretch; gap:20px}
+    .contactText h3{margin: 0; margin-bottom: 12px}
+    .contactsForm .mainButton{width: 100%}
+    .contactsForm input{align-self: stretch}
+    .contactInfo{flex-direction: column; gap: 34px}
+    .oneRow{flex-direction: column; align-self: stretch; gap: 20px; align-items: stretch}
+    .callButton{width: 100%; justify-content: center}
+    .contactTwo{gap: 12px; align-items: stretch}
+    .qnetButton{width: 100%; justify-content: center}
+}

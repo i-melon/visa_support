@@ -22,6 +22,7 @@ a{
     font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 150% */
+    text-decoration: none;
 }
 a:hover{color: #1478DC;}
 .netButton{
@@ -34,6 +35,7 @@ a:hover{color: #1478DC;}
     border: 1px solid rgba(9, 102, 194, 0.40);
     background: #FFF;
 }
+.netButton:hover{background: #1478DC;}
 .callButton{
     display: flex;
     padding: var(--spacing-m, 12px) var(--spacing-l, 16px);
@@ -49,6 +51,7 @@ a:hover{color: #1478DC;}
     font-weight: 500;
     line-height: 24px; /* 150% */
 }
+.callButton:hover{background: #1478DC;}
 .miniText{
     color: #0E2D4A;
     font-family: customLight;
@@ -77,6 +80,7 @@ a:hover{color: #1478DC;}
     letter-spacing: -0.18px;
     border: none;
 }
+.mainButton:hover{background: #FFE17A;}
 .arrowButton{
     display: flex;
     width: 64px;
@@ -88,6 +92,7 @@ a:hover{color: #1478DC;}
     background: #F0CD56;
     border: none;
 }
+.arrowButton:hover{background: #FFE17A;}
 
 
 
