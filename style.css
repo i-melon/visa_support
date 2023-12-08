@@ -91,7 +91,7 @@ header{
 }
 #marketText{
     color: #0E2D4A;
-    font-family: Druk Wide Cyr;
+    font-family: secondFont;
     font-size: 13px;
     font-style: italic;
     font-weight: 500;
@@ -234,7 +234,7 @@ header{
 .topRow p{
     color: #FFF;
     text-align: center;
-    font-family: customBold;
+    font-family: secondFont;
     font-size: 28px;
     font-style: italic;
     font-weight: 500;
@@ -242,7 +242,7 @@ header{
     letter-spacing: 0.56px;
     position: absolute;
     top: 0px;
-    right: 36px;
+    right: 23px;
     z-index: 3;
 }
 .chanceBlock img{
@@ -341,6 +341,7 @@ header{
 .upradeBlock p{
     color: #F0CD56;
     font-size: 24px;
+    font-family: secondFont;
     font-style: italic;
     font-weight: 500;
     line-height: 24px; /* 100% */
@@ -501,10 +502,19 @@ header{
     height: 631px;
     flex-shrink: 0;
 }
+.second{
+    color: #FFF;
+    font-family: secondFont;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 24px; /* 200% */
+    letter-spacing: 0.48px;
+    text-transform: uppercase;
+}
 .formBlock p{
     color: #FFF;
     font-size: 12px;
-    font-style: italic;
     font-weight: 500;
     line-height: 24px; /* 200% */
     letter-spacing: 0.48px;
@@ -1073,3 +1083,4 @@ header{
     letter-spacing: 0.3px;
     text-transform: uppercase;
 }
+
