@@ -584,25 +584,25 @@ addEventListener("DOMContentLoaded", function () {
     IMask(
         document.getElementById('phoneNumber1'),
         {
-          mask: '+{7} (700) 000-00-00'
+            mask: '+{7} (700) 000-00-00'
         }
-    )   
+    )
     IMask(
         document.getElementById('phoneNumber2'),
         {
-          mask: '+{7} (700) 000-00-00'
+            mask: '+{7} (700) 000-00-00'
         }
-    )    
+    )
     IMask(
         document.getElementById('phoneNumber3'),
         {
-          mask: '+{7} (700) 000-00-00'
+            mask: '+{7} (700) 000-00-00'
         }
-    )    
+    )
     IMask(
         document.getElementById('phoneNumber4'),
         {
-          mask: '+{7} (700) 000-00-00'
+            mask: '+{7} (700) 000-00-00'
         }
-    )      
+    )
 })
