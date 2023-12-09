@@ -32,11 +32,13 @@
 }
 @media screen and (max-width: 780px) {
     header{margin: 12px 20px}
+    #modalOpen{width: unset}
     .TitleBlock{display: none}
     .headerLeft{display: none}
     header{justify-content: end}
     .contactsCol{justify-self: start}
     .headerRight{width: 100%; justify-content: space-between}
+    #modalOpen8{align-self: stretch; width: unset}
     .TitleMob{position: relative; }
     .TitleMobile{display: flex; flex-direction: column}
     .TitleMobile img{width: 100%;}
@@ -45,16 +47,18 @@
     .subTitleBlock{margin: 0px 20px}
     .listBlock{margin: 8px 20px}
     .listRow{display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 24px}
+    .listItem{display: flex; flex-direction: column; gap: 20px}
     .Title{font-size: 36px; line-height: 36px}
     .chanceBlock{padding: 20px; border-radius: 20px 20px 0px 0px}
     .chanceBlock p{font-size: 18px; line-height: 24px}
     .chanceRow{flex-direction: column; align-items: stretch; gap: 12px; margin-bottom: 0}
-    .chanceItem{width: 90%}
+    .chanceItem{align-self: stretch; width: unset}
     .cantController{margin: 20px}
     .cantWrapper{margin-left: 20px; margin-top: 20px}
     .cantSlider{padding-bottom: 24px}
+    .cantItem{width: 100%}
     .upradeBlock{padding: 24px 20px 124px 20px; flex-direction: column; align-items: stretch; border-radius: 20px 20px 0px 0px}
-    .upgradeLeft{justify-content: start;gap: 12px}
+    .upgradeLeft{justify-content: start;gap: 20px; margin-bottom: 20px}
     .mobDel{display: none}
     .upgradeRight{margin-top: 12px; align-items: stretch; width: 100%}
     .prepareBlock{padding: 24px 0px 100px 20px;border-radius: 20px 20px 0px 0px; flex-direction: column}
@@ -65,16 +69,22 @@
     .mobBc p{position: absolute; bottom: 0px; left: 20px; margin: 0}
     .formBlock h1{margin: 12px 20px 12px 20px}
     .formRow{margin: 0px 20px 0px 20px; flex-direction: column ; align-items: stretch}
-    .formInput{align-self: stretch; width: 80%}
-    .formBlock .mainButton{margin: 12px 20px 12px 20px; width: 80%}
-    .formRec{margin: 8px 20px 20px 20px}
+    .formInput{align-self: stretch; width: unset}
+    .formBlock .mainButton{margin: 12px 20px 12px 20px; width: unset}
+    .formRec{margin: 8px 20px 70px 20px}
+    .formRght{position: unset; top: unset; left: unset; margin-top: 20px; display: flex; flex-direction:column; gap: 12px}
+    .formBlock{flex-direction: column}
     .typesBlock{padding: 24px 20px 74px 20px}
+    .typesRow{display: none; flex-direction: column; align-items: center; }
+    .typeItem{margin: 70px auto 40px auto}
     .beliveBlock{padding: 24px 20px 74px 20px; background-color: white}
     .beliveGrid{display: flex; flex-direction: column; gap: 32px}
-    .beliveItem{display: flex;flex-direction: row; align-items: center; gap: 12px}
-    .beliveItem p{margin: 0}
+    .beliveItem{display: flex;flex-direction: row; align-items: center; gap: 20px; }
+    .beliveItem p{margin: 0;text-align: start}
     .reviewController{margin: 24px 20px 74px 20px}
     .reviewSlider{margin: 20px}
+    .reviewItem{width: auto; margin: 0 20px 0 20px}
+    .reviewButton{position: relative; top: unset; left: unset}
     .questionBlock{padding: 24px 20px 74px 20px}
     .question h2{font-size: 16px; line-height: 20px}
     .question p{font-size: 14px; line-height: 20px}
@@ -82,10 +92,16 @@
     .contactsForm{flex-direction: column; align-items: stretch; gap:20px}
     .contactText h3{margin: 0; margin-bottom: 12px}
     .contactsForm .mainButton{width: 100%}
-    .contactsForm input{align-self: stretch}
+    .contactsForm input{align-self: stretch; width: unset}
     .contactInfo{flex-direction: column; gap: 34px}
     .oneRow{flex-direction: column; align-self: stretch; gap: 20px; align-items: stretch}
     .callButton{width: 100%; justify-content: center}
     .contactTwo{gap: 12px; align-items: stretch}
     .qnetButton{width: 100%; justify-content: center}
+    .cantItem{margin: 20px; width: auto}
+    .desDel{display: flex}
+    .modal1 video{width: 70%}
+}
+.owl-item active{
+    width: 300px;
 }

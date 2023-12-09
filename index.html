@@ -2,11 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <title>Visa Support</title>
   <style>
-    @import "./style.css";
-    @import "./overall.css";
-    @import "./media.css";
+    @import "./assets/css/style.css";
+    @import "./assets/css/overall.css";
+    @import "./assets/css/media.css";
+    @import "./assets/css/loader.css";
+    @import "./assets/css/owl.carousel.min.css";
+    @import "./assets/css/owl.theme.default.min.css";
     @font-face {
       font-family: customFont;
       src: url('./assets/fonts/AeonikPro-Medium.ttf');
@@ -24,45 +28,99 @@
       src: url('./assets/fonts/Druk Wide Cyr Medium Italic.ttf');
     }
   </style>
-  <script src="./index.js"></script>
+
+  <!-- JS -->
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/email.js"></script>
+
+<!--  &lt;!&ndash; Packages &ndash;&gt;-->
+<!--  <script src="https://unpkg.com/imask"></script>-->
+
 
 </head>
 <body>
-  <div class="global">
-    <div class="modalWrapper" id="modalWrapper">
-      <div class="modal">
-        <button id="closeModal">
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.35638 4.35653C4.71175 4.00115 5.28793 4.00115 5.64331 4.35653L9.99984 8.71306L14.3564 4.35653C14.7118 4.00115 15.2879 4.00115 15.6433 4.35653C15.9987 4.71191 15.9987 5.28809 15.6433 5.64346L11.2868 10L15.6433 14.3565C15.9987 14.7119 15.9987 15.2881 15.6433 15.6435C15.2879 15.9988 14.7118 15.9988 14.3564 15.6435L9.99984 11.2869L5.64331 15.6435C5.28793 15.9988 4.71175 15.9988 4.35638 15.6435C4.001 15.2881 4.001 14.7119 4.35638 14.3565L8.71291 10L4.35638 5.64346C4.001 5.28809 4.001 4.71191 4.35638 4.35653Z" fill="#0E2D4A" fill-opacity="0.53"/>
-          </svg>
-        </button>
-        <h1>Оставить заявку</h1>
-        <p>Наш специалист свяжется с вами и<br> ответит на все вопросы.</p>
-        <div class="modalForm">
-          <p>Телефон</p>
-          <input placeholder="+7 (   )" id="emailForm">
-        </div>
-        <button class="mainButton" id="modalButton">Отправить заявку</button>
+
+  <!-- Loader -->
+  <section id="loader">
+    <div id="loader-content"></div>
+  </section>
+
+  <!-- Main Page -->
+  <div id="videoModal" class="modal1">
+    <span class="close" id="closeModalBtn">&times;</span>
+    <video id="modalVideo" controls>
+      <source src="./assets/video/Buanesh_target1.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div id="videoModal2" class="modal1">
+    <span class="close" id="closeModalBtn2">&times;</span>
+    <video id="modalVideo2" controls>
+      <source src="./assets/video/Marat Target.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div id="videoModal3" class="modal1">
+    <span class="close" id="closeModalBtn3">&times;</span>
+    <video id="modalVideo3" controls>
+      <source src="./assets/video/Nurlutan_main.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div id="videoModal4" class="modal1">
+    <span class="close" id="closeModalBtn4">&times;</span>
+    <video id="modalVideo4" controls>
+      <source src="./assets/video/Target.mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  <div id="videoModal5" class="modal1">
+    <span class="close" id="closeModalBtn5">&times;</span>
+    <video id="modalVideo5" controls>
+      <source src="./assets/video/Video 1  (1).mov" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+
+
+
+
+  <div class="modalWrapper" id="modalWrapper">
+    <div class="modal">
+      <button id="closeModal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path fill-rule="evenodd" clip-rule="evenodd" d="M4.35638 4.35653C4.71175 4.00115 5.28793 4.00115 5.64331 4.35653L9.99984 8.71306L14.3564 4.35653C14.7118 4.00115 15.2879 4.00115 15.6433 4.35653C15.9987 4.71191 15.9987 5.28809 15.6433 5.64346L11.2868 10L15.6433 14.3565C15.9987 14.7119 15.9987 15.2881 15.6433 15.6435C15.2879 15.9988 14.7118 15.9988 14.3564 15.6435L9.99984 11.2869L5.64331 15.6435C5.28793 15.9988 4.71175 15.9988 4.35638 15.6435C4.001 15.2881 4.001 14.7119 4.35638 14.3565L8.71291 10L4.35638 5.64346C4.001 5.28809 4.001 4.71191 4.35638 4.35653Z" fill="#0E2D4A" fill-opacity="0.53"/>
+        </svg>
+      </button>
+      <h1>Оставить заявку</h1>
+      <p>Наш специалист свяжется с вами и<br> ответит на все вопросы.</p>
+      <div class="modalForm">
+        <p>Телефон</p>
+        <input id="phoneNumber1" name="phoneNumber" type="text" placeholder="+7 (700) 000-00-00">
+      </div>
+      <button class="mainButton" id="modalButton" onclick="sendEmail(1)">Отправить заявку</button>
+    </div>
+  </div>
+  <header>
+    <div class="headerLeft">
+      <div class="logo">
+        <img id="logoImg" src="./assets/imgs/logo.png">
+        <p class="logoText">Visa<br>Support</p>
+      </div>
+      <div class="linkRow">
+        <a href="#hawWeWork">Как мы работаем</a>
+        <a href="#pluses">Преимущества</a>
+        <a href="#reviwes">Отзывы</a>
+        <a href="#contacts">Контакты</a>
       </div>
     </div>
-    <header>
-      <div class="headerLeft">
-        <div class="logo">
-          <img id="logoImg" src="./assets/imgs/logo.png">
-          <p class="logoText">Visa<br>Support</p>
-        </div>
-        <div class="linkRow">
-          <a href="#hawWeWork">Как мы работаем</a>
-          <a href="#pluses">Преимущества</a>
-          <a href="#reviwes">Отзывы</a>
-          <a href="#contacts">Контакты</a>
-        </div>
+    <div class="headerRight">
+      <div class="contactsCol">
+        <p id="numberText">+7 747 365 55 55</p>
+        <p class="miniText">9:00 - 19:00, без выходных</p>
       </div>
-      <div class="headerRight">
-        <div class="contactsCol">
-          <p id="numberText">+7 747 365 55 55</p>
-          <p class="miniText">9:00 - 19:00, без выходных</p>
-        </div>
+      <div class="headerButtonRow">
         <a href="https://wa.me/87473655554"><button class="netButton"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
           <g clip-path="url(#clip0_255_1063)">
             <path d="M14.5893 11.9225L14.5818 11.985C12.7493 11.0717 12.5576 10.95 12.3209 11.305C12.1568 11.5508 11.6784 12.1083 11.5343 12.2733C11.3884 12.4358 11.2434 12.4483 10.9959 12.3358C10.7459 12.2108 9.94345 11.9483 8.99345 11.0983C8.25345 10.4358 7.75678 9.62333 7.61011 9.37333C7.36595 8.95167 7.87678 8.89167 8.34178 8.01167C8.42511 7.83667 8.38261 7.69917 8.32095 7.575C8.25845 7.45 7.76095 6.225 7.55261 5.73667C7.35261 5.25 7.14678 5.31167 6.99261 5.31167C6.51261 5.27 6.16178 5.27667 5.85261 5.59833C4.50761 7.07667 4.84678 8.60167 5.99761 10.2233C8.25928 13.1833 9.46428 13.7283 11.6676 14.485C12.2626 14.6742 12.8051 14.6475 13.2343 14.5858C13.7126 14.51 14.7068 13.985 14.9143 13.3975C15.1268 12.81 15.1268 12.3225 15.0643 12.21C15.0026 12.0975 14.8393 12.035 14.5893 11.9225Z" fill="#0866C5"/>
@@ -78,11 +136,13 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
             <path d="M14.5828 2.5L17.4995 5.41667M17.4995 5.41667L14.5828 8.33333M17.4995 5.41667H10.8328M8.52204 11.5526C7.52072 10.5512 6.73007 9.41904 6.15007 8.21102C6.10018 8.10712 6.07523 8.05516 6.05607 7.98942C5.98797 7.75579 6.03689 7.46891 6.17856 7.27105C6.21843 7.21537 6.26606 7.16774 6.36132 7.07248C6.65266 6.78115 6.79833 6.63548 6.89356 6.48899C7.25273 5.93659 7.25273 5.22443 6.89356 4.67203C6.79833 4.52554 6.65266 4.37988 6.36132 4.08854L6.19893 3.92615C5.75606 3.48328 5.53462 3.26184 5.29681 3.14156C4.82384 2.90233 4.26529 2.90233 3.79232 3.14156C3.5545 3.26184 3.33307 3.48328 2.8902 3.92615L2.75883 4.05751C2.31748 4.49886 2.09681 4.71954 1.92827 5.01956C1.74125 5.35249 1.60678 5.86956 1.60792 6.25141C1.60894 6.59554 1.67569 6.83072 1.8092 7.30109C2.52668 9.82892 3.8804 12.2142 5.87039 14.2042C7.86037 16.1942 10.2457 17.5479 12.7735 18.2654C13.2439 18.3989 13.4791 18.4657 13.8232 18.4667C14.205 18.4678 14.7221 18.3333 15.055 18.1463C15.3551 17.9778 15.5757 17.7571 16.0171 17.3158L16.1484 17.1844C16.5913 16.7415 16.8128 16.5201 16.933 16.2823C17.1723 15.8093 17.1723 15.2508 16.933 14.7778C16.8128 14.54 16.5913 14.3185 16.1484 13.8757L15.9861 13.7133C15.6947 13.4219 15.549 13.2763 15.4026 13.181C14.8502 12.8219 14.138 12.8219 13.5856 13.181C13.4391 13.2763 13.2934 13.4219 13.0021 13.7133C12.9069 13.8085 12.8592 13.8562 12.8035 13.896C12.6057 14.0377 12.3188 14.0866 12.0852 14.0185C12.0194 13.9994 11.9675 13.9744 11.8636 13.9245C10.6556 13.3445 9.52335 12.5539 8.52204 11.5526Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-          Заказать звонок
+          <span class="mobDel">Заказать звонок</span>
         </button>
       </div>
-    </header>
-    <div class="TitleBlock">
+    </div>
+  </header>
+  <div class="TitleBlock">
+    <div class="TitleLeft">
       <p id="marketText">От лидера рынка в СНГ</p>
       <h1 class="superTitle">Получите визу<br>в США на 10 лет <br>от $550</h1>
       <div class="subTitleBlock">
@@ -94,227 +154,298 @@
           </svg>
         </button>
       </div>
-      <img class="titleImg" src="./assets/imgs/titleImg.png">
     </div>
-    <div class="TitleMobile">
-      <div class="TitleMob">
-        <img src="./assets/imgs/titleImg2.png">
-        <div class="TitleMobLeft">
-          <div class="logo">
-            <img id="logoImg2" src="./assets/imgs/logo.png">
-            <p class="logoText">Visa<br>Support</p>
-          </div>
+    <img class="titleImg" src="./assets/imgs/titleImg.png">
+  </div>
+  <div class="TitleMobile">
+    <div class="TitleMob">
+      <img src="./assets/imgs/titleImg2.png">
+      <div class="TitleMobLeft">
+        <div class="logo">
+          <img id="logoImg2" src="./assets/imgs/logo.png">
+          <p class="logoText">Visa<br>Support</p>
         </div>
-        <p class="titleMobRight">От лидера рынка в СНГ</p>
       </div>
-      <h1 class="superTitle">Получите визу<br class="mobDel">в США на 10 лет <br class="mobDel">от $550</h1>
-      <div class="subTitleBlock">
-        <p class="TitleBlockText">Бесплатная онлайн-оценка <br>одобрения визы от специалистов.</p>
-        <button class="mainButton" id="modalOpen8">
-          Узнать процент одобрения
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-            <path d="M4.1665 9.99999H15.8332M15.8332 9.99999L9.99984 4.16666M15.8332 9.99999L9.99984 15.8333" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      <p class="titleMobRight">От лидера рынка в СНГ</p>
+    </div>
+    <h1 class="superTitle">Получите визу<br class="mobDel">в США на 10 лет <br class="mobDel">от $550</h1>
+    <div class="subTitleBlock">
+      <p class="TitleBlockText">Бесплатная онлайн-оценка <br>одобрения визы от специалистов.</p>
+      <button class="mainButton" id="modalOpen8">
+        Узнать процент одобрения
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M4.1665 9.99999H15.8332M15.8332 9.99999L9.99984 4.16666M15.8332 9.99999L9.99984 15.8333" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="listBlock">
+    <p>Вы получите визу даже если:</p>
+    <div class="listRow">
+      <div class="listItem">
+        <div class="listItemIcon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <g clip-path="url(#clip0_331_1056)">
+            <path d="M9.49216 1.0548L1.05469 9.49228H7.38279C8.5478 9.49228 9.49216 8.54791 9.49216 7.38291V1.0548Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22.1484 5.27353H13.7109" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M22.1484 9.49228H13.7109" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20.039 13.711H5.27344" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M20.039 17.9297H5.27344" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M5.27344 26.5078C5.27344 24.1779 7.16224 22.2891 9.49217 22.2891C11.8221 22.2891 13.7109 24.1779 13.7109 26.5078C13.7109 28.8378 11.8221 30.7266 9.49217 30.7266C7.16224 30.7266 5.27344 28.8378 5.27344 26.5078Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21.5859 30.0235H32.8359C34.0009 30.0235 34.9453 30.9678 34.9453 32.1328V34.9453H19.4766V32.1328C19.4766 30.9678 20.4209 30.0235 21.5859 30.0235Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M24.0449 19.4592L25.1014 30.0235H29.3201L30.3765 19.4592C30.5638 17.5862 29.093 15.961 27.2107 15.961C25.3284 15.961 23.8576 17.5862 24.0449 19.4592Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26.3671 16.0738V1.05479H9.49216L1.05469 9.49227V34.9453H19.4765" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_331_1056">
+              <rect width="36" height="36" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+        </div>
+        <p>Ранее вам<br> отказали в визе</p>
+      </div>
+      <div class="listItem">
+        <div class="listItemIcon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <path d="M27.914 34.9453H6.04688V5.27353H27.914C29.0401 5.27353 29.9531 6.18639 29.9531 7.31258V32.9063C29.9531 34.0324 29.0401 34.9453 27.914 34.9453Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6.04688 5.27353H24.3281V4.24149C24.3281 2.4815 22.9013 1.05479 21.1414 1.05479C20.843 1.05479 20.546 1.0967 20.2592 1.17931L6.04688 5.27353Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M25.0312 18.0001C25.0312 21.8833 21.8833 25.0313 18 25.0313C14.1167 25.0313 10.9688 21.8833 10.9688 18.0001C10.9688 14.1168 14.1167 10.9688 18 10.9688C21.8833 10.9688 25.0312 14.1168 25.0312 18.0001Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20.4609 18.0001C20.4609 21.8833 19.3591 25.0313 18 25.0313C16.6409 25.0313 15.5391 21.8833 15.5391 18.0001C15.5391 14.1168 16.6409 10.9688 18 10.9688C19.3591 10.9688 20.4609 14.1168 20.4609 18.0001Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M10.9688 18.0001H25.0312" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.375 29.25H23.625" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </div>
+        <p>У вас «пустой»<br> паспорт</p>
+      </div>
+      <div class="listItem">
+        <div class="listItemIcon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M38.828 31.6914H1.17188V8.30862H38.828V31.6914Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M1.17188 27.0586H38.828" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20.9209 22.3712H38.828" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21.3203 17.6837H38.8282" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M20.921 22.3712H1.17188V8.3087H20.921V22.3712Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </div>
+        <p>Не владеете <br>английским языком</p>
+      </div>
+      <div class="listItem">
+        <div class="listItemIcon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <g clip-path="url(#clip0_331_1089)">
+            <path d="M6.79346 5.39368C9.77589 2.73953 13.7029 1.05478 17.9998 1.05478C27.3045 1.05478 34.9451 8.69534 34.9451 18C34.9451 19.9788 34.5324 21.879 33.9039 23.6447" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M29.2063 30.6064C26.2239 33.2606 22.2969 34.9453 17.9999 34.9453C8.69524 34.9453 1.05469 27.3048 1.05469 18.0001C1.05469 16.0213 1.46735 14.1211 2.09587 12.3554" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M28.5468 18.0001C28.5468 23.8249 23.8249 28.5469 18 28.5469C12.1751 28.5469 7.45312 23.8249 7.45312 18.0001C7.45312 12.1752 12.1751 7.45322 18 7.45322C23.8249 7.45322 28.5468 12.1752 28.5468 18.0001Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 28.5469V7.45322" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M23.2734 18.0001C23.2734 23.8249 20.9124 28.5469 18 28.5469C15.0876 28.5469 12.7266 23.8249 12.7266 18.0001C12.7266 12.1752 15.0876 7.45322 18 7.45322C20.9124 7.45322 23.2734 12.1752 23.2734 18.0001Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.45312 18.0001H28.5468" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M7.45311 6.92588C7.45311 8.09081 6.50868 9.03525 5.34374 9.03525C4.17881 9.03525 3.23438 8.09081 3.23438 6.92588C3.23438 5.76094 4.17881 4.81651 5.34374 4.81651C6.50868 4.81651 7.45311 5.76094 7.45311 6.92588Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M32.7656 29.0742C32.7656 30.2392 31.8212 31.1836 30.6562 31.1836C29.4913 31.1836 28.5469 30.2392 28.5469 29.0742C28.5469 27.9093 29.4913 26.9649 30.6562 26.9649C31.8212 26.9649 32.7656 27.9093 32.7656 29.0742Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </g>
+          <defs>
+            <clipPath id="clip0_331_1089">
+              <rect width="36" height="36" fill="white"/>
+            </clipPath>
+          </defs>
+        </svg>
+        </div>
+        <p>Вы находитесь<br>в другой стране </p>
+      </div>
+    </div>
+  </div>
+  <div class="chanceBlock">
+    <img src="./assets/imgs/chance.png">
+    <h1 class="Title">Увеличьте шансы на<br class="mobDel"> получение визы с помощью <br class="mobDel"> <span class="blue">экс-консулов</span> США</h1>
+    <p>Только в нашей компании экспертов<br> курируют экс-консулы США, что сильно<br> повышает шансы на успех в получении визы.</p>
+    <div class="chanceRow">
+      <div class="chanceItem">
+        <div class="topRow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <path d="M71.4251 63.2339H12.6394C10.4351 63.2339 8.64844 61.449 8.64844 59.2473V10.8792H75.416V59.2473C75.416 61.449 73.6292 63.2339 71.4251 63.2339Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M69.4251 63.2339H10.6394C8.43515 63.2339 6.64844 61.449 6.64844 59.2473V10.8792H73.416V59.2473C73.416 61.449 71.6292 63.2339 69.4251 63.2339Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M73.4295 10.8793H6.63487C4.28269 10.8793 2.37598 8.97256 2.37598 6.62053V6.60288C2.37598 4.2507 4.28269 2.34399 6.63487 2.34399H73.4295C75.7815 2.34399 77.6882 4.2507 77.6882 6.60288V6.62053C77.6882 8.97256 75.7815 10.8793 73.4295 10.8793Z" fill="#0866C5" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M40.0322 63.234V77.5813V63.234Z" fill="white"/>
+            <path d="M40.0322 63.234V77.5813" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M49.4072 77.6562L40.0938 63.3289C40.0871 63.3187 40.078 63.3102 40.0672 63.3044C40.0564 63.2985 40.0444 63.2954 40.0321 63.2954C40.0199 63.2954 40.0078 63.2985 39.997 63.3044C39.9863 63.3102 39.9771 63.3187 39.9705 63.3289L30.6572 77.6562" fill="white"/>
+            <path d="M49.4072 77.6562L40.0938 63.329C40.0871 63.3187 40.078 63.3102 40.0672 63.3044C40.0564 63.2985 40.0444 63.2954 40.0321 63.2954C40.0199 63.2954 40.0078 63.2985 39.997 63.3044C39.9863 63.3102 39.9771 63.3187 39.9705 63.329L30.6572 77.6562" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M26.4257 25.5421C26.4257 28.3669 24.1349 30.6567 21.3093 30.6567C18.4835 30.6567 16.1929 28.3669 16.1929 25.5421C16.1929 22.7174 18.4835 20.4274 21.3093 20.4274C24.1349 20.4274 26.4257 22.7174 26.4257 25.5421Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M65.3695 53.0387L57.8779 45.5495L65.3695 53.0387Z" fill="white"/>
+            <path d="M65.3695 53.0387L57.8779 45.5495" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M65.3695 45.5496L57.8779 53.0388L65.3695 45.5496Z" fill="white"/>
+            <path d="M65.3695 45.5496L57.8779 53.0388" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18.8154 48.5209L34.1809 33.8959C34.4346 33.6836 34.7594 33.5756 35.0897 33.5937C35.42 33.6118 35.7311 33.7547 35.9601 33.9934L44.7561 43.1685C45.3163 43.7529 46.2685 43.6912 46.7483 43.0392L60.7848 25.737" fill="white"/>
+            <path d="M18.8154 48.5209L34.1809 33.8959C34.4346 33.6836 34.7594 33.5756 35.0897 33.5937C35.42 33.6118 35.7311 33.7547 35.9601 33.9934L44.7561 43.1685C45.3163 43.7529 46.2685 43.6912 46.7483 43.0392L60.7848 25.737" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M55.6216 26.033L60.3884 25.6189C60.4638 25.6123 60.5398 25.6209 60.6118 25.6442C60.6838 25.6676 60.7503 25.7051 60.8075 25.7546C60.8648 25.8042 60.9114 25.8647 60.9448 25.9326C60.9782 26.0005 60.9976 26.0744 61.0019 26.15L61.2495 30.5403" fill="white"/>
+            <path d="M55.6216 26.033L60.3884 25.6189C60.4638 25.6123 60.5398 25.6209 60.6118 25.6442C60.6838 25.6676 60.7503 25.7051 60.8075 25.7546C60.8648 25.8042 60.9114 25.8647 60.9448 25.9326C60.9782 26.0005 60.9976 26.0744 61.0019 26.15L61.2495 30.5403" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="96" height="64" viewBox="0 0 96 64" fill="none">
+            <path d="M0 16C0 7.16344 7.16344 0 16 0H73.2301C79.7412 0 85.6029 3.94564 88.0536 9.97797L94.5536 25.978C96.1223 29.8394 96.1223 34.1606 94.5536 38.022L88.0536 54.022C85.6029 60.0544 79.7412 64 73.2301 64H16C7.16344 64 0 56.8366 0 48V16Z" fill="#0866C5"/>
+          </svg>
+          <p>01</p>
+        </div>
+        <div class="bottomCol">
+          <h4>Стратегия</h4>
+          <p>Экс-консулы совестно с нашими визовыми экспертами разрабатывают для вас стратегию подачи визы.</p>
+        </div>
+
+      </div>
+      <div class="chanceItem">
+        <div class="topRow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <g clip-path="url(#clip0_256_1031)">
+              <path d="M21.0937 58.9063V54.2188C21.0937 49.0412 16.8964 44.8438 11.7187 44.8438C6.54108 44.8438 2.34375 49.0412 2.34375 54.2188V77.6562H21.0937" fill="white"/>
+              <path d="M21.0937 58.9063V54.2188C21.0937 49.0412 16.8964 44.8439 11.7187 44.8439C6.54108 44.8439 2.34375 49.0412 2.34375 54.2188V77.6562H21.0937" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M23.4375 36.2501C23.4375 40.9964 19.59 44.8439 14.8437 44.8439C10.0975 44.8439 6.25 40.9964 6.25 36.2501C6.25 31.5039 10.0975 27.6564 14.8437 27.6564C19.59 27.6564 23.4375 31.5039 23.4375 36.2501Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M62.0311 77.6562H17.9688V68.2813H62.0311V77.6562Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21.0937 58.9063H30.4687C33.0574 58.9063 35.1562 61.005 35.1562 63.5938C35.1562 66.1825 33.0574 68.2812 30.4687 68.2812H17.9687C14.5169 68.2812 11.7188 65.4831 11.7188 62.0313V58.9063" fill="white"/>
+              <path d="M21.0937 58.9063H30.4687C33.0574 58.9063 35.1562 61.005 35.1562 63.5938C35.1562 66.1825 33.0574 68.2812 30.4687 68.2812H17.9687C14.5169 68.2812 11.7188 65.4831 11.7188 62.0313V58.9063" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M60.9062 58.9063V54.2188C60.9062 49.0412 65.1036 44.8438 70.2812 44.8438C75.4589 44.8438 79.6562 49.0412 79.6562 54.2188V77.6562H60.9062" fill="#0E2D4A"/>
+              <path d="M60.9062 58.9063V54.2188C60.9062 49.0412 65.1036 44.8439 70.2812 44.8439C75.4589 44.8439 79.6562 49.0412 79.6562 54.2188V77.6562H60.9062" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M58.9062 58.9063V54.2188C58.9062 49.0412 63.1036 44.8438 68.2812 44.8438C73.4589 44.8438 77.6562 49.0412 77.6562 54.2188V77.6562H58.9062" fill="white"/>
+              <path d="M58.9062 58.9063V54.2188C58.9062 49.0412 63.1036 44.8439 68.2812 44.8439C73.4589 44.8439 77.6562 49.0412 77.6562 54.2188V77.6562H58.9062" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M58.5625 36.2501C58.5625 40.9964 62.41 44.8439 67.1562 44.8439C71.9025 44.8439 75.75 40.9964 75.75 36.2501C75.75 31.5039 71.9025 27.6564 67.1562 27.6564C62.41 27.6564 58.5625 31.5039 58.5625 36.2501Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M56.5625 36.2501C56.5625 40.9964 60.41 44.8439 65.1562 44.8439C69.9025 44.8439 73.75 40.9964 73.75 36.2501C73.75 31.5039 69.9025 27.6564 65.1562 27.6564C60.41 27.6564 56.5625 31.5039 56.5625 36.2501Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M58.9062 58.9063H49.5312C46.9425 58.9063 44.8438 61.005 44.8438 63.5938C44.8438 66.1825 46.9425 68.2812 49.5312 68.2812H62.0312C65.4831 68.2812 68.2812 65.4831 68.2812 62.0313V58.9063" fill="white"/>
+              <path d="M58.9062 58.9063H49.5312C46.9425 58.9063 44.8438 61.005 44.8438 63.5938C44.8438 66.1825 46.9425 68.2812 49.5312 68.2812H62.0312C65.4831 68.2812 68.2812 65.4831 68.2812 62.0313V58.9063" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M26.375 5.46894V17.9689C26.375 19.6948 27.7741 21.0939 29.5 21.0939H32.625V27.3439L40.4375 21.0939H43.5624L51.3749 27.3439V21.0939H54.4999C56.2258 21.0939 57.6249 19.6948 57.6249 17.9689V5.46894C57.6249 3.743 56.2258 2.34395 54.4999 2.34395H29.5C27.7741 2.34395 26.375 3.743 26.375 5.46894Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M24.375 5.46894V17.9689C24.375 19.6948 25.7741 21.0939 27.5 21.0939H30.625V27.3439L38.4375 21.0939H41.5624L49.3749 27.3439V21.0939H52.4999C54.2258 21.0939 55.6249 19.6948 55.6249 17.9689V5.46894C55.6249 3.743 54.2258 2.34395 52.4999 2.34395H27.5C25.7741 2.34395 24.375 3.743 24.375 5.46894Z" fill="#0866C5" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M33.75 11.719H46.25H33.75Z" fill="white"/>
+              <path d="M33.75 11.719H46.25" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_256_1031">
+                <rect width="80" height="80" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="96" height="64" viewBox="0 0 96 64" fill="none">
+            <path d="M0 16C0 7.16344 7.16344 0 16 0H73.2301C79.7412 0 85.6029 3.94564 88.0536 9.97797L94.5536 25.978C96.1223 29.8394 96.1223 34.1606 94.5536 38.022L88.0536 54.022C85.6029 60.0544 79.7412 64 73.2301 64H16C7.16344 64 0 56.8366 0 48V16Z" fill="#0866C5"/>
+          </svg>
+          <p>02</p>
+        </div>
+        <div class="bottomCol">
+          <h4>Интервью</h4>
+          <p>Специалисты проведут с вами ролевое пробное интервью и дадут обратную связь. </p>
+        </div>
+
+      </div>
+      <div class="chanceItem">
+        <div class="topRow">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <path d="M53.2812 15.6252C53.2812 22.9601 47.3349 28.9064 40 28.9064C32.665 28.9064 26.7188 22.9601 26.7188 15.6252C26.7188 8.29018 32.665 2.34395 40 2.34395C47.3349 2.34395 53.2812 8.29018 53.2812 15.6252Z" fill="#0866C5" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M61.0379 37.7047C56.4523 32.3218 49.6254 28.9065 41.9998 28.9065C34.3744 28.9065 27.5474 32.3218 22.9619 37.7047" fill="#0E2D4A"/>
+            <path d="M61.0379 37.7047C56.4523 32.3218 49.6254 28.9065 41.9998 28.9065C34.3744 28.9065 27.5474 32.3218 22.9619 37.7047" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M59.0379 37.7047C54.4523 32.3218 47.6254 28.9065 39.9998 28.9065C32.3744 28.9065 25.5474 32.3218 20.9619 37.7047" fill="white"/>
+            <path d="M59.0379 37.7047C54.4523 32.3218 47.6254 28.9065 39.9998 28.9065C32.3744 28.9065 25.5474 32.3218 20.9619 37.7047" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M66.9999 46.0938V35.4689L42 44.8438V77.6562L66.9999 68.2813V57.0313" fill="#0E2D4A"/>
+            <path d="M66.9999 46.0938V35.4689L42 44.8438V77.6562L66.9999 68.2813V57.0313" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M64.9999 46.0938V35.4689L40 44.8438V77.6562L64.9999 68.2813V57.0313" fill="white"/>
+            <path d="M64.9999 46.0938V35.4689L40 44.8438V77.6562L64.9999 68.2813V57.0313" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 57.0313V68.2813L39.9999 77.6562V44.8438L15 35.4689V46.0938" fill="white"/>
+            <path d="M15 57.0313V68.2813L39.9999 77.6562V44.8438L15 35.4689V46.0938" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M66.7812 57.0314H64.4375C63.5747 57.0314 62.875 56.3317 62.875 55.4689V47.6564C62.875 46.7936 63.5747 46.0939 64.4375 46.0939H66.7812C69.8015 46.0939 72.25 48.5423 72.25 51.5626C72.25 54.5829 69.8015 57.0314 66.7812 57.0314Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M65.7812 57.0314H63.4375C62.5747 57.0314 61.875 56.3317 61.875 55.4689V47.6564C61.875 46.7936 62.5747 46.0939 63.4375 46.0939H65.7812C68.8015 46.0939 71.25 48.5423 71.25 51.5626C71.25 54.5829 68.8015 57.0314 65.7812 57.0314Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.2187 57.0314H16.5625C17.4253 57.0314 18.125 56.3317 18.125 55.4689V47.6564C18.125 46.7936 17.4253 46.0939 16.5625 46.0939H14.2187C11.1984 46.0939 8.75 48.5423 8.75 51.5626C8.75 54.5829 11.1984 57.0314 14.2187 57.0314Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="96" height="64" viewBox="0 0 96 64" fill="none">
+            <path d="M0 16C0 7.16344 7.16344 0 16 0H73.2301C79.7412 0 85.6029 3.94564 88.0536 9.97797L94.5536 25.978C96.1223 29.8394 96.1223 34.1606 94.5536 38.022L88.0536 54.022C85.6029 60.0544 79.7412 64 73.2301 64H16C7.16344 64 0 56.8366 0 48V16Z" fill="#0866C5"/>
+          </svg>
+          <p>03</p>
+        </div>
+        <div class="bottomCol">
+          <h4>Подготовка</h4>
+          <p>Эксперты проведут полный комплекс работ по увеличению шансов на одобрение.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <div class="cantBlock">
+    <div class="cantController">
+      <h1 class="Title">Вы <span class="yellow">не сможете</span> <br>получить визу если:</h1>
+      <div class="ButtonRow mobDel">
+        <button class="arrowButton" id="toLeft">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M22.1665 14H5.83317M5.83317 14L13.9998 5.83337M5.83317 14L13.9998 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="arrowButton" id="toRight">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M5.8335 14H22.1668M22.1668 14L14.0002 5.83337M22.1668 14L14.0002 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
       </div>
     </div>
-    <div class="listBlock">
-      <p>Вы получите визу даже если:</p>
-      <div class="listRow">
-        <div class="listItem">
-          <div class="listItemIcon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <g clip-path="url(#clip0_331_1056)">
-              <path d="M9.49216 1.0548L1.05469 9.49228H7.38279C8.5478 9.49228 9.49216 8.54791 9.49216 7.38291V1.0548Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22.1484 5.27353H13.7109" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M22.1484 9.49228H13.7109" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M20.039 13.711H5.27344" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M20.039 17.9297H5.27344" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M5.27344 26.5078C5.27344 24.1779 7.16224 22.2891 9.49217 22.2891C11.8221 22.2891 13.7109 24.1779 13.7109 26.5078C13.7109 28.8378 11.8221 30.7266 9.49217 30.7266C7.16224 30.7266 5.27344 28.8378 5.27344 26.5078Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M21.5859 30.0235H32.8359C34.0009 30.0235 34.9453 30.9678 34.9453 32.1328V34.9453H19.4766V32.1328C19.4766 30.9678 20.4209 30.0235 21.5859 30.0235Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M24.0449 19.4592L25.1014 30.0235H29.3201L30.3765 19.4592C30.5638 17.5862 29.093 15.961 27.2107 15.961C25.3284 15.961 23.8576 17.5862 24.0449 19.4592Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M26.3671 16.0738V1.05479H9.49216L1.05469 9.49227V34.9453H19.4765" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+    <div class="cantSlider mobDel">
+      <div class="cantWrapper" id="cantWrapper">
+        <div class="cantItem">
+          <p>Будет неграмотно заполнена анкета либо допустите ошибки в документах </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+            <g clip-path="url(#clip0_255_1008)">
+              <path d="M55.5159 54.228V72.6907H5.80957V4.90942H41.9596V15.4657H55.5159V41.447" fill="#0E2D4A"/>
+              <path d="M51.8157 51.428V69.8906H2.10938V2.10938H38.2594V15.6656H51.8157V38.647" fill="white"/>
+              <path d="M51.8157 51.428V69.8906H2.10938V2.10938H38.2594V15.6656H51.8157V38.647" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M51.8157 15.6656L38.2595 2.10938V15.6656H51.8157ZM11.147 33.7406H42.7782H11.147ZM24.7032 56.3344C24.7032 56.3344 26.9626 54.075 29.2219 54.075C33.7406 54.075 29.2219 58.5937 33.7406 58.5937C38.2593 58.5937 40.5188 56.4694 40.5188 56.4694M11.147 24.7032H20.1844H11.147ZM11.147 42.7781H33.7406H11.147ZM63.4966 26.9625C63.4966 26.9625 51.7367 38.7316 45.0376 45.4254C42.1448 48.3188 40.5195 52.2425 40.5189 56.334V56.3342C44.6084 56.3342 48.5396 54.7089 51.4317 51.8157C58.1192 45.1221 69.8907 33.353 69.8907 33.353V33.352C69.8907 31.6574 69.2129 30.0322 68.0153 28.834C67.4219 28.2406 66.7175 27.7698 65.9421 27.4487C65.1668 27.1276 64.3358 26.9624 63.4966 26.9625Z" fill="white"/>
+              <path d="M11.147 33.7406H42.7782M24.7032 56.3344C24.7032 56.3344 26.9626 54.075 29.2219 54.075C33.7406 54.075 29.2219 58.5937 33.7406 58.5937C38.2593 58.5937 40.5188 56.4694 40.5188 56.4694M11.147 24.7032H20.1844M11.147 42.7781H33.7406M51.8157 15.6656L38.2595 2.10938V15.6656H51.8157ZM63.4966 26.9625C63.4966 26.9625 51.7367 38.7316 45.0376 45.4254C42.1448 48.3188 40.5195 52.2425 40.5189 56.334V56.3342C44.6084 56.3342 48.5396 54.7089 51.4317 51.8157C58.1192 45.1221 69.8907 33.353 69.8907 33.353V33.352C69.8907 31.6574 69.2129 30.0322 68.0153 28.834C67.4219 28.2406 66.7175 27.7698 65.9421 27.4487C65.1668 27.1276 64.3358 26.9624 63.4966 26.9625Z" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M44.1 45.9L40.95 51.75L40.5 53.7188V55.8L41.85 56.7L46.8 54.9L50.85 51.75L69.75 33.75V31.95L68.4 29.25L66.15 27.9L63.45 27L53.55 36.9L44.1 45.9Z" fill="#F0CD56"/>
             </g>
             <defs>
-              <clipPath id="clip0_331_1056">
-                <rect width="36" height="36" fill="white"/>
+              <clipPath id="clip0_255_1008">
+                <rect width="72" height="72" fill="white"/>
               </clipPath>
             </defs>
           </svg>
-          </div>
-          <p>Ранее вам<br> отказали в визе</p>
         </div>
-        <div class="listItem">
-          <div class="listItemIcon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <path d="M27.914 34.9453H6.04688V5.27353H27.914C29.0401 5.27353 29.9531 6.18639 29.9531 7.31258V32.9063C29.9531 34.0324 29.0401 34.9453 27.914 34.9453Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M6.04688 5.27353H24.3281V4.24149C24.3281 2.4815 22.9013 1.05479 21.1414 1.05479C20.843 1.05479 20.546 1.0967 20.2592 1.17931L6.04688 5.27353Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M25.0312 18.0001C25.0312 21.8833 21.8833 25.0313 18 25.0313C14.1167 25.0313 10.9688 21.8833 10.9688 18.0001C10.9688 14.1168 14.1167 10.9688 18 10.9688C21.8833 10.9688 25.0312 14.1168 25.0312 18.0001Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M20.4609 18.0001C20.4609 21.8833 19.3591 25.0313 18 25.0313C16.6409 25.0313 15.5391 21.8833 15.5391 18.0001C15.5391 14.1168 16.6409 10.9688 18 10.9688C19.3591 10.9688 20.4609 14.1168 20.4609 18.0001Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M10.9688 18.0001H25.0312" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M12.375 29.25H23.625" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          </div>
-          <p>У вас «пустой»<br> паспорт</p>
-        </div>
-        <div class="listItem">
-          <div class="listItemIcon"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-            <path d="M38.828 31.6914H1.17188V8.30862H38.828V31.6914Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M1.17188 27.0586H38.828" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M20.9209 22.3712H38.828" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21.3203 17.6837H38.8282" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M20.921 22.3712H1.17188V8.3087H20.921V22.3712Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-          </div>
-          <p>Не владеете <br>английским языком</p>
-        </div>
-        <div class="listItem">
-          <div class="listItemIcon"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
-            <g clip-path="url(#clip0_331_1089)">
-              <path d="M6.79346 5.39368C9.77589 2.73953 13.7029 1.05478 17.9998 1.05478C27.3045 1.05478 34.9451 8.69534 34.9451 18C34.9451 19.9788 34.5324 21.879 33.9039 23.6447" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M29.2063 30.6064C26.2239 33.2606 22.2969 34.9453 17.9999 34.9453C8.69524 34.9453 1.05469 27.3048 1.05469 18.0001C1.05469 16.0213 1.46735 14.1211 2.09587 12.3554" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M28.5468 18.0001C28.5468 23.8249 23.8249 28.5469 18 28.5469C12.1751 28.5469 7.45312 23.8249 7.45312 18.0001C7.45312 12.1752 12.1751 7.45322 18 7.45322C23.8249 7.45322 28.5468 12.1752 28.5468 18.0001Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M18 28.5469V7.45322" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M23.2734 18.0001C23.2734 23.8249 20.9124 28.5469 18 28.5469C15.0876 28.5469 12.7266 23.8249 12.7266 18.0001C12.7266 12.1752 15.0876 7.45322 18 7.45322C20.9124 7.45322 23.2734 12.1752 23.2734 18.0001Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M7.45312 18.0001H28.5468" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M7.45311 6.92588C7.45311 8.09081 6.50868 9.03525 5.34374 9.03525C4.17881 9.03525 3.23438 8.09081 3.23438 6.92588C3.23438 5.76094 4.17881 4.81651 5.34374 4.81651C6.50868 4.81651 7.45311 5.76094 7.45311 6.92588Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M32.7656 29.0742C32.7656 30.2392 31.8212 31.1836 30.6562 31.1836C29.4913 31.1836 28.5469 30.2392 28.5469 29.0742C28.5469 27.9093 29.4913 26.9649 30.6562 26.9649C31.8212 26.9649 32.7656 27.9093 32.7656 29.0742Z" stroke="#F5F7FA" stroke-width="1.4" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+        <div class="cantItem">
+          <p>У вас отсутствует «связь с<br>Родиной» </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="72" height="70" viewBox="0 0 72 70" fill="none">
+            <g clip-path="url(#clip0_255_1016)">
+              <path d="M71.9999 69.6606H4.48242V18.9525H71.9999V69.6606Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M67.5175 66.9712H0V16.263H67.5175V66.9712Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8.40479 66.9712V54.2941C8.40479 47.2928 14.0805 41.6171 21.0818 41.6171C28.0832 41.6171 33.7589 47.2928 33.7589 54.2941V66.9712" fill="#F0CD56"/>
+              <path d="M8.40479 66.9712V54.2941C8.40479 47.2928 14.0805 41.6171 21.0818 41.6171C28.0832 41.6171 33.7589 47.2928 33.7589 54.2941V66.9712" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M33.7588 66.9712V58.4965C33.7588 51.4951 39.4345 45.8194 46.4358 45.8194C53.4372 45.8194 59.1129 51.4951 59.1129 58.4965V66.9712" fill="#F0CD56"/>
+              <path d="M33.7588 66.9712V58.4965C33.7588 51.4951 39.4345 45.8194 46.4358 45.8194C53.4372 45.8194 59.1129 51.4951 59.1129 58.4965V66.9712" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12.6069 16.2629L33.7587 -9.28619e-05L54.9104 16.2629" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M29.5563 33.1425C29.5563 37.8229 25.7621 41.6172 21.0816 41.6172C16.4012 41.6172 12.6069 37.8229 12.6069 33.1425C12.6069 28.4621 16.4012 24.6678 21.0816 24.6678C25.7621 24.6678 29.5563 28.4621 29.5563 33.1425Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M54.9104 37.3446C54.9104 42.025 51.1161 45.8193 46.4356 45.8193C41.7552 45.8193 37.9609 42.025 37.9609 37.3446C37.9609 32.6642 41.7552 28.8699 46.4356 28.8699C51.1161 28.8699 54.9104 32.6642 54.9104 37.3446Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             </g>
             <defs>
-              <clipPath id="clip0_331_1089">
-                <rect width="36" height="36" fill="white"/>
+              <clipPath id="clip0_255_1016">
+                <rect width="72" height="69.6607" fill="white"/>
               </clipPath>
             </defs>
           </svg>
-          </div>
-          <p>Вы находитесь<br>в другой стране </p>
+        </div>
+        <div class="cantItem">
+          <p>У вас отсутствуют необходимые документы </p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="75" height="72" viewBox="0 0 75 72" fill="none">
+            <path d="M70.1717 68.0906H10.8281C8.49824 68.0906 6.60938 66.2018 6.60938 63.8718V32.822H74.3904V63.8718C74.3904 66.2018 72.5015 68.0906 70.1717 68.0906Z" fill="#0E2D4A"/>
+            <path d="M74.3904 32.822V12.9658C74.3904 10.6358 72.5015 8.74707 70.1717 8.74707H32.0624C32.0624 4.08719 28.2848 0.309597 23.6249 0.309597H10.8281C8.49824 0.309597 6.60938 2.19833 6.60938 4.52833V32.822" fill="#0E2D4A"/>
+            <path d="M69.8904 34.6221V14.7659C69.8904 12.4359 68.0015 10.5471 65.6717 10.5471H27.5624C27.5624 5.88724 23.7848 2.10965 19.1249 2.10965H6.32811C3.99824 2.10965 2.10938 3.99837 2.10938 6.32838V34.6221" fill="white"/>
+            <path d="M69.8904 34.6221V14.7659C69.8904 12.4358 68.0015 10.5471 65.6717 10.5471H27.5624C27.5624 5.88724 23.7848 2.10965 19.1249 2.10965H6.32811C3.99824 2.10965 2.10938 3.99837 2.10938 6.32838V34.6221" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.5469 34.6221V20.7846H61.453V34.6221" fill="#F0CD56"/>
+            <path d="M10.5469 34.6221V20.7846H61.453V34.6221" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M65.6717 69.8906H6.32811C3.99824 69.8906 2.10938 68.0019 2.10938 65.6719V34.622H69.8904V65.6719C69.8904 68.0019 68.0015 69.8906 65.6717 69.8906Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M48.6562 57.0938V61.3125H23.3438V57.0938" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="cantItem">
+          <p>Вам сделали <br>шаблонный кейс</p>
+          <svg xmlns="http://www.w3.org/2000/svg" width="75" height="72" viewBox="0 0 75 72" fill="none">
+            <path d="M70.1717 68.0906H10.8281C8.49824 68.0906 6.60938 66.2018 6.60938 63.8718V32.822H74.3904V63.8718C74.3904 66.2018 72.5015 68.0906 70.1717 68.0906Z" fill="#0E2D4A"/>
+            <path d="M74.3904 32.822V12.9658C74.3904 10.6358 72.5015 8.74707 70.1717 8.74707H32.0624C32.0624 4.08719 28.2848 0.309597 23.6249 0.309597H10.8281C8.49824 0.309597 6.60938 2.19833 6.60938 4.52833V32.822" fill="#0E2D4A"/>
+            <path d="M69.8904 34.6221V14.7659C69.8904 12.4359 68.0015 10.5471 65.6717 10.5471H27.5624C27.5624 5.88724 23.7848 2.10965 19.1249 2.10965H6.32811C3.99824 2.10965 2.10938 3.99837 2.10938 6.32838V34.6221" fill="white"/>
+            <path d="M69.8904 34.6221V14.7659C69.8904 12.4358 68.0015 10.5471 65.6717 10.5471H27.5624C27.5624 5.88724 23.7848 2.10965 19.1249 2.10965H6.32811C3.99824 2.10965 2.10938 3.99837 2.10938 6.32838V34.6221" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10.5469 34.6221V20.7846H61.453V34.6221" fill="#F0CD56"/>
+            <path d="M10.5469 34.6221V20.7846H61.453V34.6221" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M65.6717 69.8906H6.32811C3.99824 69.8906 2.10938 68.0019 2.10938 65.6719V34.622H69.8904V65.6719C69.8904 68.0019 68.0015 69.8906 65.6717 69.8906Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M48.6562 57.0938V61.3125H23.3438V57.0938" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
         </div>
       </div>
     </div>
-    <div class="chanceBlock">
-      <img src="./assets/imgs/chance.png">
-      <h1 class="Title">Увеличьте шансы на<br class="mobDel"> получение визы с помощью <br class="mobDel"> <span class="blue">экс-консулов</span> США</h1>
-      <p>Только в нашей компании экспертов<br> курируют экс-консулы США, что сильно<br> повышает шансы на успех в получении визы.</p>
-      <div class="chanceRow">
-        <div class="chanceItem">
-          <div class="topRow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <path d="M71.4251 63.2339H12.6394C10.4351 63.2339 8.64844 61.449 8.64844 59.2473V10.8792H75.416V59.2473C75.416 61.449 73.6292 63.2339 71.4251 63.2339Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M69.4251 63.2339H10.6394C8.43515 63.2339 6.64844 61.449 6.64844 59.2473V10.8792H73.416V59.2473C73.416 61.449 71.6292 63.2339 69.4251 63.2339Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M73.4295 10.8793H6.63487C4.28269 10.8793 2.37598 8.97256 2.37598 6.62053V6.60288C2.37598 4.2507 4.28269 2.34399 6.63487 2.34399H73.4295C75.7815 2.34399 77.6882 4.2507 77.6882 6.60288V6.62053C77.6882 8.97256 75.7815 10.8793 73.4295 10.8793Z" fill="#0866C5" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M40.0322 63.234V77.5813V63.234Z" fill="white"/>
-              <path d="M40.0322 63.234V77.5813" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M49.4072 77.6562L40.0938 63.3289C40.0871 63.3187 40.078 63.3102 40.0672 63.3044C40.0564 63.2985 40.0444 63.2954 40.0321 63.2954C40.0199 63.2954 40.0078 63.2985 39.997 63.3044C39.9863 63.3102 39.9771 63.3187 39.9705 63.3289L30.6572 77.6562" fill="white"/>
-              <path d="M49.4072 77.6562L40.0938 63.329C40.0871 63.3187 40.078 63.3102 40.0672 63.3044C40.0564 63.2985 40.0444 63.2954 40.0321 63.2954C40.0199 63.2954 40.0078 63.2985 39.997 63.3044C39.9863 63.3102 39.9771 63.3187 39.9705 63.329L30.6572 77.6562" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M26.4257 25.5421C26.4257 28.3669 24.1349 30.6567 21.3093 30.6567C18.4835 30.6567 16.1929 28.3669 16.1929 25.5421C16.1929 22.7174 18.4835 20.4274 21.3093 20.4274C24.1349 20.4274 26.4257 22.7174 26.4257 25.5421Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M65.3695 53.0387L57.8779 45.5495L65.3695 53.0387Z" fill="white"/>
-              <path d="M65.3695 53.0387L57.8779 45.5495" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M65.3695 45.5496L57.8779 53.0388L65.3695 45.5496Z" fill="white"/>
-              <path d="M65.3695 45.5496L57.8779 53.0388" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M18.8154 48.5209L34.1809 33.8959C34.4346 33.6836 34.7594 33.5756 35.0897 33.5937C35.42 33.6118 35.7311 33.7547 35.9601 33.9934L44.7561 43.1685C45.3163 43.7529 46.2685 43.6912 46.7483 43.0392L60.7848 25.737" fill="white"/>
-              <path d="M18.8154 48.5209L34.1809 33.8959C34.4346 33.6836 34.7594 33.5756 35.0897 33.5937C35.42 33.6118 35.7311 33.7547 35.9601 33.9934L44.7561 43.1685C45.3163 43.7529 46.2685 43.6912 46.7483 43.0392L60.7848 25.737" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M55.6216 26.033L60.3884 25.6189C60.4638 25.6123 60.5398 25.6209 60.6118 25.6442C60.6838 25.6676 60.7503 25.7051 60.8075 25.7546C60.8648 25.8042 60.9114 25.8647 60.9448 25.9326C60.9782 26.0005 60.9976 26.0744 61.0019 26.15L61.2495 30.5403" fill="white"/>
-              <path d="M55.6216 26.033L60.3884 25.6189C60.4638 25.6123 60.5398 25.6209 60.6118 25.6442C60.6838 25.6676 60.7503 25.7051 60.8075 25.7546C60.8648 25.8042 60.9114 25.8647 60.9448 25.9326C60.9782 26.0005 60.9976 26.0744 61.0019 26.15L61.2495 30.5403" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="64" viewBox="0 0 96 64" fill="none">
-              <path d="M0 16C0 7.16344 7.16344 0 16 0H73.2301C79.7412 0 85.6029 3.94564 88.0536 9.97797L94.5536 25.978C96.1223 29.8394 96.1223 34.1606 94.5536 38.022L88.0536 54.022C85.6029 60.0544 79.7412 64 73.2301 64H16C7.16344 64 0 56.8366 0 48V16Z" fill="#0866C5"/>
-            </svg>
-            <p>01</p>
-          </div>
-          <div class="bottomCol">
-            <h4>Стратегия</h4>
-            <p>Экс-консулы совестно с нашими визовыми экспертами разрабатывают для вас стратегию подачи визы.</p>
-          </div>
-
-        </div>
-        <div class="chanceItem">
-          <div class="topRow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <g clip-path="url(#clip0_256_1031)">
-                <path d="M21.0937 58.9063V54.2188C21.0937 49.0412 16.8964 44.8438 11.7187 44.8438C6.54108 44.8438 2.34375 49.0412 2.34375 54.2188V77.6562H21.0937" fill="white"/>
-                <path d="M21.0937 58.9063V54.2188C21.0937 49.0412 16.8964 44.8439 11.7187 44.8439C6.54108 44.8439 2.34375 49.0412 2.34375 54.2188V77.6562H21.0937" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M23.4375 36.2501C23.4375 40.9964 19.59 44.8439 14.8437 44.8439C10.0975 44.8439 6.25 40.9964 6.25 36.2501C6.25 31.5039 10.0975 27.6564 14.8437 27.6564C19.59 27.6564 23.4375 31.5039 23.4375 36.2501Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M62.0311 77.6562H17.9688V68.2813H62.0311V77.6562Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M21.0937 58.9063H30.4687C33.0574 58.9063 35.1562 61.005 35.1562 63.5938C35.1562 66.1825 33.0574 68.2812 30.4687 68.2812H17.9687C14.5169 68.2812 11.7188 65.4831 11.7188 62.0313V58.9063" fill="white"/>
-                <path d="M21.0937 58.9063H30.4687C33.0574 58.9063 35.1562 61.005 35.1562 63.5938C35.1562 66.1825 33.0574 68.2812 30.4687 68.2812H17.9687C14.5169 68.2812 11.7188 65.4831 11.7188 62.0313V58.9063" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M60.9062 58.9063V54.2188C60.9062 49.0412 65.1036 44.8438 70.2812 44.8438C75.4589 44.8438 79.6562 49.0412 79.6562 54.2188V77.6562H60.9062" fill="#0E2D4A"/>
-                <path d="M60.9062 58.9063V54.2188C60.9062 49.0412 65.1036 44.8439 70.2812 44.8439C75.4589 44.8439 79.6562 49.0412 79.6562 54.2188V77.6562H60.9062" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M58.9062 58.9063V54.2188C58.9062 49.0412 63.1036 44.8438 68.2812 44.8438C73.4589 44.8438 77.6562 49.0412 77.6562 54.2188V77.6562H58.9062" fill="white"/>
-                <path d="M58.9062 58.9063V54.2188C58.9062 49.0412 63.1036 44.8439 68.2812 44.8439C73.4589 44.8439 77.6562 49.0412 77.6562 54.2188V77.6562H58.9062" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M58.5625 36.2501C58.5625 40.9964 62.41 44.8439 67.1562 44.8439C71.9025 44.8439 75.75 40.9964 75.75 36.2501C75.75 31.5039 71.9025 27.6564 67.1562 27.6564C62.41 27.6564 58.5625 31.5039 58.5625 36.2501Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M56.5625 36.2501C56.5625 40.9964 60.41 44.8439 65.1562 44.8439C69.9025 44.8439 73.75 40.9964 73.75 36.2501C73.75 31.5039 69.9025 27.6564 65.1562 27.6564C60.41 27.6564 56.5625 31.5039 56.5625 36.2501Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M58.9062 58.9063H49.5312C46.9425 58.9063 44.8438 61.005 44.8438 63.5938C44.8438 66.1825 46.9425 68.2812 49.5312 68.2812H62.0312C65.4831 68.2812 68.2812 65.4831 68.2812 62.0313V58.9063" fill="white"/>
-                <path d="M58.9062 58.9063H49.5312C46.9425 58.9063 44.8438 61.005 44.8438 63.5938C44.8438 66.1825 46.9425 68.2812 49.5312 68.2812H62.0312C65.4831 68.2812 68.2812 65.4831 68.2812 62.0313V58.9063" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M26.375 5.46894V17.9689C26.375 19.6948 27.7741 21.0939 29.5 21.0939H32.625V27.3439L40.4375 21.0939H43.5624L51.3749 27.3439V21.0939H54.4999C56.2258 21.0939 57.6249 19.6948 57.6249 17.9689V5.46894C57.6249 3.743 56.2258 2.34395 54.4999 2.34395H29.5C27.7741 2.34395 26.375 3.743 26.375 5.46894Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M24.375 5.46894V17.9689C24.375 19.6948 25.7741 21.0939 27.5 21.0939H30.625V27.3439L38.4375 21.0939H41.5624L49.3749 27.3439V21.0939H52.4999C54.2258 21.0939 55.6249 19.6948 55.6249 17.9689V5.46894C55.6249 3.743 54.2258 2.34395 52.4999 2.34395H27.5C25.7741 2.34395 24.375 3.743 24.375 5.46894Z" fill="#0866C5" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M33.75 11.719H46.25H33.75Z" fill="white"/>
-                <path d="M33.75 11.719H46.25" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_256_1031">
-                  <rect width="80" height="80" fill="white"/>
-                </clipPath>
-              </defs>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="64" viewBox="0 0 96 64" fill="none">
-              <path d="M0 16C0 7.16344 7.16344 0 16 0H73.2301C79.7412 0 85.6029 3.94564 88.0536 9.97797L94.5536 25.978C96.1223 29.8394 96.1223 34.1606 94.5536 38.022L88.0536 54.022C85.6029 60.0544 79.7412 64 73.2301 64H16C7.16344 64 0 56.8366 0 48V16Z" fill="#0866C5"/>
-            </svg>
-            <p>02</p>
-          </div>
-          <div class="bottomCol">
-            <h4>Интервью</h4>
-            <p>Специалисты проведут с вами ролевое пробное интервью и дадут обратную связь. </p>
-          </div>
-
-        </div>
-        <div class="chanceItem">
-          <div class="topRow">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <path d="M53.2812 15.6252C53.2812 22.9601 47.3349 28.9064 40 28.9064C32.665 28.9064 26.7188 22.9601 26.7188 15.6252C26.7188 8.29018 32.665 2.34395 40 2.34395C47.3349 2.34395 53.2812 8.29018 53.2812 15.6252Z" fill="#0866C5" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M61.0379 37.7047C56.4523 32.3218 49.6254 28.9065 41.9998 28.9065C34.3744 28.9065 27.5474 32.3218 22.9619 37.7047" fill="#0E2D4A"/>
-              <path d="M61.0379 37.7047C56.4523 32.3218 49.6254 28.9065 41.9998 28.9065C34.3744 28.9065 27.5474 32.3218 22.9619 37.7047" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M59.0379 37.7047C54.4523 32.3218 47.6254 28.9065 39.9998 28.9065C32.3744 28.9065 25.5474 32.3218 20.9619 37.7047" fill="white"/>
-              <path d="M59.0379 37.7047C54.4523 32.3218 47.6254 28.9065 39.9998 28.9065C32.3744 28.9065 25.5474 32.3218 20.9619 37.7047" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M66.9999 46.0938V35.4689L42 44.8438V77.6562L66.9999 68.2813V57.0313" fill="#0E2D4A"/>
-              <path d="M66.9999 46.0938V35.4689L42 44.8438V77.6562L66.9999 68.2813V57.0313" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M64.9999 46.0938V35.4689L40 44.8438V77.6562L64.9999 68.2813V57.0313" fill="white"/>
-              <path d="M64.9999 46.0938V35.4689L40 44.8438V77.6562L64.9999 68.2813V57.0313" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M15 57.0313V68.2813L39.9999 77.6562V44.8438L15 35.4689V46.0938" fill="white"/>
-              <path d="M15 57.0313V68.2813L39.9999 77.6562V44.8438L15 35.4689V46.0938" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M66.7812 57.0314H64.4375C63.5747 57.0314 62.875 56.3317 62.875 55.4689V47.6564C62.875 46.7936 63.5747 46.0939 64.4375 46.0939H66.7812C69.8015 46.0939 72.25 48.5423 72.25 51.5626C72.25 54.5829 69.8015 57.0314 66.7812 57.0314Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M65.7812 57.0314H63.4375C62.5747 57.0314 61.875 56.3317 61.875 55.4689V47.6564C61.875 46.7936 62.5747 46.0939 63.4375 46.0939H65.7812C68.8015 46.0939 71.25 48.5423 71.25 51.5626C71.25 54.5829 68.8015 57.0314 65.7812 57.0314Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14.2187 57.0314H16.5625C17.4253 57.0314 18.125 56.3317 18.125 55.4689V47.6564C18.125 46.7936 17.4253 46.0939 16.5625 46.0939H14.2187C11.1984 46.0939 8.75 48.5423 8.75 51.5626C8.75 54.5829 11.1984 57.0314 14.2187 57.0314Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <svg xmlns="http://www.w3.org/2000/svg" width="96" height="64" viewBox="0 0 96 64" fill="none">
-              <path d="M0 16C0 7.16344 7.16344 0 16 0H73.2301C79.7412 0 85.6029 3.94564 88.0536 9.97797L94.5536 25.978C96.1223 29.8394 96.1223 34.1606 94.5536 38.022L88.0536 54.022C85.6029 60.0544 79.7412 64 73.2301 64H16C7.16344 64 0 56.8366 0 48V16Z" fill="#0866C5"/>
-            </svg>
-            <p>03</p>
-          </div>
-          <div class="bottomCol">
-            <h4>Подготовка</h4>
-            <p>Эксперты проведут полный комплекс работ по увеличению шансов на одобрение.</p>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-    <div class="cantBlock">
-      <div class="cantController">
-        <h1 class="Title">Вы <span class="yellow">не сможете</span> <br>получить визу если:</h1>
-        <div class="ButtonRow">
-          <button class="arrowButton" id="toLeft">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M22.1665 14H5.83317M5.83317 14L13.9998 5.83337M5.83317 14L13.9998 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="arrowButton" id="toRight">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M5.8335 14H22.1668M22.1668 14L14.0002 5.83337M22.1668 14L14.0002 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div class="cantSlider">
-        <div class="cantWrapper" id="cantWrapper">
+    <div class="desDel">
+      <div class="owl-carousel">
+        <div>
           <div class="cantItem">
             <p>Будет неграмотно заполнена анкета либо допустите ошибки в документах </p>
             <svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
@@ -333,6 +464,8 @@
               </defs>
             </svg>
           </div>
+        </div>
+        <div>
           <div class="cantItem">
             <p>У вас отсутствует «связь с<br>Родиной» </p>
             <svg xmlns="http://www.w3.org/2000/svg" width="72" height="70" viewBox="0 0 72 70" fill="none">
@@ -354,6 +487,8 @@
               </defs>
             </svg>
           </div>
+        </div>
+        <div>
           <div class="cantItem">
             <p>У вас отсутствуют необходимые документы </p>
             <svg xmlns="http://www.w3.org/2000/svg" width="75" height="72" viewBox="0 0 75 72" fill="none">
@@ -367,6 +502,8 @@
               <path d="M48.6562 57.0938V61.3125H23.3438V57.0938" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </div>
+        </div>
+        <div>
           <div class="cantItem">
             <p>Вам сделали <br>шаблонный кейс</p>
             <svg xmlns="http://www.w3.org/2000/svg" width="75" height="72" viewBox="0 0 75 72" fill="none">
@@ -383,734 +520,945 @@
         </div>
       </div>
     </div>
-    <a name="hawWeWork"></a>
-    <div class="upradeBlock">
-      <div class="upgradeLeft">
-        <h1 class="Title white">Как мы<br class="mobDel"> <span class="yellow">увеличиваем<br class="mobDel"> шансы</span> на<br> получение<br class="mobDel"> визы</h1>
-        <p>до<br><span class="big">+92%</span> </p>
-      </div>
-      <div class="upgradeRight">
-        <div class="upgradeItem">
-          <div class="upradeText">
-            <h3>Большой опыт работы с визами</h3>
-            <p id="openText1">Благодаря опыту компании, наши специалисты знаю все нюансы и тонкости для подачи на визу в США. Командная работа экспертов приводят к высоким результатам.
-              Так же все сотрудники имеют опыт в прохождении собеседовании и жизни в США.</p>
-          </div>
-          <button id="closeButton1">
-              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="upgradeButton" id="openButton1">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="upgradeItem">
-          <div class="upradeText">
-            <h3>Собираем полный пакет документов</h3>
-            <p id="openText2">Документы являются важным аспектом при подаче на визу. Знание обязательных и дополнительных документов, а главное корректное их содержание увеличивает шансы.</p>
-          </div>
-          <button id="closeButton2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="upgradeButton" id="openButton2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="upgradeItem">
-          <div class="upradeText">
-            <h3>Разбор кейса и детальный анализ.</h3>
-            <p id="openText3">Разобрав ваш кейс, визовые специалисты понимают ваш случай и прорабатывают каркас для корректной работы с лучшими вариантами.</p>
-          </div>
-          <button id="closeButton3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="upgradeButton" id="openButton3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="upgradeItem">
-          <div class="upradeText">
-            <h3>Предоставления приглашение на мероприятия в США</h3>
-            <p id="openText4">Подбор и получение пригласительного письма с США. Данное письмо подбирается индивидуально и опираясь на интересы и предпочтения клиента.</p>
-          </div>
-          <button id="closeButton4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="upgradeButton" id="openButton4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="upgradeItem">
-          <div class="upradeText">
-            <h3>Индивидуальные встречи с визовыми специалистами</h3>
-            <p id="openText5">Мы обучаем наших клиентов технике правильных ответов на вопросы консула. Подготовки проходят на 3 языках, в случае необходимости. В индивидуальном порядке раскрываем сильные и слабые стороны кейса – и используем эту информацию для достижения результата.</p>
-          </div>
-          <button id="closeButton5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="upgradeButton" id="openButton5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="upgradeItem">
-          <div class="upradeText">
-            <h3>Нестандартный подход к кейсу клиента</h3>
-            <p id="openText6">Благодаря уникальным решениям визовые эксперты составляют кейсы предпочтительные в глазах визового офицера в консульстве.</p>
-          </div>
-          <button id="closeButton6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="upgradeButton" id="openButton6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="upgradeItem">
-          <div class="upradeText">
-            <h3>Подготовка к прохождению интервью с консулом</h3>
-            <p id="openText7">Помимо операционных моментов, не мало важную роль играет внешний вид и эмоциональное состояние клиента. Эти детали так же входят в полное сопровождение.</p>
-          </div>
-          <button id="closeButton7">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="upgradeButton" id="openButton7">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <img src="./assets/imgs/Component4.png">
+  </div>
+  <a name="hawWeWork"></a>
+  <div class="upradeBlock">
+    <div class="upgradeLeft">
+      <h1 class="Title white">Как мы<br class="mobDel"> <span class="yellow">увеличиваем<br class="mobDel"> шансы</span> на<br> получение<br class="mobDel"> визы</h1>
+      <p>до<br><span class="big">+92%</span> </p>
     </div>
-    <a name="pluses"></a>
-    <div class="prepareBlock">
-      <img class="bcimg" src="./assets/imgs/chance.png">
-      <div class="prepareLeft">
-        <h1 class="Title">5 часов<br class="mobDel"> подготовки <br class="mobDel">и <span class="yellow">покупайте<br class="mobDel"> билеты</span> <br class="mobDel">в США</h1>
-        <div class="ButtonRow">
-          <button class="arrowButton" id="toLeft2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M22.1665 14H5.83317M5.83317 14L13.9998 5.83337M5.83317 14L13.9998 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="arrowButton" id="toRight2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M5.8335 14H22.1668M22.1668 14L14.0002 5.83337M22.1668 14L14.0002 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+    <div class="upgradeRight">
+      <div class="upgradeItem" id="openButton1">
+        <div class="upradeText">
+          <h3>Большой опыт работы с визами</h3>
+          <p id="openText1">Благодаря опыту компании, наши специалисты знаю все нюансы и тонкости для подачи на визу в США. Командная работа экспертов приводят к высоким результатам.
+            Так же все сотрудники имеют опыт в прохождении собеседовании и жизни в США.</p>
         </div>
-      </div>
-      <div class="prepareRight">
-        <div class="prepWrapper" id="prepWrapper">
-          <div class="prepareItem">
-            <img src="./assets/imgs/prepaare1.png">
-            <p>Получаем пригласительные письма от мероприятий в США исходя из ваших интересов</p>
-          </div>
-          <div class="prepareItem">
-            <img src="./assets/imgs/prepare2.png">
-            <p>Делаем подробный разбор кейса</p>
-          </div>
-          <div class="prepareItem">
-            <img src="./assets/imgs/prepare2.png">
-            <p>Создаем тур-маршрут по интересам</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <div class="formBlock">
-      <div class="mobBc">
-        <img src="assets/imgs/mobForm.png">
-        <p>Оставьте заявку</p>
-      </div>
-      <img class="mobDel" src="./assets/imgs/formImg.png">
-      <p class="second mobDel">Оставьте заявку</p>
-      <h1 class="Title white">Получите <span class="yellow">бесплатную<br> оценку </span> на получение <br>визы в США онлайн</h1>
-      <div class="formRow">
-        <input class="formInput" type="text" name="" placeholder="Имя">
-        <input class="formInput" type="text" name="" placeholder="Телефон">
-      </div>
-      <button class="mainButton" >
-        Оставить заявку
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-          <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="#0D253D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <p class="formRec">НАЖИМАЯ НАКНОПКУ «ОТПРАВИТЬ ЗАЯВКУ»,<br> ВЫПРИНИМАЕТЕ УСЛОВИЯ ОБРАБОТКИ<br> ПЕРСОНАЛЬНЫХ ДАННЫХ</p>
-    </div>
-    <div class="typesBlock">
-      <h1 class="Title">Какие <span class="blue">виды виз</span> в США<br class="mobDel">вы можете получить</h1>
-      <div class="typesRow mobDel">
-        <div class="typeItem">
-          <div class="blueBall">
-            <div class="mask">
-              <img src="./assets/imgs/persone1.png">
-            </div>
-          </div>
-          <div class="typeText">
-            <h2>Деловая</h2>
-            <p>Предназначена для тех, кто собирается посещать страну с деловыми целями, такими как участие в конференциях, предпринимательская деятельность и тд.</p>
-          </div>
-          <button class="typeButton" id="modalOpen3">Получить визу
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-              <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="typeItem">
-          <div class="blueBall">
-            <div class="mask">
-              <img src="./assets/imgs/persone2.png">
-            </div>
-          </div>
-          <div class="typeText">
-            <h2>Студентческая</h2>
-            <p>Студенческая виза в США предоставляет возможность иностранным студентам учиться в американских образовательных учреждениях.</p>
-          </div>
-          <button class="typeButton" id="modalOpen4">Получить визу
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-              <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="typeItem">
-          <div class="blueBall">
-            <div class="mask">
-              <img src="./assets/imgs/persone3.png">
-            </div>
-          </div>
-          <div class="typeText">
-            <h2>Туристическая</h2>
-            <p>Для планирующих посетить страну с целью отдыха, туризма или посещения друзей и родственников.</p>
-          </div>
-          <button class="typeButton" id="modalOpen5">Получить визу
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-              <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="typeItem">
-          <div class="blueBall">
-            <div class="mask">
-              <img src="./assets/imgs/persone4.png">
-            </div>
-          </div>
-          <div class="typeText">
-            <h2>Иммиграция в США</h2>
-            <p>Для тех кто не хочет разбираться в типе виз и хочет как можно скорее иммигрировать в США по любой визе.</p>
-          </div>
-          <button class="typeButton" id="modalOpen6">Получить визу
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-              <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <div class="beliveBlock">
-      <img src="./assets/imgs/chance.png" class="mobDel">
-      <div class="beliveContent">
-        <h1 class="Title">Доверьтесь<br><span class="blue">профессионалам</span> </h1>
-        <div class="beliveGrid">
-          <div class="beliveItem">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <g clip-path="url(#clip0_255_1505)">
-                <path d="M19.9907 3.34392V29.0053C19.9985 40.9763 29.7184 50.8322 41.6883 50.9978C53.9867 51.1682 64.0097 41.2499 64.0097 28.9906V3.34392" fill="#0E2D4A"/>
-                <path d="M19.9907 3.34392V29.0053C19.9985 40.9763 29.7184 50.8322 41.6883 50.9978C53.9867 51.1682 64.0097 41.2499 64.0097 28.9906V3.34392" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M11.5483 2.34375H68.4516" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M17.9904 11.7191H2.34375V24.6094C2.34375 32.376 8.63967 38.6719 16.4062 38.6719H20.7789" fill="white"/>
-                <path d="M17.9904 11.7191H2.34375V24.6094C2.34375 32.376 8.63967 38.6719 16.4062 38.6719H20.7789" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M33.125 64.4165V48.8801V64.4165Z" fill="white"/>
-                <path d="M33.125 64.4165V48.8801" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M46.875 48.8801V64.4165V48.8801Z" fill="white"/>
-                <path d="M46.875 48.8801V64.4165" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M64.0092 12.7191H79.6559V25.6094C79.6559 33.376 73.36 39.6719 65.5935 39.6719H61.2471" fill="#0E2D4A"/>
-                <path d="M64.0092 12.7191H79.6559V25.6094C79.6559 33.376 73.36 39.6719 65.5935 39.6719H61.2471" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M62.0092 11.7191H77.6559V24.6094C77.6559 32.376 71.36 38.6719 63.5935 38.6719H59.2471" fill="white"/>
-                <path d="M62.0092 11.7191H77.6559V24.6094C77.6559 32.376 71.36 38.6719 63.5935 38.6719H59.2471" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M17.9907 2.34392V28.0053C17.9985 39.9763 27.7184 49.8322 39.6883 49.9978C51.9867 50.1682 62.0097 40.2499 62.0097 27.9906V2.34392" fill="#0866C5"/>
-                <path d="M17.9907 2.34392V28.0053C17.9985 39.9763 27.7184 49.8322 39.6883 49.9978C51.9867 50.1682 62.0097 40.2499 62.0097 27.9906V2.34392" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M55.2371 77.6562V69.731C55.2371 67.1422 53.1385 65.0435 50.5496 65.0435H29.4497C26.8608 65.0435 24.7622 67.1422 24.7622 69.731V77.6562" fill="white"/>
-                <path d="M55.2371 77.6562V69.731C55.2371 67.1422 53.1385 65.0435 50.5496 65.0435H29.4497C26.8608 65.0435 24.7622 67.1422 24.7622 69.731V77.6562" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M11.5483 2.34375H68.4518H11.5483Z" fill="white"/>
-                <path d="M11.5483 2.34375H68.4518" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M17.9907 77.6562H62.0095H17.9907Z" fill="white"/>
-                <path d="M17.9907 77.6562H62.0095" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_255_1505">
-                  <rect width="80" height="80" fill="white"/>
-                </clipPath>
-              </defs>
-            </svg>
-            <p>Мы работаем на рынке более <br>5 лет, с 2017 года</p>
-          </div>
-          <div class="beliveItem">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <g clip-path="url(#clip0_255_1517)">
-                <path d="M72.7155 61.7143L42.2487 77.6142L11.4011 61.7143V2.38623H72.7155V61.7143ZM4.33936 2.38623H79.6609H4.33936Z" fill="#0E2D4A"/>
-                <path d="M4.33936 2.38623H79.6609M72.7155 61.7143L42.2487 77.6142L11.4011 61.7143V2.38623H72.7155V61.7143Z" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M70.7155 61.7143L40.2487 77.6142L9.40107 61.7143V2.38623H70.7155V61.7143ZM2.33936 2.38623H77.6609H2.33936Z" fill="white"/>
-                <path d="M2.33936 2.38623H77.6609M70.7155 61.7143L40.2487 77.6142L9.40107 61.7143V2.38623H70.7155V61.7143Z" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <rect x="9" y="3" width="61" height="43" fill="#0866C5"/>
-                <path d="M40.9752 13.9771L44.28 20.3565L51.3685 21.5283L46.3226 26.6427L47.3986 33.7463L40.9752 30.5278L34.5518 33.7463L35.6277 26.6427L30.582 21.5283L37.6703 20.3565L40.9752 13.9771ZM9.40088 44.9791H70.7153H9.40088ZM19.7921 44.9791V67.0704V44.9791ZM30.1912 44.9791V72.4304V44.9791ZM40.2485 44.9791V77.6143V44.9791ZM50.3059 44.9791V72.3657V44.9791ZM60.3632 44.9791V67.0704V44.9791Z" fill="white"/>
-                <path d="M9.40088 44.9791H70.7153M19.7921 44.9791V67.0704M30.1912 44.9791V72.4304M40.2485 44.9791V77.6143M50.3059 44.9791V72.3657M60.3632 44.9791V67.0704M40.9752 13.9771L44.28 20.3565L51.3685 21.5283L46.3226 26.6427L47.3986 33.7463L40.9752 30.5278L34.5518 33.7463L35.6277 26.6427L30.582 21.5283L37.6703 20.3565L40.9752 13.9771Z" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_255_1517">
-                  <rect width="80" height="80" fill="white"/>
-                </clipPath>
-              </defs>
-            </svg>
-            <p>Каждый сотрудник нашей<br> компании побывал в США</p>
-          </div>
-          <div class="beliveItem">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <path d="M18.125 47.8765V39.491C18.125 27.4057 27.9687 17.5181 39.9999 17.5181C52.0312 17.5181 61.8749 27.4072 61.8749 39.491V47.8765" fill="#0866C5"/>
-              <path d="M18.125 47.8765V39.491C18.125 27.4057 27.9687 17.5181 39.9999 17.5181C52.0311 17.5181 61.8749 27.4072 61.8749 39.491V47.8765" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M39.9999 28.4433C52.0312 28.4433 61.8749 38.3313 61.8749 50.4163V55.6775C61.8749 67.7623 52.0312 77.6504 39.9999 77.6504C27.9689 77.6504 18.125 67.7626 18.125 55.6775V50.4163C18.125 38.3311 27.9687 28.4433 39.9999 28.4433Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M40 18.9121V26.8809V18.9121Z" fill="white"/>
-              <path d="M40 18.9121V26.8809" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M27.6445 22.4656L30.2772 28.8164L27.6445 22.4656Z" fill="white"/>
-              <path d="M27.6445 22.4656L30.2772 28.8164" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M52.4048 22.3003L49.71 28.811L52.4048 22.3003Z" fill="white"/>
-              <path d="M52.4048 22.3003L49.71 28.811" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M41.9997 2.34997L46.1269 17.5332H37.8726L41.9997 2.34997Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M39.9997 2.34997L44.1269 17.5332H35.8726L39.9997 2.34997Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3.01611 32.2503L18.7501 32.1936L16.6137 40.1665L3.01611 32.2503Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M78.984 32.2503L63.25 32.1936L65.3864 40.1665L78.984 32.2503Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M76.984 32.2503L61.25 32.1936L63.3864 40.1665L76.984 32.2503Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M15.1172 11.8812L28.7717 19.6989L22.9351 25.5356L15.1172 11.8812Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M66.8825 11.8812L53.228 19.6989L59.0647 25.5356L66.8825 11.8812Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M64.8825 11.8812L51.228 19.6989L57.0647 25.5356L64.8825 11.8812Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M61.6199 47.4533C59.6766 48.1977 57.567 48.6055 55.3618 48.6055C48.8046 48.6055 43.0909 44.9983 40.0936 39.6608C37.0964 44.9983 31.3825 48.6055 24.8253 48.6055C22.5492 48.6055 20.3746 48.1709 18.3799 47.3802" fill="white"/>
-              <path d="M61.6199 47.4533C59.6766 48.1977 57.567 48.6055 55.3618 48.6055C48.8046 48.6055 43.0909 44.9983 40.0936 39.6608C37.0964 44.9983 31.3825 48.6055 24.8253 48.6055C22.5492 48.6055 20.3746 48.1709 18.3799 47.3802" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <p>Визовые эксперты <br>с минимальным стажем <br>работы 3 года</p>
-          </div>
-          <div class="beliveItem">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <path d="M41.0315 54.4305C41.5596 56.1627 41.8436 58.0015 41.8436 59.9063C41.8436 70.2617 33.4491 78.6562 23.0937 78.6562C12.7384 78.6562 4.34375 70.2617 4.34375 59.9063C4.34375 49.551 12.7384 41.1564 23.0937 41.1564C24.9988 41.1564 26.8373 41.4406 28.5695 41.9687" fill="#0E2D4A"/>
-              <path d="M41.0315 54.4305C41.5596 56.1627 41.8436 58.0015 41.8436 59.9063C41.8436 70.2617 33.4491 78.6562 23.0937 78.6562C12.7384 78.6562 4.34375 70.2617 4.34375 59.9063C4.34375 49.551 12.7384 41.1564 23.0937 41.1564C24.9988 41.1564 26.8373 41.4406 28.5695 41.9687" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M39.0315 53.4305C39.5596 55.1627 39.8436 57.0015 39.8436 58.9063C39.8436 69.2617 31.4491 77.6562 21.0937 77.6562C10.7384 77.6562 2.34375 69.2617 2.34375 58.9063C2.34375 48.551 10.7384 40.1564 21.0937 40.1564C22.9988 40.1564 24.8373 40.4406 26.5695 40.9687" fill="#0866C5"/>
-              <path d="M39.0315 53.4305C39.5596 55.1627 39.8436 57.0015 39.8436 58.9063C39.8436 69.2617 31.4491 77.6562 21.0937 77.6562C10.7384 77.6562 2.34375 69.2617 2.34375 58.9063C2.34375 48.551 10.7384 40.1564 21.0937 40.1564C22.9988 40.1564 24.8373 40.4406 26.5695 40.9687" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M60.0037 46.5128L53.3745 53.1419C48.7981 57.7184 39.1524 55.4923 31.8301 48.17C24.5076 40.8478 22.2817 31.2019 26.8581 26.6255L33.4873 19.9963" fill="white"/>
-              <path d="M60.0037 46.5128L53.3745 53.1419C48.7981 57.7184 39.1524 55.4923 31.8301 48.17C24.5076 40.8478 22.2817 31.2019 26.8581 26.6255L33.4873 19.9963" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M58.7225 29.4632C62.9641 35.8604 63.6877 42.8288 60.0039 46.5125C55.4274 51.0889 45.7816 48.863 38.4593 41.5407C31.137 34.2185 28.9111 24.5726 33.4875 19.9962C37.1712 16.3123 44.1396 17.0361 50.5368 21.2775" fill="white"/>
-              <path d="M58.7225 29.4632C62.9641 35.8604 63.6877 42.8288 60.0039 46.5125C55.4274 51.0889 45.7816 48.863 38.4593 41.5407C31.137 34.2185 28.9111 24.5726 33.4875 19.9962C37.1712 16.3123 44.1396 17.0361 50.5368 21.2775" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M51.7176 34.9116C48.0563 34.9116 45.0884 31.9437 45.0884 28.2824L62.8471 5.53921C65.9033 1.60969 71.7119 1.24813 75.2319 4.76812C78.752 8.28811 78.3903 14.0967 74.4609 17.1529L51.7176 34.9116Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M14.0625 58.9063L18.75 63.5938L28.125 54.2188" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <p>Каждый визовый эксперт<br> получает до 200 одобрений </p>
-          </div>
-          <div class="beliveItem">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <g clip-path="url(#clip0_255_1545)">
-                <path d="M20.125 65.1563H13.875C8.69733 65.1563 4.5 69.3536 4.5 74.5313V77.6562H29.4999V74.5313C29.4999 69.3536 25.3026 65.1563 20.125 65.1563Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M18.125 65.1563H11.875C6.69733 65.1563 2.5 69.3536 2.5 74.5313V77.6562H27.4999V74.5313C27.4999 69.3536 23.3026 65.1563 18.125 65.1563Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M45.125 65.1563H38.875C33.6973 65.1563 29.5 69.3536 29.5 74.5313V77.6562H54.4999V74.5313C54.4999 69.3536 50.3026 65.1563 45.125 65.1563Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M43.125 65.1563H36.875C31.6973 65.1563 27.5 69.3536 27.5 74.5313V77.6562H52.4999V74.5313C52.4999 69.3536 48.3026 65.1563 43.125 65.1563Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M70.125 65.1563H63.875C58.6973 65.1563 54.5 69.3536 54.5 74.5313V77.6562H79.4999V74.5313C79.4999 69.3536 75.3026 65.1563 70.125 65.1563Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M68.125 65.1563H61.875C56.6973 65.1563 52.5 69.3536 52.5 74.5313V77.6562H77.4999V74.5313C77.4999 69.3536 73.3026 65.1563 68.125 65.1563Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M23.8125 57.3438C23.8125 61.6584 20.3147 65.1562 16 65.1562C11.6853 65.1562 8.1875 61.6584 8.1875 57.3438C8.1875 53.0291 11.6853 49.5313 16 49.5313C20.3147 49.5313 23.8125 53.0291 23.8125 57.3438Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M22.8125 57.3438C22.8125 61.6584 19.3147 65.1562 15 65.1562C10.6853 65.1562 7.1875 61.6584 7.1875 57.3438C7.1875 53.0291 10.6853 49.5313 15 49.5313C19.3147 49.5313 22.8125 53.0291 22.8125 57.3438Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M48.8125 57.3438C48.8125 61.6584 45.3147 65.1562 41 65.1562C36.6853 65.1562 33.1875 61.6584 33.1875 57.3438C33.1875 53.0291 36.6853 49.5313 41 49.5313C45.3147 49.5313 48.8125 53.0291 48.8125 57.3438Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M47.8125 57.3438C47.8125 61.6584 44.3147 65.1562 40 65.1562C35.6853 65.1562 32.1875 61.6584 32.1875 57.3438C32.1875 53.0291 35.6853 49.5313 40 49.5313C44.3147 49.5313 47.8125 53.0291 47.8125 57.3438Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M73.8125 57.3438C73.8125 61.6584 70.3147 65.1562 66 65.1562C61.6853 65.1562 58.1875 61.6584 58.1875 57.3438C58.1875 53.0291 61.6853 49.5313 66 49.5313C70.3147 49.5313 73.8125 53.0291 73.8125 57.3438Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M72.8125 57.3438C72.8125 61.6584 69.3147 65.1562 65 65.1562C60.6853 65.1562 57.1875 61.6584 57.1875 57.3438C57.1875 53.0291 60.6853 49.5313 65 49.5313C69.3147 49.5313 72.8125 53.0291 72.8125 57.3438Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M31.4062 12.5001H27.4999V2.34386H2.5V33.5938H10.3125L15 39.8438L19.6875 33.5938H27.4999V23.4375H31.4062C34.4265 23.4375 36.8749 20.9891 36.8749 17.9688C36.8749 14.9485 34.4265 12.5001 31.4062 12.5001Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M52.5 33.5938H60.3125L65 39.8438L69.6874 33.5938H77.4999V2.34386H52.5" fill="white"/>
-                <path d="M52.5 33.5938H60.3125L65 39.8438L69.6874 33.5938H77.4999V2.34386H52.5" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M27.5 33.5938H35.3125L40 39.8438L44.6875 33.5938H52.4999V23.4375H56.4062C59.4265 23.4375 61.8749 20.9891 61.8749 17.9688C61.8749 14.9485 59.4265 12.5001 56.4062 12.5001H52.4999V2.34386H27.5" fill="#0866C5"/>
-                <path d="M27.5 33.5938H35.3125L40 39.8438L44.6875 33.5938H52.4999V23.4375H56.4062C59.4265 23.4375 61.8749 20.9891 61.8749 17.9688C61.8749 14.9485 59.4265 12.5001 56.4062 12.5001H52.4999V2.34386H27.5" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_255_1545">
-                  <rect width="80" height="80" fill="white"/>
-                </clipPath>
-              </defs>
-            </svg>
-            <p>Штат сотрудников компании <br>50+ человек </p>
-          </div>
-          <div class="beliveItem">
-            <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
-              <g clip-path="url(#clip0_255_1561)">
-                <path d="M59.4702 35.6902V3.90625C59.4702 3.04328 58.7706 2.34375 57.9077 2.34375H3.90625C3.04328 2.34375 2.34375 3.04328 2.34375 3.90625V76.0934C2.34375 76.9564 3.04328 77.6559 3.90625 77.6559L57.8864 77.6562M13.3566 35.7586H31.4472H13.3566ZM13.3566 26.383H31.4472H13.3566ZM13.3566 17.0073H48.3095H13.3566ZM13.3566 45.0705H31.4472H13.3566ZM13.3566 52.8834H31.4472H13.3566ZM13.3566 62.2591H31.4472H13.3566Z" fill="white"/>
-                <path d="M59.4702 35.6902V3.90625C59.4702 3.04328 58.7706 2.34375 57.9077 2.34375H3.90625C3.04328 2.34375 2.34375 3.04328 2.34375 3.90625V76.0934C2.34375 76.9564 3.04328 77.6559 3.90625 77.6559L57.8864 77.6562M13.3566 35.7586H31.4472M13.3566 26.383H31.4472M13.3566 17.0073H48.3095M13.3566 45.0705H31.4472M13.3566 52.8834H31.4472M13.3566 62.2591H31.4472" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M79.6552 51.1164L79.5726 40.2259C75.6405 40.255 72.2349 37.9851 70.6645 34.6904L51.8915 34.829C50.3712 38.1465 47.0002 40.4665 43.0684 40.4954L43.151 51.3859C43.2206 60.5468 48.1934 68.9892 56.2268 73.5846L61.596 76.6561L66.918 73.5057C74.8807 68.7921 79.7248 60.2773 79.6552 51.1164Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M77.6552 52.1164L77.5726 41.2259C73.6405 41.255 70.2349 38.9851 68.6645 35.6904L49.8915 35.829C48.3712 39.1465 45.0002 41.4665 41.0684 41.4954L41.151 52.3859C41.2206 61.5468 46.1934 69.9892 54.2268 74.5846L59.596 77.6561L64.918 74.5057C72.8807 69.7921 77.7248 61.2773 77.6552 52.1164Z" fill="#0866C4" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M53.77 55.4948L57.7903 60.4332L66.27 51.417" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-              <defs>
-                <clipPath id="clip0_255_1561">
-                  <rect width="80" height="80" fill="white"/>
-                </clipPath>
-              </defs>
-            </svg>
-            <p>Даем 100% гарантию на<br> получение приглашения из США </p>
-          </div>
-
-        </div>
-      </div>
-    </div>
-    <a name="reviwes"></a>
-    <div class="reviewBlock">
-      <div class="reviewController">
-        <h1 class="Title"><span class="yellow"> Отзывы</span> <br>наших клиентов</h1>
-        <div class="ButtonRow">
-          <button class="arrowButton" id="toLeft3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M22.1665 14H5.83317M5.83317 14L13.9998 5.83337M5.83317 14L13.9998 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="arrowButton" id="toRight3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M5.8335 14H22.1668M22.1668 14L14.0002 5.83337M22.1668 14L14.0002 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div class="reviewSlider">
-        <div class="reviewWrapper" id="reviewWrapper">
-          <div class="reviewItem">
-            <svg class="reviewButton" id="reviewButton" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-              <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
-            </svg>
-            <img src="./assets/imgs/video1.png">
-            <div class="reviewBlockText">
-              <h3>Руслан, 25 лет</h3>
-              <p>Сделали рабочую визу в США за 10 дней</p>
-            </div>
-          </div>
-          <div class="reviewItem">
-            <svg class="reviewButton" id="reviewButton2" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-              <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
-            </svg>
-            <img src="./assets/imgs/video2.png">
-            <div class="reviewBlockText">
-              <h3>Айнура, 20 лет</h3>
-              <p>Сделали рабочую визу в США за 10 дней</p>
-            </div>
-          </div>
-          <div class="reviewItem">
-            <svg class="reviewButton" id="reviewButton3" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-              <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
-            </svg>
-            <img src="./assets/imgs/video3.png">
-            <div class="reviewBlockText">
-              <h3>Анастасия, 25 лет</h3>
-              <p>Сделали рабочую визу в США за 10 дней</p>
-            </div>
-          </div>
-          <div class="reviewItem">
-            <svg class="reviewButton" id="reviewButton" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
-              <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
-            </svg>
-            <img src="./assets/imgs/video1.png">
-            <div class="reviewBlockText">
-              <h3>Руслан, 25 лет</h3>
-              <p>Сделали рабочую визу в США за 10 дней</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="formBlock">
-      <div class="mobBc">
-        <img src="assets/imgs/mobBc2.png">
-        <p>Оставьте заявку</p>
-      </div>
-      <img class="mobDel" src="./assets/imgs/form2.png">
-      <p class="second mobDel">Оставьте заявку</p>
-      <h1 class="Title white">Пробная подготовка <br>с <span class="yellow"> визовый экспертом</span> <br>бесплатно</h1>
-      <div class="formRow">
-        <input class="formInput" type="text" name="" placeholder="Имя">
-        <input class="formInput" type="text" name="" placeholder="Телефон">
-      </div>
-      <button class="mainButton">
-        Оставить заявку
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-          <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="#0D253D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </button>
-      <p class="formRec">НАЖИМАЯ НАКНОПКУ «ОТПРАВИТЬ ЗАЯВКУ»,<br> ВЫПРИНИМАЕТЕ УСЛОВИЯ ОБРАБОТКИ<br> ПЕРСОНАЛЬНЫХ ДАННЫХ</p>
-    </div>
-    <div class="questionBlock">
-      <h1 class="Title">Вопросы и <span class="yellow">ответы</span> </h1>
-      <div class="questions">
-        <div class="question">
-          <div class="quesText">
-            <h2>На каком языке можно пройти интервью с визовым офицером в Казахстане?</h2>
-            <p id="iconText">Интервью с визовым офицером можно пройти на русском, английском и казахском языках.</p>
-          </div>
-          <button class="iconButton" id="iconClose">
+        <button id="closeButton1">
             <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2>Сколько времени занимает оформление визы в США?</h2>
-            <p id="iconText2">Длительность зависит от типа визы и пакета услуг, в среднем от 30 дней до 4-х месяцев.</p>
-          </div>
-          <button class="iconButton" id="iconClose2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2> Есть ли гарантии в получении визы?</h2>
-            <p id="iconText3">Мы гарантируем качественное выполнение работы с нашей стороны, однако конечное решение остатеся за визовым офицером\консулом.</p>
-          </div>
-          <button class="iconButton" id="iconClose3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2> Есть ли возврат?</h2>
-            <p id="iconText4">Возврат денежных средств за предоставленные услуги не предусмотрен, но есть возможность воспользоваться повторной подачей на визу.</p>
-          </div>
-          <button class="iconButton" id="iconClose4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen4">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2> А если я полулу отказ?</h2>
-            <p id="iconText5">Для наших клиентов мы предоставляем вторую бесплатную подачу на визу, где мы также разберем предыдущий слуйчай совместно с визовым экспертом.</p>
-          </div>
-          <button class="iconButton" id="iconClose5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen5">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2> Есть ли у вас скидки?</h2>
-            <p id="iconText6">Да, наши менеджера имеют персональную скидку, но она ограничена.</p>
-          </div>
-          <button class="iconButton" id="iconClose6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen6">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2>Влияет ли поездка в Европу на получение визы в США?</h2>
-            <p id="iconText7">Предыдущие поездки за границу могут увеличить шанс, однако это только один из факторов благодаря которой у вас есть возможность получить визу в Америку.
-            </p>
-          </div>
-          <button class="iconButton" id="iconClose7">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen7">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2>Что если ранее у меня был отказ?</h2>
-            <p id="iconText8">Предыдущие отказы не влияют на получение визы. Мы делаем анализ предыдущего кейса и прорабатываем актуальный кейс.</p>
-          </div>
-          <button class="iconButton" id="iconClose8">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen8">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2>На сколько лет выдается виза в США?</h2>
-            <p id="iconText9">Для граждан Казахстана туристическая виза выдается сроком до 10 лет, студенческая виза до 5 лет. Для нерезидентам стран уточняйте у менеджера.</p>
-          </div>
-          <button class="iconButton" id="iconClose9">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen9">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2>С гражданами каких стран вы работаете?</h2>
-            <p id="iconText10">Мы работаем с гражданами всех стран.
-            </p>
-          </div>
-          <button class="iconButton" id="iconClose10">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen10">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2>Каким образом Консульский офицер принимает решение?</h2>
-            <p id="iconText11">Каждый заявитель на визу является потенциальным имигрантом. Задача заявителя убедить консула в не иммиграционных целях, связи с родиной.
-            </p>
-          </div>
-          <button class="iconButton" id="iconClose11">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen11">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-        <div class="question">
-          <div class="quesText">
-            <h2>Могу ли я обращаться за визой снова и через какой период, если мне было отказано?</h2>
-            <p id="iconText12">Повторная подача не имет отпределенных сроков. При оплате консульского сбора и наличаи дат, записаться можно уже на следующий день после отказа.
-            </p>
-          </div>
-          <button class="iconButton" id="iconClose12">
-            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
-              <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="iconButton2" id="iconOpen12">
-            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-    </div>
-    <a name="contacts"></a>
-    <div class="contactBlock">
-      <img class="bgImg" src="./assets/imgs/chance.png">
-      <div class="contactsForm">
-        <div class="contactText">
-          <h3 class="blue">Остались вопросы?</h3>
-          <p>Оставьте заявку, наш специалист перезвонит вам и проконсультирует по всем вопросам.</p>
-        </div>
-        <input placeholder="Имя">
-        <input placeholder="Телефон">
-        <button class="mainButton">
-          <span class="white">
-          Оставить заявку
-          </span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-            <path d="M4.1665 10.5003H15.8332M15.8332 10.5003L9.99984 4.66699M15.8332 10.5003L9.99984 16.3337" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="upgradeButton" id="QopenButton1">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
         </button>
       </div>
-      <div class="contactInfo">
-        <div class="contactOne">
-          <p class="cHelper">Телефон:</p>
-          <p class="bigText">+7 747 365 55 55</p>
-          <div class="oneRow">
-            <button class="callButton" id="modalOpen7">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                <path d="M14.5828 2.5L17.4995 5.41667M17.4995 5.41667L14.5828 8.33333M17.4995 5.41667H10.8328M8.52204 11.5526C7.52072 10.5512 6.73007 9.41904 6.15007 8.21102C6.10018 8.10712 6.07523 8.05516 6.05607 7.98942C5.98797 7.75579 6.03689 7.46891 6.17856 7.27105C6.21843 7.21537 6.26606 7.16774 6.36132 7.07248C6.65266 6.78115 6.79833 6.63548 6.89356 6.48899C7.25273 5.93659 7.25273 5.22443 6.89356 4.67203C6.79833 4.52554 6.65266 4.37988 6.36132 4.08854L6.19893 3.92615C5.75606 3.48328 5.53462 3.26184 5.29681 3.14156C4.82384 2.90233 4.26529 2.90233 3.79232 3.14156C3.5545 3.26184 3.33307 3.48328 2.8902 3.92615L2.75883 4.05751C2.31748 4.49886 2.09681 4.71954 1.92827 5.01956C1.74125 5.35249 1.60678 5.86956 1.60792 6.25141C1.60894 6.59554 1.67569 6.83072 1.8092 7.30109C2.52668 9.82892 3.8804 12.2142 5.87039 14.2042C7.86037 16.1942 10.2457 17.5479 12.7735 18.2654C13.2439 18.3989 13.4791 18.4657 13.8232 18.4667C14.205 18.4678 14.7221 18.3333 15.055 18.1463C15.3551 17.9778 15.5757 17.7571 16.0171 17.3158L16.1484 17.1844C16.5913 16.7415 16.8128 16.5201 16.933 16.2823C17.1723 15.8093 17.1723 15.2508 16.933 14.7778C16.8128 14.54 16.5913 14.3185 16.1484 13.8757L15.9861 13.7133C15.6947 13.4219 15.549 13.2763 15.4026 13.181C14.8502 12.8219 14.138 12.8219 13.5856 13.181C13.4391 13.2763 13.2934 13.4219 13.0021 13.7133C12.9069 13.8085 12.8592 13.8562 12.8035 13.896C12.6057 14.0377 12.3188 14.0866 12.0852 14.0185C12.0194 13.9994 11.9675 13.9744 11.8636 13.9245C10.6556 13.3445 9.52335 12.5539 8.52204 11.5526Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              Заказать звонок
-            </button>
-            <p class="miniText">График работы:<br class="mobDel"> 9:00 - 19:00, без выходных</p>
+      <div class="upgradeItem" id="openButton2">
+        <div class="upradeText">
+          <h3>Собираем полный пакет документов</h3>
+          <p id="openText2">Документы являются важным аспектом при подаче на визу. Знание обязательных и дополнительных документов, а главное корректное их содержание увеличивает шансы.</p>
+        </div>
+        <button id="closeButton2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="upgradeButton" id="QopenButton2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="upgradeItem" id="openButton3">
+        <div class="upradeText">
+          <h3>Разбор кейса и детальный анализ.</h3>
+          <p id="openText3">Разобрав ваш кейс, визовые специалисты понимают ваш случай и прорабатывают каркас для корректной работы с лучшими вариантами.</p>
+        </div>
+        <button id="closeButton3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="upgradeButton" id="QopenButton3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="upgradeItem" id="openButton4">
+        <div class="upradeText">
+          <h3>Предоставления приглашение на мероприятия в США</h3>
+          <p id="openText4">Подбор и получение пригласительного письма с США. Данное письмо подбирается индивидуально и опираясь на интересы и предпочтения клиента.</p>
+        </div>
+        <button id="closeButton4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="upgradeButton" id="QopenButton4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="upgradeItem" id="openButton5">
+        <div class="upradeText">
+          <h3>Индивидуальные встречи с визовыми специалистами</h3>
+          <p id="openText5">Мы обучаем наших клиентов технике правильных ответов на вопросы консула. Подготовки проходят на 3 языках, в случае необходимости. В индивидуальном порядке раскрываем сильные и слабые стороны кейса – и используем эту информацию для достижения результата.</p>
+        </div>
+        <button id="closeButton5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="upgradeButton" id="QopenButton5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="upgradeItem" id="openButton6">
+        <div class="upradeText">
+          <h3>Нестандартный подход к кейсу клиента</h3>
+          <p id="openText6">Благодаря уникальным решениям визовые эксперты составляют кейсы предпочтительные в глазах визового офицера в консульстве.</p>
+        </div>
+        <button id="closeButton6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="upgradeButton" id="QopenButton6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="upgradeItem" id="openButton7">
+        <div class="upradeText">
+          <h3>Подготовка к прохождению интервью с консулом</h3>
+          <p id="openText7">Помимо операционных моментов, не мало важную роль играет внешний вид и эмоциональное состояние клиента. Эти детали так же входят в полное сопровождение.</p>
+        </div>
+        <button id="closeButton7">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="upgradeButton" id="QopenButton7">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83325V22.1666M5.8335 13.9999H22.1668" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <img src="./assets/imgs/Component4.png">
+  </div>
+  <a name="pluses"></a>
+  <div class="prepareBlock">
+    <img class="bcimg" src="./assets/imgs/chance.png">
+    <div class="prepareLeft">
+      <h1 class="Title">5 часов<br class="mobDel"> подготовки <br class="mobDel">и <span class="yellow">покупайте<br class="mobDel"> билеты</span> <br class="mobDel">в США</h1>
+      <div class="ButtonRow mobDel">
+        <button class="arrowButton" id="toLeft2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M22.1665 14H5.83317M5.83317 14L13.9998 5.83337M5.83317 14L13.9998 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="arrowButton" id="toRight2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M5.8335 14H22.1668M22.1668 14L14.0002 5.83337M22.1668 14L14.0002 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="prepareRight mobDel">
+      <div class="prepWrapper" id="prepWrapper">
+        <div class="prepareItem">
+          <img src="./assets/imgs/prepaare1.png">
+          <p>Получаем пригласительные письма от мероприятий в США исходя из ваших интересов</p>
+        </div>
+        <div class="prepareItem">
+          <img src="./assets/imgs/prepare2.png">
+          <p>Делаем подробный разбор кейса</p>
+        </div>
+        <div class="prepareItem">
+          <img src="./assets/imgs/prepare2.png">
+          <p>Создаем тур-маршрут по интересам</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="formBlock">
+    <div class="mobBc">
+      <img src="assets/imgs/mobForm.png">
+      <p>Оставьте заявку</p>
+    </div>
+    <img class="mobDel" src="./assets/imgs/formImg.png">
+    <div class="formRght">
+      <p class="second mobDel">Оставьте заявку</p>
+      <h1 class="Title white">Получите <span class="yellow">бесплатную<br> оценку </span> на получение <br>визы в США онлайн</h1>
+      <div class="formRow">
+        <input id="name2" name="name" class="formInput" type="text" placeholder="Имя">
+        <input id="phoneNumber2" class="formInput phoneNumber" type="text" placeholder="Телефон">
+      </div>
+      <button class="mainButton" onclick="sendEmail(2, true)">
+        Оставить заявку
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="#0D253D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <p class="formRec">НАЖИМАЯ НАКНОПКУ «ОТПРАВИТЬ ЗАЯВКУ»,<br> ВЫПРИНИМАЕТЕ УСЛОВИЯ ОБРАБОТКИ<br> ПЕРСОНАЛЬНЫХ ДАННЫХ</p>
+    </div>
+  </div>
+  <div class="typesBlock">
+    <h1 class="Title">Какие <span class="blue">виды виз</span> в США<br class="mobDel">вы можете получить</h1>
+    <div class="typesRow">
+      <div class="typeItem">
+        <div class="blueBall">
+          <div class="mask">
+            <img src="./assets/imgs/persone1.png">
           </div>
         </div>
-        <div class="contactTwo">
-          <p class="cHelper">Адрес:</p>
-          <p class="spec">Алматы, ул. Оспанова 86, офис 15</p>
-          <a href="https://2gis.kz/almaty/firm/70000001038950153"><button class="qnetButton">Построить маршрут в 2GIS</button></a>
+        <div class="typeText">
+          <h2>Деловая</h2>
+          <p>Предназначена для тех, кто собирается посещать страну с деловыми целями, такими как участие в конференциях, предпринимательская деятельность и тд.</p>
         </div>
-        <div class="contactTwo">
-          <p class="cHelper">Написать нам:</p>
-          <p class="spec">visasup21@gmail.com</p>
-          <div class="oneRow">
-            <a href="https://instagram.com/visa.support.usa?igshid=MmVlMjlkMTBhMg=="><button class="qnetButton">Instagram</button></a>
-            <a href="https://wa.me/87473655554"><button class="qnetButton">WhatsApp</button></a>
+        <button class="typeButton" id="modalOpen3">Получить визу
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="typeItem">
+        <div class="blueBall">
+          <div class="mask">
+            <img src="./assets/imgs/persone2.png">
+          </div>
+        </div>
+        <div class="typeText">
+          <h2>Студентческая</h2>
+          <p>Студенческая виза в США предоставляет возможность иностранным студентам учиться в американских образовательных учреждениях.</p>
+        </div>
+        <button class="typeButton" id="modalOpen4">Получить визу
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="typeItem">
+        <div class="blueBall">
+          <div class="mask">
+            <img src="./assets/imgs/persone3.png">
+          </div>
+        </div>
+        <div class="typeText">
+          <h2>Туристическая</h2>
+          <p>Для планирующих посетить страну с целью отдыха, туризма или посещения друзей и родственников.</p>
+        </div>
+        <button class="typeButton" id="modalOpen5">Получить визу
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="typeItem">
+        <div class="blueBall">
+          <div class="mask">
+            <img src="./assets/imgs/persone4.png">
+          </div>
+        </div>
+        <div class="typeText">
+          <h2>Иммиграция в США</h2>
+          <p>Для тех кто не хочет разбираться в типе виз и хочет как можно скорее иммигрировать в США по любой визе.</p>
+        </div>
+        <button class="typeButton" id="modalOpen6">Получить визу
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+            <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="desDel">
+      <div class="owl-carousel">
+        <div>
+          <div class="typeItem">
+            <div class="blueBall">
+              <div class="mask">
+                <img src="./assets/imgs/persone1.png">
+              </div>
+            </div>
+            <div class="typeText">
+              <h2>Деловая</h2>
+              <p>Предназначена для тех, кто собирается посещать страну с деловыми целями, такими как участие в конференциях, предпринимательская деятельность и тд.</p>
+            </div>
+            <button class="typeButton" id="MmodalOpen3">Получить визу
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div class="typeItem">
+            <div class="blueBall">
+              <div class="mask">
+                <img src="./assets/imgs/persone2.png">
+              </div>
+            </div>
+            <div class="typeText">
+              <h2>Студентческая</h2>
+              <p>Студенческая виза в США предоставляет возможность иностранным студентам учиться в американских образовательных учреждениях.</p>
+            </div>
+            <button class="typeButton" id="MmodalOpen4">Получить визу
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div class="typeItem">
+            <div class="blueBall">
+              <div class="mask">
+                <img src="./assets/imgs/persone3.png">
+              </div>
+            </div>
+            <div class="typeText">
+              <h2>Туристическая</h2>
+              <p>Для планирующих посетить страну с целью отдыха, туризма или посещения друзей и родственников.</p>
+            </div>
+            <button class="typeButton" id="MmodalOpen5">Получить визу
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div>
+          <div class="typeItem">
+            <div class="blueBall">
+              <div class="mask">
+                <img src="./assets/imgs/persone4.png">
+              </div>
+            </div>
+            <div class="typeText">
+              <h2>Иммиграция в США</h2>
+              <p>Для тех кто не хочет разбираться в типе виз и хочет как можно скорее иммигрировать в США по любой визе.</p>
+            </div>
+            <button class="typeButton" id="MmodalOpen6">Получить визу
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
         </div>
       </div>
-      <p class="footerText">VisaSupport.kz 2023 Все права защищены!</p>
-      <img class="bgImg2" clas src="./assets/imgs/contact.png">
     </div>
-
   </div>
+  <div class="beliveBlock">
+    <img src="./assets/imgs/chance.png" class="mobDel">
+    <div class="beliveContent">
+      <h1 class="Title">Доверьтесь<br><span class="blue">профессионалам</span> </h1>
+      <div class="beliveGrid">
+        <div class="beliveItem">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <g clip-path="url(#clip0_255_1505)">
+              <path d="M19.9907 3.34392V29.0053C19.9985 40.9763 29.7184 50.8322 41.6883 50.9978C53.9867 51.1682 64.0097 41.2499 64.0097 28.9906V3.34392" fill="#0E2D4A"/>
+              <path d="M19.9907 3.34392V29.0053C19.9985 40.9763 29.7184 50.8322 41.6883 50.9978C53.9867 51.1682 64.0097 41.2499 64.0097 28.9906V3.34392" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.5483 2.34375H68.4516" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17.9904 11.7191H2.34375V24.6094C2.34375 32.376 8.63967 38.6719 16.4062 38.6719H20.7789" fill="white"/>
+              <path d="M17.9904 11.7191H2.34375V24.6094C2.34375 32.376 8.63967 38.6719 16.4062 38.6719H20.7789" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M33.125 64.4165V48.8801V64.4165Z" fill="white"/>
+              <path d="M33.125 64.4165V48.8801" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M46.875 48.8801V64.4165V48.8801Z" fill="white"/>
+              <path d="M46.875 48.8801V64.4165" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M64.0092 12.7191H79.6559V25.6094C79.6559 33.376 73.36 39.6719 65.5935 39.6719H61.2471" fill="#0E2D4A"/>
+              <path d="M64.0092 12.7191H79.6559V25.6094C79.6559 33.376 73.36 39.6719 65.5935 39.6719H61.2471" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M62.0092 11.7191H77.6559V24.6094C77.6559 32.376 71.36 38.6719 63.5935 38.6719H59.2471" fill="white"/>
+              <path d="M62.0092 11.7191H77.6559V24.6094C77.6559 32.376 71.36 38.6719 63.5935 38.6719H59.2471" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17.9907 2.34392V28.0053C17.9985 39.9763 27.7184 49.8322 39.6883 49.9978C51.9867 50.1682 62.0097 40.2499 62.0097 27.9906V2.34392" fill="#0866C5"/>
+              <path d="M17.9907 2.34392V28.0053C17.9985 39.9763 27.7184 49.8322 39.6883 49.9978C51.9867 50.1682 62.0097 40.2499 62.0097 27.9906V2.34392" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M55.2371 77.6562V69.731C55.2371 67.1422 53.1385 65.0435 50.5496 65.0435H29.4497C26.8608 65.0435 24.7622 67.1422 24.7622 69.731V77.6562" fill="white"/>
+              <path d="M55.2371 77.6562V69.731C55.2371 67.1422 53.1385 65.0435 50.5496 65.0435H29.4497C26.8608 65.0435 24.7622 67.1422 24.7622 69.731V77.6562" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M11.5483 2.34375H68.4518H11.5483Z" fill="white"/>
+              <path d="M11.5483 2.34375H68.4518" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M17.9907 77.6562H62.0095H17.9907Z" fill="white"/>
+              <path d="M17.9907 77.6562H62.0095" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_255_1505">
+                <rect width="80" height="80" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <p>Мы работаем на рынке более <br>5 лет, с 2017 года</p>
+        </div>
+        <div class="beliveItem">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <g clip-path="url(#clip0_255_1517)">
+              <path d="M72.7155 61.7143L42.2487 77.6142L11.4011 61.7143V2.38623H72.7155V61.7143ZM4.33936 2.38623H79.6609H4.33936Z" fill="#0E2D4A"/>
+              <path d="M4.33936 2.38623H79.6609M72.7155 61.7143L42.2487 77.6142L11.4011 61.7143V2.38623H72.7155V61.7143Z" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M70.7155 61.7143L40.2487 77.6142L9.40107 61.7143V2.38623H70.7155V61.7143ZM2.33936 2.38623H77.6609H2.33936Z" fill="white"/>
+              <path d="M2.33936 2.38623H77.6609M70.7155 61.7143L40.2487 77.6142L9.40107 61.7143V2.38623H70.7155V61.7143Z" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <rect x="9" y="3" width="61" height="43" fill="#0866C5"/>
+              <path d="M40.9752 13.9771L44.28 20.3565L51.3685 21.5283L46.3226 26.6427L47.3986 33.7463L40.9752 30.5278L34.5518 33.7463L35.6277 26.6427L30.582 21.5283L37.6703 20.3565L40.9752 13.9771ZM9.40088 44.9791H70.7153H9.40088ZM19.7921 44.9791V67.0704V44.9791ZM30.1912 44.9791V72.4304V44.9791ZM40.2485 44.9791V77.6143V44.9791ZM50.3059 44.9791V72.3657V44.9791ZM60.3632 44.9791V67.0704V44.9791Z" fill="white"/>
+              <path d="M9.40088 44.9791H70.7153M19.7921 44.9791V67.0704M30.1912 44.9791V72.4304M40.2485 44.9791V77.6143M50.3059 44.9791V72.3657M60.3632 44.9791V67.0704M40.9752 13.9771L44.28 20.3565L51.3685 21.5283L46.3226 26.6427L47.3986 33.7463L40.9752 30.5278L34.5518 33.7463L35.6277 26.6427L30.582 21.5283L37.6703 20.3565L40.9752 13.9771Z" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_255_1517">
+                <rect width="80" height="80" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <p>Каждый сотрудник нашей<br> компании побывал в США</p>
+        </div>
+        <div class="beliveItem">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <path d="M18.125 47.8765V39.491C18.125 27.4057 27.9687 17.5181 39.9999 17.5181C52.0312 17.5181 61.8749 27.4072 61.8749 39.491V47.8765" fill="#0866C5"/>
+            <path d="M18.125 47.8765V39.491C18.125 27.4057 27.9687 17.5181 39.9999 17.5181C52.0311 17.5181 61.8749 27.4072 61.8749 39.491V47.8765" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M39.9999 28.4433C52.0312 28.4433 61.8749 38.3313 61.8749 50.4163V55.6775C61.8749 67.7623 52.0312 77.6504 39.9999 77.6504C27.9689 77.6504 18.125 67.7626 18.125 55.6775V50.4163C18.125 38.3311 27.9687 28.4433 39.9999 28.4433Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M40 18.9121V26.8809V18.9121Z" fill="white"/>
+            <path d="M40 18.9121V26.8809" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M27.6445 22.4656L30.2772 28.8164L27.6445 22.4656Z" fill="white"/>
+            <path d="M27.6445 22.4656L30.2772 28.8164" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M52.4048 22.3003L49.71 28.811L52.4048 22.3003Z" fill="white"/>
+            <path d="M52.4048 22.3003L49.71 28.811" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M41.9997 2.34997L46.1269 17.5332H37.8726L41.9997 2.34997Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M39.9997 2.34997L44.1269 17.5332H35.8726L39.9997 2.34997Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M3.01611 32.2503L18.7501 32.1936L16.6137 40.1665L3.01611 32.2503Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M78.984 32.2503L63.25 32.1936L65.3864 40.1665L78.984 32.2503Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M76.984 32.2503L61.25 32.1936L63.3864 40.1665L76.984 32.2503Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15.1172 11.8812L28.7717 19.6989L22.9351 25.5356L15.1172 11.8812Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M66.8825 11.8812L53.228 19.6989L59.0647 25.5356L66.8825 11.8812Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M64.8825 11.8812L51.228 19.6989L57.0647 25.5356L64.8825 11.8812Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M61.6199 47.4533C59.6766 48.1977 57.567 48.6055 55.3618 48.6055C48.8046 48.6055 43.0909 44.9983 40.0936 39.6608C37.0964 44.9983 31.3825 48.6055 24.8253 48.6055C22.5492 48.6055 20.3746 48.1709 18.3799 47.3802" fill="white"/>
+            <path d="M61.6199 47.4533C59.6766 48.1977 57.567 48.6055 55.3618 48.6055C48.8046 48.6055 43.0909 44.9983 40.0936 39.6608C37.0964 44.9983 31.3825 48.6055 24.8253 48.6055C22.5492 48.6055 20.3746 48.1709 18.3799 47.3802" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p>Визовые эксперты <br>с минимальным стажем <br>работы 3 года</p>
+        </div>
+        <div class="beliveItem">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <path d="M41.0315 54.4305C41.5596 56.1627 41.8436 58.0015 41.8436 59.9063C41.8436 70.2617 33.4491 78.6562 23.0937 78.6562C12.7384 78.6562 4.34375 70.2617 4.34375 59.9063C4.34375 49.551 12.7384 41.1564 23.0937 41.1564C24.9988 41.1564 26.8373 41.4406 28.5695 41.9687" fill="#0E2D4A"/>
+            <path d="M41.0315 54.4305C41.5596 56.1627 41.8436 58.0015 41.8436 59.9063C41.8436 70.2617 33.4491 78.6562 23.0937 78.6562C12.7384 78.6562 4.34375 70.2617 4.34375 59.9063C4.34375 49.551 12.7384 41.1564 23.0937 41.1564C24.9988 41.1564 26.8373 41.4406 28.5695 41.9687" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M39.0315 53.4305C39.5596 55.1627 39.8436 57.0015 39.8436 58.9063C39.8436 69.2617 31.4491 77.6562 21.0937 77.6562C10.7384 77.6562 2.34375 69.2617 2.34375 58.9063C2.34375 48.551 10.7384 40.1564 21.0937 40.1564C22.9988 40.1564 24.8373 40.4406 26.5695 40.9687" fill="#0866C5"/>
+            <path d="M39.0315 53.4305C39.5596 55.1627 39.8436 57.0015 39.8436 58.9063C39.8436 69.2617 31.4491 77.6562 21.0937 77.6562C10.7384 77.6562 2.34375 69.2617 2.34375 58.9063C2.34375 48.551 10.7384 40.1564 21.0937 40.1564C22.9988 40.1564 24.8373 40.4406 26.5695 40.9687" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M60.0037 46.5128L53.3745 53.1419C48.7981 57.7184 39.1524 55.4923 31.8301 48.17C24.5076 40.8478 22.2817 31.2019 26.8581 26.6255L33.4873 19.9963" fill="white"/>
+            <path d="M60.0037 46.5128L53.3745 53.1419C48.7981 57.7184 39.1524 55.4923 31.8301 48.17C24.5076 40.8478 22.2817 31.2019 26.8581 26.6255L33.4873 19.9963" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M58.7225 29.4632C62.9641 35.8604 63.6877 42.8288 60.0039 46.5125C55.4274 51.0889 45.7816 48.863 38.4593 41.5407C31.137 34.2185 28.9111 24.5726 33.4875 19.9962C37.1712 16.3123 44.1396 17.0361 50.5368 21.2775" fill="white"/>
+            <path d="M58.7225 29.4632C62.9641 35.8604 63.6877 42.8288 60.0039 46.5125C55.4274 51.0889 45.7816 48.863 38.4593 41.5407C31.137 34.2185 28.9111 24.5726 33.4875 19.9962C37.1712 16.3123 44.1396 17.0361 50.5368 21.2775" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M51.7176 34.9116C48.0563 34.9116 45.0884 31.9437 45.0884 28.2824L62.8471 5.53921C65.9033 1.60969 71.7119 1.24813 75.2319 4.76812C78.752 8.28811 78.3903 14.0967 74.4609 17.1529L51.7176 34.9116Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M14.0625 58.9063L18.75 63.5938L28.125 54.2188" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <p>Каждый визовый эксперт<br> получает до 200 одобрений </p>
+        </div>
+        <div class="beliveItem">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <g clip-path="url(#clip0_255_1545)">
+              <path d="M20.125 65.1563H13.875C8.69733 65.1563 4.5 69.3536 4.5 74.5313V77.6562H29.4999V74.5313C29.4999 69.3536 25.3026 65.1563 20.125 65.1563Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M18.125 65.1563H11.875C6.69733 65.1563 2.5 69.3536 2.5 74.5313V77.6562H27.4999V74.5313C27.4999 69.3536 23.3026 65.1563 18.125 65.1563Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M45.125 65.1563H38.875C33.6973 65.1563 29.5 69.3536 29.5 74.5313V77.6562H54.4999V74.5313C54.4999 69.3536 50.3026 65.1563 45.125 65.1563Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M43.125 65.1563H36.875C31.6973 65.1563 27.5 69.3536 27.5 74.5313V77.6562H52.4999V74.5313C52.4999 69.3536 48.3026 65.1563 43.125 65.1563Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M70.125 65.1563H63.875C58.6973 65.1563 54.5 69.3536 54.5 74.5313V77.6562H79.4999V74.5313C79.4999 69.3536 75.3026 65.1563 70.125 65.1563Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M68.125 65.1563H61.875C56.6973 65.1563 52.5 69.3536 52.5 74.5313V77.6562H77.4999V74.5313C77.4999 69.3536 73.3026 65.1563 68.125 65.1563Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M23.8125 57.3438C23.8125 61.6584 20.3147 65.1562 16 65.1562C11.6853 65.1562 8.1875 61.6584 8.1875 57.3438C8.1875 53.0291 11.6853 49.5313 16 49.5313C20.3147 49.5313 23.8125 53.0291 23.8125 57.3438Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M22.8125 57.3438C22.8125 61.6584 19.3147 65.1562 15 65.1562C10.6853 65.1562 7.1875 61.6584 7.1875 57.3438C7.1875 53.0291 10.6853 49.5313 15 49.5313C19.3147 49.5313 22.8125 53.0291 22.8125 57.3438Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M48.8125 57.3438C48.8125 61.6584 45.3147 65.1562 41 65.1562C36.6853 65.1562 33.1875 61.6584 33.1875 57.3438C33.1875 53.0291 36.6853 49.5313 41 49.5313C45.3147 49.5313 48.8125 53.0291 48.8125 57.3438Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M47.8125 57.3438C47.8125 61.6584 44.3147 65.1562 40 65.1562C35.6853 65.1562 32.1875 61.6584 32.1875 57.3438C32.1875 53.0291 35.6853 49.5313 40 49.5313C44.3147 49.5313 47.8125 53.0291 47.8125 57.3438Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M73.8125 57.3438C73.8125 61.6584 70.3147 65.1562 66 65.1562C61.6853 65.1562 58.1875 61.6584 58.1875 57.3438C58.1875 53.0291 61.6853 49.5313 66 49.5313C70.3147 49.5313 73.8125 53.0291 73.8125 57.3438Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M72.8125 57.3438C72.8125 61.6584 69.3147 65.1562 65 65.1562C60.6853 65.1562 57.1875 61.6584 57.1875 57.3438C57.1875 53.0291 60.6853 49.5313 65 49.5313C69.3147 49.5313 72.8125 53.0291 72.8125 57.3438Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M31.4062 12.5001H27.4999V2.34386H2.5V33.5938H10.3125L15 39.8438L19.6875 33.5938H27.4999V23.4375H31.4062C34.4265 23.4375 36.8749 20.9891 36.8749 17.9688C36.8749 14.9485 34.4265 12.5001 31.4062 12.5001Z" fill="white" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M52.5 33.5938H60.3125L65 39.8438L69.6874 33.5938H77.4999V2.34386H52.5" fill="white"/>
+              <path d="M52.5 33.5938H60.3125L65 39.8438L69.6874 33.5938H77.4999V2.34386H52.5" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M27.5 33.5938H35.3125L40 39.8438L44.6875 33.5938H52.4999V23.4375H56.4062C59.4265 23.4375 61.8749 20.9891 61.8749 17.9688C61.8749 14.9485 59.4265 12.5001 56.4062 12.5001H52.4999V2.34386H27.5" fill="#0866C5"/>
+              <path d="M27.5 33.5938H35.3125L40 39.8438L44.6875 33.5938H52.4999V23.4375H56.4062C59.4265 23.4375 61.8749 20.9891 61.8749 17.9688C61.8749 14.9485 59.4265 12.5001 56.4062 12.5001H52.4999V2.34386H27.5" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_255_1545">
+                <rect width="80" height="80" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <p>Штат сотрудников компании <br>50+ человек </p>
+        </div>
+        <div class="beliveItem">
+          <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" fill="none">
+            <g clip-path="url(#clip0_255_1561)">
+              <path d="M59.4702 35.6902V3.90625C59.4702 3.04328 58.7706 2.34375 57.9077 2.34375H3.90625C3.04328 2.34375 2.34375 3.04328 2.34375 3.90625V76.0934C2.34375 76.9564 3.04328 77.6559 3.90625 77.6559L57.8864 77.6562M13.3566 35.7586H31.4472H13.3566ZM13.3566 26.383H31.4472H13.3566ZM13.3566 17.0073H48.3095H13.3566ZM13.3566 45.0705H31.4472H13.3566ZM13.3566 52.8834H31.4472H13.3566ZM13.3566 62.2591H31.4472H13.3566Z" fill="white"/>
+              <path d="M59.4702 35.6902V3.90625C59.4702 3.04328 58.7706 2.34375 57.9077 2.34375H3.90625C3.04328 2.34375 2.34375 3.04328 2.34375 3.90625V76.0934C2.34375 76.9564 3.04328 77.6559 3.90625 77.6559L57.8864 77.6562M13.3566 35.7586H31.4472M13.3566 26.383H31.4472M13.3566 17.0073H48.3095M13.3566 45.0705H31.4472M13.3566 52.8834H31.4472M13.3566 62.2591H31.4472" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M79.6552 51.1164L79.5726 40.2259C75.6405 40.255 72.2349 37.9851 70.6645 34.6904L51.8915 34.829C50.3712 38.1465 47.0002 40.4665 43.0684 40.4954L43.151 51.3859C43.2206 60.5468 48.1934 68.9892 56.2268 73.5846L61.596 76.6561L66.918 73.5057C74.8807 68.7921 79.7248 60.2773 79.6552 51.1164Z" fill="#0E2D4A" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M77.6552 52.1164L77.5726 41.2259C73.6405 41.255 70.2349 38.9851 68.6645 35.6904L49.8915 35.829C48.3712 39.1465 45.0002 41.4665 41.0684 41.4954L41.151 52.3859C41.2206 61.5468 46.1934 69.9892 54.2268 74.5846L59.596 77.6561L64.918 74.5057C72.8807 69.7921 77.7248 61.2773 77.6552 52.1164Z" fill="#0866C4" stroke="#0E2D4A" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M53.77 55.4948L57.7903 60.4332L66.27 51.417" stroke="white" stroke-width="1.64" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            <defs>
+              <clipPath id="clip0_255_1561">
+                <rect width="80" height="80" fill="white"/>
+              </clipPath>
+            </defs>
+          </svg>
+          <p>Даем 100% гарантию на<br> получение приглашения из США </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <a name="reviwes"></a>
+  <div class="reviewBlock">
+    <div class="reviewController">
+      <h1 class="Title"><span class="yellow"> Отзывы</span> <br>наших клиентов</h1>
+      <div class="ButtonRow mobDel">
+        <button class="arrowButton" id="toLeft3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M22.1665 14H5.83317M5.83317 14L13.9998 5.83337M5.83317 14L13.9998 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="arrowButton" id="toRight3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M5.8335 14H22.1668M22.1668 14L14.0002 5.83337M22.1668 14L14.0002 22.1667" stroke="#0E2D4A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="reviewSlider mobDel">
+      <div class="reviewWrapper" id="reviewWrapper">
+        <div class="reviewItem">
+
+          <div class="reviewImg">
+            <svg class="reviewButton" id="reviewButton" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+              <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
+            </svg>
+            <img src="./assets/imgs/Снимок экрана 2023-12-08 в 19.04.22.png">
+          </div>
+
+          <div class="reviewBlockText">
+            <h3>Мустафин Куаныш и Жубаныш, 35 лет</h3>
+            <p>Сделали рабочую визу в США за 10 дней</p>
+          </div>
+        </div>
+        <div class="reviewItem">
+          <svg class="reviewButton" id="reviewButton2" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
+          </svg>
+          <div class="reviewImg">
+            <img src="./assets/imgs/Снимок экрана 2023-12-08 в 19.17.58.png">
+          </div>
+
+          <div class="reviewBlockText">
+            <h3>Ласиев Марат и Сейденалиева Лаура, 31 год и 35 лет</h3>
+            <p>Сделали рабочую визу в США за 10 дней</p>
+          </div>
+        </div>
+        <div class="reviewItem">
+          <svg class="reviewButton" id="reviewButton3" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
+          </svg>
+          <div class="reviewImg">
+            <img src="./assets/imgs/Снимок экрана 2023-12-08 в 19.25.18.png">
+          </div>
+
+          <div class="reviewBlockText">
+            <h3>Нуртуган Коянбаев, 29 лет</h3>
+            <p>Сделали рабочую визу в США за 10 дней</p>
+          </div>
+        </div>
+        <div class="reviewItem">
+          <svg class="reviewButton" id="reviewButton4" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
+          </svg>
+          <div class="reviewImg">
+            <img src="./assets/imgs/Снимок экрана 2023-12-08 в 19.33.46.png">
+          </div>
+
+          <div class="reviewBlockText">
+            <h3>Кемелов Мухит и Тахмина, 40 и 38 лет</h3>
+            <p>Сделали рабочую визу в США за 10 дней</p>
+          </div>
+        </div>
+        <div class="reviewItem">
+          <svg class="reviewButton" id="reviewButton5" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
+          </svg>
+          <div class="reviewImg">
+            <img src="./assets/imgs/Снимок экрана 2023-12-08 в 19.41.41.png">
+          </div>
+
+          <div class="reviewBlockText">
+            <h3>Демегенова Амира, 25 лет</h3>
+            <p>Сделали рабочую визу в США за 10 дней</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="desDel">
+      <div class="owl-carousel">
+        <div>
+          <div class="reviewItem">
+
+            <div class="reviewImg">
+              <div class="reviewButtonWrapper">
+                <svg class="reviewButton" id="reviewButtonM" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                  <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
+                </svg>
+              </div>
+              <img src="./assets/imgs/Снимок экрана 2023-12-08 в 19.04.22.png">
+            </div>
+
+            <div class="reviewBlockText">
+              <h3>Мустафин Куаныш и Жубаныш, 35 лет</h3>
+              <p>Сделали рабочую визу в США за 10 дней</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="reviewItem">
+            <div class="reviewButtonWrapper">
+              <svg class="reviewButton" id="reviewButtonM2" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="reviewImg">
+              <img src="./assets/imgs/Снимок экрана 2023-12-08 в 19.17.58.png">
+            </div>
+
+            <div class="reviewBlockText">
+              <h3>Ласиев Марат и Сейденалиева Лаура, 31 год и 35 лет</h3>
+              <p>Сделали рабочую визу в США за 10 дней</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="reviewItem">
+            <div class="reviewButtonWrapper">
+              <svg class="reviewButton" id="reviewButtonM3" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="reviewImg">
+              <img src="./assets/imgs/Снимок экрана 2023-12-08 в 19.25.18.png">
+            </div>
+
+            <div class="reviewBlockText">
+              <h3>Нуртуган Коянбаев, 29 лет</h3>
+              <p>Сделали рабочую визу в США за 10 дней</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="reviewItem">
+            <div class="reviewButtonWrapper">
+              <svg class="reviewButton" id="reviewButtonM4" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="reviewImg">
+              <img src="./assets/imgs/Снимок экрана 2023-12-08 в 19.33.46.png">
+            </div>
+
+            <div class="reviewBlockText">
+              <h3>Кемелов Мухит и Тахмина, 40 и 38 лет</h3>
+              <p>Сделали рабочую визу в США за 10 дней</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="reviewItem">
+            <div class="reviewButtonWrapper">
+              <svg class="reviewButton" id="reviewButtonM5" xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 56 56" fill="none">
+                <path opacity="0.8" fill-rule="evenodd" clip-rule="evenodd" d="M28 56C43.464 56 56 43.464 56 28C56 12.536 43.464 0 28 0C12.536 0 0 12.536 0 28C0 43.464 12.536 56 28 56ZM23 36.6603L38 28L23 19.3397V36.6603Z" fill="white"/>
+              </svg>
+            </div>
+            <div class="reviewImg">
+              <img src="./assets/imgs/Снимок экрана 2023-12-08 в 19.41.41.png">
+            </div>
+
+            <div class="reviewBlockText">
+              <h3>Демегенова Амира, 25 лет</h3>
+              <p>Сделали рабочую визу в США за 10 дней</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="formBlock">
+    <div class="mobBc">
+      <img src="assets/imgs/mobBc2.png">
+      <p>Оставьте заявку</p>
+    </div>
+    <img class="mobDel" src="./assets/imgs/form2.png">
+    <div class="formRght">
+      <p class="second mobDel">Оставьте заявку</p>
+      <h1 class="Title white">Пробная подготовка <br>с <span class="yellow"> визовый экспертом</span> <br>бесплатно</h1>
+      <div class="formRow">
+        <input id="name3" name="name" class="formInput" type="text" placeholder="Имя">
+        <input id="phoneNumber3" class="formInput phoneNumber" type="text" placeholder="Телефон">
+      </div>
+      <button class="mainButton" onclick="sendEmail(3, true)">
+        Оставить заявку
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <path d="M4.1665 10.4998H15.8332M15.8332 10.4998L9.99984 4.6665M15.8332 10.4998L9.99984 16.3332" stroke="#0D253D" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+      <p class="formRec">НАЖИМАЯ НАКНОПКУ «ОТПРАВИТЬ ЗАЯВКУ»,<br> ВЫПРИНИМАЕТЕ УСЛОВИЯ ОБРАБОТКИ<br> ПЕРСОНАЛЬНЫХ ДАННЫХ</p>
+    </div>
+  </div>
+  <div class="questionBlock">
+    <h1 class="Title">Вопросы и <span class="yellow">ответы</span> </h1>
+    <div class="questions">
+      <div class="question" id="iconOpen">
+        <div class="quesText">
+          <h2>На каком языке можно пройти интервью с визовым офицером в Казахстане?</h2>
+          <p id="iconText">Интервью с визовым офицером можно пройти на русском, английском и казахском языках.</p>
+        </div>
+        <button class="iconButton" id="iconClose">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen2">
+        <div class="quesText">
+          <h2>Сколько времени занимает оформление визы в США?</h2>
+          <p id="iconText2">Длительность зависит от типа визы и пакета услуг, в среднем от 30 дней до 4-х месяцев.</p>
+        </div>
+        <button class="iconButton" id="iconClose2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen2">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen3">
+        <div class="quesText">
+          <h2> Есть ли гарантии в получении визы?</h2>
+          <p id="iconText3">Мы гарантируем качественное выполнение работы с нашей стороны, однако конечное решение остатеся за визовым офицером\консулом.</p>
+        </div>
+        <button class="iconButton" id="iconClose3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen3">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen4">
+        <div class="quesText">
+          <h2> Есть ли возврат?</h2>
+          <p id="iconText4">Возврат денежных средств за предоставленные услуги не предусмотрен, но есть возможность воспользоваться повторной подачей на визу.</p>
+        </div>
+        <button class="iconButton" id="iconClose4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen4">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen5">
+        <div class="quesText">
+          <h2> А если я полулу отказ?</h2>
+          <p id="iconText5">Для наших клиентов мы предоставляем вторую бесплатную подачу на визу, где мы также разберем предыдущий слуйчай совместно с визовым экспертом.</p>
+        </div>
+        <button class="iconButton" id="iconClose5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen5">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen6">
+        <div class="quesText">
+          <h2> Есть ли у вас скидки?</h2>
+          <p id="iconText6">Да, наши менеджера имеют персональную скидку, но она ограничена.</p>
+        </div>
+        <button class="iconButton" id="iconClose6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen6">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen7">
+        <div class="quesText">
+          <h2>Влияет ли поездка в Европу на получение визы в США?</h2>
+          <p id="iconText7">Предыдущие поездки за границу могут увеличить шанс, однако это только один из факторов благодаря которой у вас есть возможность получить визу в Америку.
+          </p>
+        </div>
+        <button class="iconButton" id="iconClose7">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen7">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen8">
+        <div class="quesText">
+          <h2>Что если ранее у меня был отказ?</h2>
+          <p id="iconText8">Предыдущие отказы не влияют на получение визы. Мы делаем анализ предыдущего кейса и прорабатываем актуальный кейс.</p>
+        </div>
+        <button class="iconButton" id="iconClose8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen8">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen9">
+        <div class="quesText">
+          <h2>На сколько лет выдается виза в США?</h2>
+          <p id="iconText9">Для граждан Казахстана туристическая виза выдается сроком до 10 лет, студенческая виза до 5 лет. Для нерезидентам стран уточняйте у менеджера.</p>
+        </div>
+        <button class="iconButton" id="iconClose9">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen9">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen10">
+        <div class="quesText">
+          <h2>С гражданами каких стран вы работаете?</h2>
+          <p id="iconText10">Мы работаем с гражданами всех стран.
+          </p>
+        </div>
+        <button class="iconButton" id="iconClose10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen10">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen11">
+        <div class="quesText">
+          <h2>Каким образом Консульский офицер принимает решение?</h2>
+          <p id="iconText11">Каждый заявитель на визу является потенциальным имигрантом. Задача заявителя убедить консула в не иммиграционных целях, связи с родиной.
+          </p>
+        </div>
+        <button class="iconButton" id="iconClose11">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen11">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="question" id="iconOpen12">
+        <div class="quesText">
+          <h2>Могу ли я обращаться за визой снова и через какой период, если мне было отказано?</h2>
+          <p id="iconText12">Повторная подача не имет отпределенных сроков. При оплате консульского сбора и наличаи дат, записаться можно уже на следующий день после отказа.
+          </p>
+        </div>
+        <button class="iconButton" id="iconClose12">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+            <path d="M14.2254 14.2253L25.7748 25.7747M14.2254 25.7747L25.7748 14.2253" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="iconButton2" id="QiconOpen12">
+          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <path d="M14.0002 5.83301V22.1663M5.8335 13.9997H22.1668" stroke="#F0CD56" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <a name="contacts"></a>
+  <div class="contactBlock">
+    <img class="bgImg" src="./assets/imgs/chance.png">
+    <div class="contactsForm">
+      <div class="contactText">
+        <h3 class="blue">Остались вопросы?</h3>
+        <p>Оставьте заявку, наш специалист перезвонит вам и проконсультирует по всем вопросам.</p>
+      </div>
+      <input id="name4" name="name" class="formInput" type="text" placeholder="Имя">
+      <input id="phoneNumber4" class="formInput phoneNumber" type="text" placeholder="Телефон">
+      <button class="mainButton" onclick="sendEmail(4, true)">
+        <span class="white">
+        Оставить заявку
+        </span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+          <path d="M4.1665 10.5003H15.8332M15.8332 10.5003L9.99984 4.66699M15.8332 10.5003L9.99984 16.3337" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <div class="contactInfo">
+      <div class="contactOne">
+        <p class="cHelper">Телефон:</p>
+        <p class="bigText">+7 747 365 55 55</p>
+        <div class="oneRow">
+          <button class="callButton" id="modalOpen7">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+              <path d="M14.5828 2.5L17.4995 5.41667M17.4995 5.41667L14.5828 8.33333M17.4995 5.41667H10.8328M8.52204 11.5526C7.52072 10.5512 6.73007 9.41904 6.15007 8.21102C6.10018 8.10712 6.07523 8.05516 6.05607 7.98942C5.98797 7.75579 6.03689 7.46891 6.17856 7.27105C6.21843 7.21537 6.26606 7.16774 6.36132 7.07248C6.65266 6.78115 6.79833 6.63548 6.89356 6.48899C7.25273 5.93659 7.25273 5.22443 6.89356 4.67203C6.79833 4.52554 6.65266 4.37988 6.36132 4.08854L6.19893 3.92615C5.75606 3.48328 5.53462 3.26184 5.29681 3.14156C4.82384 2.90233 4.26529 2.90233 3.79232 3.14156C3.5545 3.26184 3.33307 3.48328 2.8902 3.92615L2.75883 4.05751C2.31748 4.49886 2.09681 4.71954 1.92827 5.01956C1.74125 5.35249 1.60678 5.86956 1.60792 6.25141C1.60894 6.59554 1.67569 6.83072 1.8092 7.30109C2.52668 9.82892 3.8804 12.2142 5.87039 14.2042C7.86037 16.1942 10.2457 17.5479 12.7735 18.2654C13.2439 18.3989 13.4791 18.4657 13.8232 18.4667C14.205 18.4678 14.7221 18.3333 15.055 18.1463C15.3551 17.9778 15.5757 17.7571 16.0171 17.3158L16.1484 17.1844C16.5913 16.7415 16.8128 16.5201 16.933 16.2823C17.1723 15.8093 17.1723 15.2508 16.933 14.7778C16.8128 14.54 16.5913 14.3185 16.1484 13.8757L15.9861 13.7133C15.6947 13.4219 15.549 13.2763 15.4026 13.181C14.8502 12.8219 14.138 12.8219 13.5856 13.181C13.4391 13.2763 13.2934 13.4219 13.0021 13.7133C12.9069 13.8085 12.8592 13.8562 12.8035 13.896C12.6057 14.0377 12.3188 14.0866 12.0852 14.0185C12.0194 13.9994 11.9675 13.9744 11.8636 13.9245C10.6556 13.3445 9.52335 12.5539 8.52204 11.5526Z" stroke="white" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            Заказать звонок
+          </button>
+          <p class="miniText">График работы:<br class="mobDel"> 9:00 - 19:00, без выходных</p>
+        </div>
+      </div>
+      <div class="contactTwo">
+        <p class="cHelper">Адрес:</p>
+        <p class="spec">Алматы, ул. Оспанова 86, офис 15</p>
+        <a href="https://2gis.kz/almaty/firm/70000001038950153"><button class="qnetButton">Построить маршрут в 2GIS</button></a>
+      </div>
+      <div class="contactTwo">
+        <p class="cHelper">Написать нам:</p>
+        <p class="spec">visasup21@gmail.com</p>
+        <div class="oneRow">
+          <a href="https://instagram.com/visa.support.usa?igshid=MmVlMjlkMTBhMg=="><button class="qnetButton">Instagram</button></a>
+          <a href="https://wa.me/87473655554"><button class="qnetButton">WhatsApp</button></a>
+        </div>
+      </div>
+    </div>
+    <p class="footerText">VisaSupport.kz 2023 Все права защищены!</p>
+    <img class="bgImg2" clas src="./assets/imgs/contact.png">
+  </div>
+
+
+
+
+
+
+  <script src="./assets/js/jquery.min.js"></script>
+  <script src="./assets/js/owl.carousel.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $(".owl-carousel").owlCarousel({
+        items:1,
+        dots: true
+      });
+    });
+  </script>
 </body>
 </html>

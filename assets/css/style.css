@@ -1,5 +1,5 @@
 body{background: #F5F7FA; font-family: customFont; margin: 0; padding: 0; display: flex; flex-direction: column}
-.global{max-width: 1440px;width: 100%; align-self: center}
+
 
 
 
@@ -57,6 +57,11 @@ header{
     font-weight: 500;
     line-height: 24px; /* 133.333% */
 }
+.headerButtonRow{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
 
 
 
@@ -68,9 +73,9 @@ header{
     margin-right: 64px;
     margin-top: 48px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: end;
     position: relative;
-    height: 546px;
 }
 .superTitle{
     margin-top: 8px;
@@ -108,10 +113,13 @@ header{
     line-height: 25px; /* 125% */
 }
 .titleImg{
+    width: 60%;
+    position: relative;
+}
+.TitleLeft{
     position: absolute;
+    left: 0;
     top: 0;
-    right: 0;
-    width: 799px;
 }
 
 
@@ -254,7 +262,7 @@ header{
 
 
 
-
+.desDel{display: none}
 .cantBlock{
     margin-right: 0;
     margin-left: 0;
@@ -379,6 +387,8 @@ header{
     background: #142C43;
     padding: 24px var(--spacing-l, 16px);
     align-self: stretch;
+    z-index: 8;
+
 }
 .upgradeItem h3{
     color: #FFF;
@@ -389,14 +399,16 @@ header{
     line-height: 26px; /* 123.81% */
     margin: 0;
 }
-.upgradeItem p{
+.upradeText p{
     color: #FFF;
     font-size: 16px;
+    font-family: customLight;
     font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 150% */
     text-transform: none;
     margin-top: 20px;
+
 }
 .upgradeItem button{
     background: none;
@@ -486,21 +498,21 @@ header{
     margin-top: -40px;
     border-radius: 32px 32px 32px 32px;
     background: #0D253D;
-    padding: 64px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: relative;
     overflow: hidden;
     padding-bottom: 0px;
     z-index: 6;
+    justify-content: end;
 }
 .formBlock img{
+    width: 65%;
+}
+.formRght{
     position: absolute;
-    top:0;
-    right: 0;
-    width: 920px;
-    height: 631px;
-    flex-shrink: 0;
+    top:64px;
+    left: 64px;
 }
 .second{
     color: #FFF;
@@ -589,10 +601,10 @@ header{
 }
 .mask{
     width: 296px;
-    height: 350px;
+    height: 400px;
     border-radius: 296px;
     position: absolute;
-    top: -54px;
+    top: -104px;
     overflow: hidden;
 }
 .mask img{
@@ -741,11 +753,25 @@ header{
     margin-left: 24px;
     margin-right: 24px;
 }
+.reviewButtonWrapper{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 256px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
 .reviewButton{
     position: absolute;
     top: 100px;
     left: 152px;
+    z-index: 9;
 }
+.reviewImg{width: 100%; height: 256px; overflow: hidden;position: relative}
+.reviewItem img{object-fit: fill; width: 100%}
 
 
 
@@ -1082,5 +1108,35 @@ header{
     line-height: 16px; /* 160% */
     letter-spacing: 0.3px;
     text-transform: uppercase;
+}
+
+
+
+
+.modal1 {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal1 video {
+    width: 20%;
+    margin: 10% auto;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
 }
 
