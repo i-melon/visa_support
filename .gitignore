@@ -3,8 +3,5 @@
 /vendor/
 /.env
 /composer.lock
-<<<<<<< HEAD
 /assets/video/
 /node_modules/
-=======
->>>>>>> 5e084ed293b226c091b8b199b7d5d763bf59e17b
