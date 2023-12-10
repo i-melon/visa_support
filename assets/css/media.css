@@ -1,6 +1,6 @@
 @media (max-width: 1150px) {
     .linkRow{display: none}
-    .titleImg{width: 680px}
+    .titleImg{width: 60%}
     .TitleBlock .superTitle{font-size: 59px; line-height: 61px}
     .TitleBlock{height: 480px}
     .chanceItem{width: 270px; height: 320px}
@@ -10,12 +10,12 @@
     .formRow{margin-top: 12px;margin-bottom: 12px}
     .formBlock p{margin-bottom: 12px}
     .mainButton{padding: 8px 12px; height: 50px}
-    .typesRow{display: grid; grid-template-columns: 1fr 1fr; row-gap: 60px }
+    .typesRow{display: grid; justify-items: center; grid-template-columns: 1fr 1fr; row-gap: 60px }
     .contactsForm{padding: 32px 20px}
 }
 @media (max-width: 1001px) {
     .linkRow{display: none}
-    .titleImg{width: 580px}
+    .titleImg{width: 55%}
     .TitleBlockText{font-size: 18px; line-height: 20px}
     .TitleBlock .superTitle{font-size: 49px; line-height: 51px}
     .TitleBlock{height: 420px}
