@@ -113,7 +113,7 @@ header{
     line-height: 25px; /* 125% */
 }
 .titleImg{
-    width: 60%;
+    width: 55%;
     position: relative;
 }
 .TitleLeft{
@@ -539,6 +539,11 @@ header{
     gap: 16px;
     margin-top: 56px;
     margin-bottom: 32px;
+    height: 150px !important;
+}
+.fullWidth {
+    max-width: 100% !important;
+    height: none !important;
 }
 .formInput{
     display: flex;

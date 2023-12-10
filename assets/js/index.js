@@ -398,45 +398,45 @@ addEventListener("DOMContentLoaded", function () {
 
 
 
-    document.getElementById("closeModal").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "none"
-    })
-    document.getElementById("modalOpen").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("modalOpen2").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("modalOpen3").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("modalOpen4").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("modalOpen5").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("modalOpen6").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("MmodalOpen3").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("MmodalOpen4").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("MmodalOpen5").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("MmodalOpen6").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("modalOpen7").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    })
-    document.getElementById("modalOpen8").addEventListener("click", function () {
-        document.getElementById("modalWrapper").style.display= "flex"
-    });
+    // document.getElementById("closeModal").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "none"
+    // })
+    // document.getElementById("modalOpen").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("modalOpen2").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("modalOpen3").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("modalOpen4").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("modalOpen5").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("modalOpen6").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("MmodalOpen3").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("MmodalOpen4").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("MmodalOpen5").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("MmodalOpen6").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("modalOpen7").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // })
+    // document.getElementById("modalOpen8").addEventListener("click", function () {
+    //     document.getElementById("modalWrapper").style.display= "flex"
+    // });
 
 
 // Получаем элементы DOM
@@ -567,37 +567,5 @@ addEventListener("DOMContentLoaded", function () {
 // Закрываем модальное окно по завершении видео
     modalVideo5.addEventListener("ended", function () {
         videoModal5.style.display = "none";
-    });
-
-
-
-
-
-
-
-    // Set Phone Mask On Inputs
-    IMask(
-        document.getElementById('phoneNumber1'),
-        {
-          mask: '+{7} (700) 000-00-00'
-        }
-    )   
-    IMask(
-        document.getElementById('phoneNumber2'),
-        {
-          mask: '+{7} (700) 000-00-00'
-        }
-    )    
-    IMask(
-        document.getElementById('phoneNumber3'),
-        {
-          mask: '+{7} (700) 000-00-00'
-        }
-    )    
-    IMask(
-        document.getElementById('phoneNumber4'),
-        {
-          mask: '+{7} (700) 000-00-00'
-        }
-    )      
+    }); 
 })
