@@ -74,7 +74,7 @@ header{
     margin-top: 48px;
     display: flex;
     flex-direction: row;
-    justify-content: end;
+    justify-content: space-between;
     position: relative;
 }
 .superTitle{
@@ -504,7 +504,7 @@ header{
     overflow: hidden;
     padding-bottom: 0px;
     z-index: 6;
-    justify-content: end;
+    justify-content: space-between;
 }
 .formBlock img{
     width: 65%;
