@@ -1151,10 +1151,10 @@ header{
     margin-bottom: 20px;
  }
 .owl-theme .owl-dots .owl-dot span {
-    background-color: #EAC33E;/* опционально: добавьте границу для контраста */
+    background-color: #0D253D;/* опционально: добавьте границу для контраста */
 }
 .owl-theme .owl-dots .owl-dot.active span,
 .owl-theme .owl-dots .owl-dot:hover span {
-    background-color: #0D253D; /* опционально: добавьте границу для контраста */
+    background-color:  #EAC33E; /* опционально: добавьте границу для контраста */
 }
 
