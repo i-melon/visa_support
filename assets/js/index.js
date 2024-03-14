@@ -1,50 +1,53 @@
 addEventListener("DOMContentLoaded", function () {
     var xhr = new XMLHttpRequest();
 
-    index = 0;
-    toLeft = document.getElementById("toLeft").addEventListener("click", function (){
-        if(index>0){
+    IMask(
+        document.getElementById('phoneNumber1'),
+        {
+            mask: '+{7} (700) 000-00-00'
+        }
+    )
+
+    let index = 0;
+    let toLeft = document.getElementById("toLeft").addEventListener("click", function () {
+        if (index > 0) {
             index--;
-            document.getElementById("cantWrapper").style.left= -410*index+"px"
+            document.getElementById("cantWrapper").style.left = -410 * index + "px"
 
-        }
-        else{
+        } else {
             index = 3;
-            document.getElementById("cantWrapper").style.left= -410*index+"px"
+            document.getElementById("cantWrapper").style.left = -410 * index + "px"
         }
     })
-    toRight = document.getElementById("toRight").addEventListener("click", function () {
-        if(index<3){
+    let toRight = document.getElementById("toRight").addEventListener("click", function () {
+        if (index < 3) {
             index++;
-            document.getElementById("cantWrapper").style.left= -410*index+"px"
+            document.getElementById("cantWrapper").style.left = -410 * index + "px"
 
-        }
-        else{
+        } else {
             index = 0;
-            document.getElementById("cantWrapper").style.left= -410*index+"px"
+            document.getElementById("cantWrapper").style.left = -410 * index + "px"
         }
     })
 
-    indexPrep = 0;
-    toRight2 = document.getElementById("toRight2").addEventListener("click", function (){
-        if(indexPrep<2){
+    let indexPrep = 0;
+    let toRight2 = document.getElementById("toRight2").addEventListener("click", function () {
+        if (indexPrep < 2) {
             indexPrep++
-            document.getElementById("prepWrapper").style.left = -345*indexPrep+"px"
-        }
-        else {
+            document.getElementById("prepWrapper").style.left = -345 * indexPrep + "px"
+        } else {
             indexPrep = 0
-            document.getElementById("prepWrapper").style.left = -345*indexPrep+"px"
+            document.getElementById("prepWrapper").style.left = -345 * indexPrep + "px"
         }
 
     })
-    toLeft2 = document.getElementById("toLeft2").addEventListener("click", function (){
-        if(indexPrep>0){
+    let toLeft2 = document.getElementById("toLeft2").addEventListener("click", function () {
+        if (indexPrep > 0) {
             indexPrep--
-            document.getElementById("prepWrapper").style.left = -345*indexPrep+"px"
-        }
-        else {
+            document.getElementById("prepWrapper").style.left = -345 * indexPrep + "px"
+        } else {
             indexPrep = 2
-            document.getElementById("prepWrapper").style.left = -345*indexPrep+"px"
+            document.getElementById("prepWrapper").style.left = -345 * indexPrep + "px"
         }
 
     })
@@ -166,32 +169,24 @@ addEventListener("DOMContentLoaded", function () {
     });
 
 
-
-
-
-
-
-
-    indexRe = 0;
-    toRight3 = document.getElementById("toRight3").addEventListener("click", function (){
-        if(indexRe<4){
+    let indexRe = 0;
+    let toRight3 = document.getElementById("toRight3").addEventListener("click", function () {
+        if (indexRe < 4) {
             indexRe++
-            document.getElementById("reviewWrapper").style.left = -378*indexRe+"px"
-        }
-        else {
+            document.getElementById("reviewWrapper").style.left = -378 * indexRe + "px"
+        } else {
             indexRe = 0
-            document.getElementById("reviewWrapper").style.left = -378*indexRe+"px"
+            document.getElementById("reviewWrapper").style.left = -378 * indexRe + "px"
         }
 
     })
-    toLeft3 = document.getElementById("toLeft3").addEventListener("click", function (){
-        if(indexRe>0){
+    let toLeft3 = document.getElementById("toLeft3").addEventListener("click", function () {
+        if (indexRe > 0) {
             indexRe--
-            document.getElementById("reviewWrapper").style.left = -378*indexRe+"px"
-        }
-        else {
+            document.getElementById("reviewWrapper").style.left = -378 * indexRe + "px"
+        } else {
             indexRe = 4
-            document.getElementById("reviewWrapper").style.left = -378*indexRe+"px"
+            document.getElementById("reviewWrapper").style.left = -378 * indexRe + "px"
         }
 
     })
@@ -398,45 +393,61 @@ addEventListener("DOMContentLoaded", function () {
 
 
 
-    // document.getElementById("closeModal").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "none"
-    // })
-    // document.getElementById("modalOpen").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("modalOpen2").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("modalOpen3").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("modalOpen4").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("modalOpen5").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("modalOpen6").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("MmodalOpen3").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("MmodalOpen4").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("MmodalOpen5").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("MmodalOpen6").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("modalOpen7").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // })
-    // document.getElementById("modalOpen8").addEventListener("click", function () {
-    //     document.getElementById("modalWrapper").style.display= "flex"
-    // });
+    document.getElementById("closeModal").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "none"
+    })
+    document.getElementById("modalOpen").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen2").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen3").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen4").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen5").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen6").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen7").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen8").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen9").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen10").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen11").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+
+    document.getElementById("MmodalOpen3").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("MmodalOpen4").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("MmodalOpen5").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("MmodalOpen6").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen7").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    })
+    document.getElementById("modalOpen8").addEventListener("click", function () {
+        document.getElementById("modalWrapper").style.display= "flex"
+    });
 
 
 // Получаем элементы DOM
