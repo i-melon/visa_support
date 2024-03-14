@@ -26,7 +26,7 @@ header("Access-Control-Allow-Headers: *");
 /**
  * Handle cases where the script is accessed with an unsupported method
  * or without a POST request
- */ 
+ */
 if ($_SERVER["REQUEST_METHOD"] !== "POST") {
     $response = array('status' => 'error', 'message' => "Invalid request.");
     die(json_encode($response));
@@ -34,7 +34,7 @@ if ($_SERVER["REQUEST_METHOD"] !== "POST") {
 
 /**
  * Sending Email Request
- */ 
+ */
 $_POST = json_decode(file_get_contents("php://input"), true);
 
 // Create an instance; passing `true` enables exceptions
@@ -43,11 +43,11 @@ $mail->CharSet = 'UTF-8';
 
 try {
     // Mail Variables
-    $mailSubject = "Visa Support | Обратная связь";
-    $mailBody = $_POST['phoneNumber'];
+    $mailSubject = $_ENV['APP_NAME'] . " | Обратная связь";
+    $mailBody = "Номер: " . $_POST['phoneNumber'];
 
     if (isset($_POST['name'])) {
-        $mailBody .= " " . $_POST['name'];
+        $mailBody .= "\nИмя: " . $_POST['name'];
     }
 
     // Server settings
@@ -59,29 +59,29 @@ try {
     $mail->Password   = $_ENV['SMTP_PASSWORD'];       // SMTP password
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;  // Enable implicit TLS encryption
     $mail->Port       = 465;                          // TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
-    
+
     // Recipients
-    $mail->setFrom($_ENV['SMTP_USERNAME']);   
-    $mail->addAddress($_ENV['SMTP_TO']);              // Add a recipient 
-    
+    $mail->setFrom($_ENV['SMTP_USERNAME']);
+    $mail->addAddress($_ENV['SMTP_TO']);              // Add a recipient
+
     // Content
     $mail->isHTML(false);
     $mail->Subject = $mailSubject;
     $mail->Body = $mailBody;
     $mail->send();
 
-    // Retuen Response
+    // Return Response
     $response = array(
-        'status' => 'success', 
+        'status' => 'success',
         'message' => "Suiii"
     );
     echo json_encode($response);
-} 
-catch (Exception $e) 
+}
+catch (Exception $e)
 {
     http_response_code(500);
     $response = array(
-        'status' => 'error', 
+        'status' => 'error',
         'message' => "Message could not be sent. Mailer Error: {$mail->ErrorInfo}"
     );
     die(json_encode($response));

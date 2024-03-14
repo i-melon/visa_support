@@ -51,7 +51,9 @@ a:hover{color: #1478DC;}
     font-weight: 500;
     line-height: 24px; /* 150% */
 }
-.callButton:hover{background: #1478DC;}
+.callButton:hover {
+    background: #1478DC;
+}
 .miniText{
     color: #0E2D4A;
     font-family: customLight;
@@ -80,7 +82,9 @@ a:hover{color: #1478DC;}
     letter-spacing: -0.18px;
     border: none;
 }
-.mainButton:hover{background: #FFE17A;}
+.mainButton:hover{
+    background: #FFE17A;
+}
 .arrowButton{
     display: flex;
     width: 64px;
