@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function handleError() {
         console.error('Error:', xhr.response);
         alert('Произошла какая-то ошибка. Мы обязательно ее решим! ' +
-            'Просим вас связаться с нами по почте - ms7057555277@yandex.ru');
+            'Просим вас связаться с нами по почте - visasup21@gmail.com');
     }
 
     function redirectToThanks() {
