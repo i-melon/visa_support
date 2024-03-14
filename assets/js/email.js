@@ -99,6 +99,6 @@ document.addEventListener('DOMContentLoaded', function() {
     function getMailerUrl() {
         return (location.hostname === "localhost" || location.hostname === "127.0.0.1") ?
             "http://localhost:63342/visa_support/mailer.php" :
-            "https://visa-support.kz/mailer.php";
+            "https://target.visa-support.kz/mailer.php";
     }
 });
